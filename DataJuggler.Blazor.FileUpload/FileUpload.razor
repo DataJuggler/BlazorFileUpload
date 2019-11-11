@@ -1,0 +1,92 @@
+﻿@using System.IO
+@using BlazorInputFile
+
+<div class="my-component">
+    <InputFile OnChange="HandleSelection" />
+</div>
+
+@if (ShowStatus)
+{
+    <p>@status</p>
+}
+
+@code {
+
+    string status;
+
+
+    async Task HandleSelection(IFileListEntry[] files)
+    {
+        var file = files.FirstOrDefault();
+        if (file != null)
+        {
+            try
+            {
+                // Just load into .NET memory to show it can be done
+                // Alternatively it could be saved to disk, or parsed in memory, or similar
+                var ms = new MemoryStream();
+                await file.Data.CopyToAsync(ms);
+                string partialGuid = Guid.NewGuid().ToString().Substring(0, PartialGuidLength);
+
+                using (FileStream fileStream = new FileStream(Path.Combine(UploadFolder, file.Name + "." + partialGuid), FileMode.Create, FileAccess.Write))
+                {
+                    ms.WriteTo(fileStream);
+                }
+
+                // if there is a CustomSave
+                if (!String.IsNullOrWhiteSpace(CustomSuccessMessage))
+                {
+                    // Show the CustomSuccessMessage
+                    status = CustomSuccessMessage;
+                }
+                else
+                {
+                    // set the status
+                    status = $"Saved file {file.Size} bytes from {file.Name}";
+                }
+
+                // Notify the caller a file was uploaded so they can do something with it
+                FileUploaded(file.Name);
+            }
+            catch (Exception error)
+            {
+                if (!String.IsNullOrWhiteSpace(CustomErrorMessage))
+                {
+                    // Show the custom error message
+                    status = CustomErrorMessage;
+                }
+                else
+                {
+                    // show the full error
+                    status = error.ToString();
+                }
+            }
+        }
+    }
+
+    private void FileUploaded(string fileName)
+    {
+        // Notify the client a file was uploaded
+        OnChange.InvokeAsync(fileName);
+    }
+
+    [Parameter] public EventCallback<string> OnChange { get; set; }
+
+    [Parameter]
+    public bool ShowStatus { get; set; } = true;
+
+    [Parameter]
+    public int PartialGuidLength { get; set; } = 12;
+
+    [Parameter]
+    public string UploadFolder { get; set; } = "wwwroot/Upload/";
+
+    [Parameter]
+    public string CustomSuccessMessage { get; set; } = "";
+
+    [Parameter]
+    public string CustomErrorMessage { get; set; } = "An error occurred uploading your file.";
+
+}
+
+

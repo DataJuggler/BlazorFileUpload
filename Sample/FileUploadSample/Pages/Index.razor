@@ -1,0 +1,20 @@
+﻿@page "/"
+@using DataJuggler.Blazor.FileUpload
+
+<h3>File Upload Test</h3>
+
+<div class="fileuploader">
+    <FileUpload CustomSuccessMessage="Your file was uploaded successfully." OnChange="OnFileUploaded"></FileUpload>
+    @status
+</div>
+
+@code
+{
+    // test
+    string status;
+
+    private void OnFileUploaded(string fileName)
+    {
+        status = "The file " + fileName + " was uploaded.";
+    }
+}
