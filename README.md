@@ -21,9 +21,8 @@ In the Pages folder of the new Blazor project, Modiify _Host.cshtml to have the 
 <script src="_content/BlazorInputFile/inputfile.js"></script>
 
 Place the above reference directly above the reference to blazor.server.js:
-<script src="_framework/blazor.server.js"></script></br>
-
- +
+<script src="_framework/blazor.server.js"></script>
+<br/><br/>
 Replace the existing text in Index.razor with the code below:
 
 @page "/"
