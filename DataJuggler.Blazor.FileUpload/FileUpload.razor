@@ -45,8 +45,11 @@
                     status = $"Saved file {file.Size} bytes from {file.Name}";
                 }
 
+                // create the uploadedFileInfo
+                UploadedFileInfo uploadedFileInfo = new UploadedFileInfo(file, partialGuid);
+
                 // Notify the caller a file was uploaded so they can do something with it
-                FileUploaded(file.Name);
+                FileUploaded(uploadedFileInfo);
             }
             catch (Exception error)
             {
@@ -64,13 +67,13 @@
         }
     }
 
-    private void FileUploaded(string fileName)
+    private void FileUploaded(UploadedFileInfo uploadedFileInfo)
     {
         // Notify the client a file was uploaded
-        OnChange.InvokeAsync(fileName);
+        OnChange.InvokeAsync(uploadedFileInfo);
     }
 
-    [Parameter] public EventCallback<string> OnChange { get; set; }
+    [Parameter] public EventCallback<UploadedFileInfo> OnChange { get; set; }
 
     [Parameter]
     public bool ShowStatus { get; set; } = true;
@@ -83,6 +86,9 @@
 
     [Parameter]
     public string CustomSuccessMessage { get; set; } = "";
+
+    [Parameter]
+    public long MaxFileSize { get; set; } = 0;
 
     [Parameter]
     public string CustomErrorMessage { get; set; } = "An error occurred uploading your file.";

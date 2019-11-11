@@ -4,7 +4,8 @@
 <h3>File Upload Test</h3>
 
 <div class="fileuploader">
-    <FileUpload CustomSuccessMessage="Your file uploaded successfully." OnChange="OnFileUploaded"></FileUpload>
+    <FileUpload CustomSuccessMessage="Your file uploaded successfully." OnChange="OnFileUploaded"
+                PartialGuidLength="10"></FileUpload>
     @status
 </div>
 
@@ -13,8 +14,18 @@
     // test
     string status;
 
-    private void OnFileUploaded(string fileName)
+    private void OnFileUploaded(UploadedFileInfo uploadedFileInfo)
     {
-        status = "The file " + fileName + " was uploaded.";
+        // get the status
+        status = "The file " + uploadedFileInfo.Name + " was uploaded.";
+
+        // other information about the file is available
+        DateTime lastModified = uploadedFileInfo.LastModified;
+        string nameAsItIsOnDisk = uploadedFileInfo.NameWithPartialGuid;
+        string partialGuid = uploadedFileInfo.PartialGuid;
+        long size = uploadedFileInfo.Size;
+        string type = uploadedFileInfo.Type;
+
+        // The above information can be used to display, save  and / or process a file
     }
 }

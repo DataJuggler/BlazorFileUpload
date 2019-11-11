@@ -7,7 +7,19 @@
     <Description>This package is built upon BlazorInputFile by Steve Sanderson at Microsoft. https://github.com/SteveSandersonMS/BlazorInputFile
 
 All I did was wrap in it a component to make it easy to use in a Blazor app.</Description>
-    <PackageReleaseNotes>This is the first working version, that also raises the OnChange event to return the FileName of the file returned.
+    <PackageReleaseNotes>Update 1.0.6: I decided to return more information about the file instead of just the name to make it actually useful.
+
+I also broke the FileUploaded method, but now is the time to break it before anyone starts using it. Now I return an object called UploadedFileInfo, with 6 properties.
+1. string Name
+2. string PartialGuid
+3. string readonly NameWithPartialGuid (a concatanation of name + "." + PartialGuid
+4. long Size
+5. datetime LastModified
+6. string Type
+
+
+--
+This is the first working version, that also raises the OnChange event to return the FileName of the file returned.
 
 I also added a partial Guid to each fileName to ensure uniqueness. You can change the length of the PartialGuid, but the component does expect the PartialGuidLengthParameter to either not be set, which defaults to 12, or atleast be above zero. 
 
@@ -17,7 +29,7 @@ Example: JohnSmithResume.doc.sxlasdfclaej
 </PackageReleaseNotes>
     <PackageTags>C#, Blazor, FileUpload, BlazorFileUpload</PackageTags>
     <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
-    <Version>1.0.5-Preview</Version>
+    <Version>1.0.6-Preview</Version>
     <PackageLicenseFile>LICENSE</PackageLicenseFile>
     <PackageProjectUrl>https://github.com/DataJuggler/BlazorFileUpload</PackageProjectUrl>
   </PropertyGroup>
