@@ -3,11 +3,11 @@ This is a wrapper of Steve Sanderson's BlazorFileInput:
 
 https://github.com/SteveSandersonMS/BlazorInputFile  
 
-# You must use Dot Net Core SDK 3.1 for BlazorFileUpload component to work.
+<b>You must use Dot Net Core SDK 3.1 for BlazorFileUpload component to work.<b>
 
 I am using Visual Studio 16.4 Preview 4.
 
-# Nuget Package: DataJuggler.Blazor.FileUpload
+<b>Nuget Package: DataJuggler.Blazor.FileUpload</b>
 
 All the credit goes to Steve Sanderson's BlazorFileInput component. I created this project so I can create a Blazor project and use all Dot Net Core components without using Dot Net Standard, so I can create a Blazor UI Factory that has been on my to do list.
 
