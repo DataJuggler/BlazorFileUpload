@@ -3,7 +3,7 @@ This is a wrapper of Steve Sanderson's BlazorFileInput:
 
 https://github.com/SteveSandersonMS/BlazorInputFile  
 
-<b>You must use Dot Net Core SDK 3.1 for BlazorFileUpload component to work.<b>
+<b>You must use Dot Net Core SDK 3.1 for BlazorFileUpload component to work.</b>
 
 I am using Visual Studio 16.4 Preview 4.
 
