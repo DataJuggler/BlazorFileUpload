@@ -24,6 +24,7 @@ Place the above reference directly above the reference to blazor.server.js:
 <script src="_framework/blazor.server.js"></script>
 
 Replace the existing text in Index.razor with the code below:
+
 @page "/"
 @using DataJuggler.Blazor.FileUpload
 
