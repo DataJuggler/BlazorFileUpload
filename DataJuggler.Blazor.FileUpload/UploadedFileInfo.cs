@@ -14,6 +14,9 @@ namespace DataJuggler.Blazor.FileUpload
         private string name;
         private long size;
         private string type;
+        private bool aborted;
+        private string errorMessage;
+        private Exception exception;
         #endregion
 
         #region Constructor
@@ -38,6 +41,56 @@ namespace DataJuggler.Blazor.FileUpload
         #endregion
 
         #region Properties
+            
+            #region Aborted
+            /// <summary>
+            /// This property gets or sets the value for 'Aborted'.
+            /// </summary>
+            public bool Aborted
+            {
+                get { return aborted; }
+                set { aborted = value; }
+            }
+            #endregion
+            
+            #region ErrorMessage
+            /// <summary>
+            /// This property gets or sets the value for 'ErrorMessage'.
+            /// </summary>
+            public string ErrorMessage
+            {
+                get { return errorMessage; }
+                set { errorMessage = value; }
+            }
+            #endregion
+            
+            #region Exception
+            /// <summary>
+            /// This property gets or sets the value for 'Exception'.
+            /// </summary>
+            public Exception Exception
+            {
+                get { return exception; }
+                set { exception = value; }
+            }
+            #endregion
+            
+            #region HasException
+            /// <summary>
+            /// This property returns true if this object has an 'Exception'.
+            /// </summary>
+            public bool HasException
+            {
+                get
+                {
+                    // initial value
+                    bool hasException = (this.Exception != null);
+                    
+                    // return value
+                    return hasException;
+                }
+            }
+            #endregion
             
             #region LastModified
             /// <summary>

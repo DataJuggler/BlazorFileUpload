@@ -17,42 +17,65 @@
 
     async Task HandleSelection(IFileListEntry[] files)
     {
+        // local
+        UploadedFileInfo uploadedFileInfo = null;
+
         var file = files.FirstOrDefault();
         if (file != null)
         {
             try
             {
-                // Just load into .NET memory to show it can be done
-                // Alternatively it could be saved to disk, or parsed in memory, or similar
-                var ms = new MemoryStream();
-                await file.Data.CopyToAsync(ms);
+                // the partialGuid is need to ensure uniqueness
                 string partialGuid = Guid.NewGuid().ToString().Substring(0, PartialGuidLength);
 
-                using (FileStream fileStream = new FileStream(Path.Combine(UploadFolder, file.Name + "." + partialGuid), FileMode.Create, FileAccess.Write))
-                {
-                    ms.WriteTo(fileStream);
-                }
+                // create the uploadedFileInfo
+                uploadedFileInfo = new UploadedFileInfo(file, partialGuid);
 
-                // if there is a CustomSave
-                if (!String.IsNullOrWhiteSpace(CustomSuccessMessage))
+                // if the file is too large
+                if (file.Size > MaxFileSize)
                 {
-                    // Show the CustomSuccessMessage
-                    status = CustomSuccessMessage;
+                    // Show the FileTooLargeMessage
+                    status = FileTooLargeMessage;
+
+                    // Upload was aborted
+                    uploadedFileInfo.Aborted = true;
+                    uploadedFileInfo.ErrorMessage = FileTooLargeMessage;
+                    uploadedFileInfo.Exception = new Exception("The file uploaded was too large.");
                 }
                 else
                 {
-                    // set the status
-                    status = $"Saved file {file.Size} bytes from {file.Name}";
+                    // Just load into .NET memory to show it can be done
+                    // Alternatively it could be saved to disk, or parsed in memory, or similar
+                    var ms = new MemoryStream();
+                    await file.Data.CopyToAsync(ms);
+
+                    using (FileStream fileStream = new FileStream(Path.Combine(UploadFolder, file.Name + "." + partialGuid), FileMode.Create, FileAccess.Write))
+                    {
+                        ms.WriteTo(fileStream);
+                    }
+
+                    // if there is a CustomSave
+                    if (!String.IsNullOrWhiteSpace(CustomSuccessMessage))
+                    {
+                        // Show the CustomSuccessMessage
+                        status = CustomSuccessMessage;
+                    }
+                    else
+                    {
+                        // set the status
+                        status = $"Saved file {file.Size} bytes from {file.Name}";
+                    }
                 }
-
-                // create the uploadedFileInfo
-                UploadedFileInfo uploadedFileInfo = new UploadedFileInfo(file, partialGuid);
-
-                // Notify the caller a file was uploaded so they can do something with it
-                FileUploaded(uploadedFileInfo);
             }
             catch (Exception error)
             {
+                // Upload was aborted
+                uploadedFileInfo.Aborted = true;
+
+                // Store the Exception
+                uploadedFileInfo.Exception = error;
+
+                // if a CustomErrorMessage is set
                 if (!String.IsNullOrWhiteSpace(CustomErrorMessage))
                 {
                     // Show the custom error message
@@ -63,6 +86,14 @@
                     // show the full error
                     status = error.ToString();
                 }
+
+                // set the error message
+                uploadedFileInfo.ErrorMessage = status;
+            }
+            finally
+            {
+                // Notify the caller the upload was aborted due to an error 
+                FileUploaded(uploadedFileInfo);
             }
         }
     }
@@ -89,6 +120,9 @@
 
     [Parameter]
     public long MaxFileSize { get; set; } = 0;
+
+    [Parameter]
+    public string FileTooLargeMessage { get; set; } = "The file uploaded is too large";
 
     [Parameter]
     public string CustomErrorMessage { get; set; } = "An error occurred uploading your file.";

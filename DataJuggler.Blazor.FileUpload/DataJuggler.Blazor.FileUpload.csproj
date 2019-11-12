@@ -7,7 +7,11 @@
     <Description>This package is built upon BlazorInputFile by Steve Sanderson at Microsoft. https://github.com/SteveSandersonMS/BlazorInputFile
 
 All I did was wrap in it a component to make it easy to use in a Blazor app.</Description>
-    <PackageReleaseNotes>Update 1.0.6: I decided to return more information about the file instead of just the name to make it actually useful.
+    <PackageReleaseNotes>Update 1.0.7-Preview: I added a couple of new properties for MaxFileSize and a FileTooLargeMessage if you want to change the default message of 'The file uploaded is too large' you can do so.
+
+I also added an Aborted property, so the client get a signal that the upload was aborted, and the Exception is returned that might help with debugging / client validation.
+
+Update 1.0.6-Preview: I decided to return more information about the file instead of just the name to make it actually useful.
 
 I also broke the FileUploaded method, but now is the time to break it before anyone starts using it. Now I return an object called UploadedFileInfo, with 6 properties.
 1. string Name
@@ -29,7 +33,7 @@ Example: JohnSmithResume.doc.sxlasdfclaej
 </PackageReleaseNotes>
     <PackageTags>C#, Blazor, FileUpload, BlazorFileUpload</PackageTags>
     <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
-    <Version>1.0.6-Preview</Version>
+    <Version>1.0.7-Preview</Version>
     <PackageLicenseFile>LICENSE</PackageLicenseFile>
     <PackageProjectUrl>https://github.com/DataJuggler/BlazorFileUpload</PackageProjectUrl>
   </PropertyGroup>

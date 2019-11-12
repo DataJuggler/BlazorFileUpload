@@ -5,9 +5,11 @@
 
 <div class="fileuploader">
     <FileUpload CustomSuccessMessage="Your file uploaded successfully." OnChange="OnFileUploaded"
-                PartialGuidLength="10"></FileUpload>
+                PartialGuidLength="10" MaxFileSize="4194304"
+                FileTooLargeMessage="The file uploaded must be 4 megabytes or smaller."></FileUpload>
     @status
 </div>
+
 
 @code
 {
@@ -16,16 +18,28 @@
 
     private void OnFileUploaded(UploadedFileInfo uploadedFileInfo)
     {
-        // get the status
-        status = "The file " + uploadedFileInfo.Name + " was uploaded.";
+        // if aborted
+        if (uploadedFileInfo.Aborted)
+        {
+            // get the status
+            status = String.Empty;
 
-        // other information about the file is available
-        DateTime lastModified = uploadedFileInfo.LastModified;
-        string nameAsItIsOnDisk = uploadedFileInfo.NameWithPartialGuid;
-        string partialGuid = uploadedFileInfo.PartialGuid;
-        long size = uploadedFileInfo.Size;
-        string type = uploadedFileInfo.Type;
+            // get the error message
+            string errorMessage = uploadedFileInfo.ErrorMessage;
+        }
+        else
+        {
+            // get the status
+            status = "The file " + uploadedFileInfo.Name + " was uploaded.";
 
-        // The above information can be used to display, save  and / or process a file
+            // other information about the file is available
+            DateTime lastModified = uploadedFileInfo.LastModified;
+            string nameAsItIsOnDisk = uploadedFileInfo.NameWithPartialGuid;
+            string partialGuid = uploadedFileInfo.PartialGuid;
+            long size = uploadedFileInfo.Size;
+            string type = uploadedFileInfo.Type;
+
+            // The above information can be used to display, save  and / or process a file
+        }
     }
 }
