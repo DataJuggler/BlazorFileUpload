@@ -17,8 +17,9 @@
 
     async Task HandleSelection(IFileListEntry[] files)
     {
-        // local
+        // locals
         UploadedFileInfo uploadedFileInfo = null;
+        bool abort = false;
 
         var file = files.FirstOrDefault();
         if (file != null)
@@ -32,7 +33,7 @@
                 uploadedFileInfo = new UploadedFileInfo(file, partialGuid);
 
                 // if the file is too large
-                if (file.Size > MaxFileSize)
+                if ((MaxFileSize > 0) && (file.Size > MaxFileSize))
                 {
                     // Show the FileTooLargeMessage
                     status = FileTooLargeMessage;
@@ -44,26 +45,64 @@
                 }
                 else
                 {
-                    // Just load into .NET memory to show it can be done
-                    // Alternatively it could be saved to disk, or parsed in memory, or similar
-                    var ms = new MemoryStream();
-                    await file.Data.CopyToAsync(ms);
+                    // Create a new instance of a 'FileInfo' object.
+                    FileInfo fileInfo = new FileInfo(file.Name);
 
-                    using (FileStream fileStream = new FileStream(Path.Combine(UploadFolder, file.Name + "." + partialGuid), FileMode.Create, FileAccess.Write))
+                    // Set the extension. The ToLower is for just in case. I don't know if it's even possible for an extension to be upper case
+                    uploadedFileInfo.Extension = fileInfo.Extension.ToLower();
+
+                    // if FilterByExtension is true and the AllowedExtensions text exists
+                    if ((FilterByExtension) && (!string.IsNullOrWhiteSpace(AllowedExtensions)))
                     {
-                        ms.WriteTo(fileStream);
+                        // If the allowed extensions
+                        abort = !AllowedExtensions.ToLower().Contains(fileInfo.Extension);
                     }
 
-                    // if there is a CustomSave
-                    if (!String.IsNullOrWhiteSpace(CustomSuccessMessage))
+                    // Set aborted to true
+                    uploadedFileInfo.Aborted = abort;
+
+                    // if we should continue
+                    if (!abort)
                     {
-                        // Show the CustomSuccessMessage
-                        status = CustomSuccessMessage;
+                        // Just load into .NET memory to show it can be done
+                        // Alternatively it could be saved to disk, or parsed in memory, or similar
+                        var ms = new MemoryStream();
+                        await file.Data.CopyToAsync(ms);
+
+                        // save the file using the FullName (If AppendPartialGuid is still true, than the Name.PartialGuid is the FullName
+                        using (FileStream fileStream = new FileStream(Path.Combine(UploadFolder, uploadedFileInfo.FullName), FileMode.Create, FileAccess.Write))
+                        {
+                            ms.WriteTo(fileStream);
+                        }
+
+                        // if there is a CustomSave
+                        if (!String.IsNullOrWhiteSpace(CustomSuccessMessage))
+                        {
+                            // Show the CustomSuccessMessage
+                            status = CustomSuccessMessage;
+                        }
+                        else
+                        {
+                            // set the status
+                            status = $"Saved file {file.Size} bytes from {file.Name}";
+                        }
                     }
                     else
                     {
-                        // set the status
-                        status = $"Saved file {file.Size} bytes from {file.Name}";
+                        // If a CustomExtensionMessage has been set
+                        if (!string.IsNullOrWhiteSpace(CustomExtensionMessage))
+                        {
+                            // Display the Custom extension doesn't validate message
+                            uploadedFileInfo.ErrorMessage = CustomExtensionMessage;
+                        }
+                        else
+                        {
+                            // Can't think of a better message than this yet, just woke up
+                            uploadedFileInfo.ErrorMessage = "The file uploaded is an invalid extension.";
+                        }
+
+                        // Show the exception
+                        uploadedFileInfo.Exception = new Exception(uploadedFileInfo.ErrorMessage);
                     }
                 }
             }
@@ -107,25 +146,37 @@
     [Parameter] public EventCallback<UploadedFileInfo> OnChange { get; set; }
 
     [Parameter]
-    public bool ShowStatus { get; set; } = true;
+    public string AllowedExtensions { get; set; } = "";
 
     [Parameter]
-    public int PartialGuidLength { get; set; } = 12;
+    public bool AppendPartialGuid { get; set; } = true;
 
     [Parameter]
-    public string UploadFolder { get; set; } = "wwwroot/Upload/";
+    public string CustomErrorMessage { get; set; } = "An error occurred uploading your file.";
+
+    [Parameter]
+    public string CustomExtensionMessage { get; set; } = "";
 
     [Parameter]
     public string CustomSuccessMessage { get; set; } = "";
 
     [Parameter]
-    public long MaxFileSize { get; set; } = 0;
-
-    [Parameter]
     public string FileTooLargeMessage { get; set; } = "The file uploaded is too large";
 
     [Parameter]
-    public string CustomErrorMessage { get; set; } = "An error occurred uploading your file.";
+    public bool FilterByExtension { get; set; } = false;
+
+    [Parameter]
+    public long MaxFileSize { get; set; } = 0;
+
+    [Parameter]
+    public int PartialGuidLength { get; set; } = 12;
+
+    [Parameter]
+    public bool ShowStatus { get; set; } = true;
+
+    [Parameter]
+    public string UploadFolder { get; set; } = "wwwroot/Upload/";
 
 }
 

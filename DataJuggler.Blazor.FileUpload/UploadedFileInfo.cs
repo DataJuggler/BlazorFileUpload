@@ -9,6 +9,7 @@ namespace DataJuggler.Blazor.FileUpload
     public class UploadedFileInfo
     {
         #region Private Variables
+        private bool appendPartialGuid;
         private string partialGuid;
         private DateTime lastModified;
         private string name;
@@ -16,6 +17,7 @@ namespace DataJuggler.Blazor.FileUpload
         private string type;
         private bool aborted;
         private string errorMessage;
+        private string extension;
         private Exception exception;
         #endregion
 
@@ -53,6 +55,17 @@ namespace DataJuggler.Blazor.FileUpload
             }
             #endregion
             
+            #region AppendPartialGuid
+            /// <summary>
+            /// This property gets or sets the value for 'AppendPartialGuid'.
+            /// </summary>
+            public bool AppendPartialGuid
+            {
+                get { return appendPartialGuid; }
+                set { appendPartialGuid = value; }
+            }
+            #endregion
+            
             #region ErrorMessage
             /// <summary>
             /// This property gets or sets the value for 'ErrorMessage'.
@@ -75,6 +88,31 @@ namespace DataJuggler.Blazor.FileUpload
             }
             #endregion
             
+            #region Extension
+            /// <summary>
+            /// This property gets or sets the value for 'Extension'.
+            /// </summary>
+            public string Extension
+            {
+                get { return extension; }
+                set { extension = value; }
+            }
+            #endregion
+
+            #region FullName
+            /// <summary>
+            /// This read only property returns the File Name plus the PartialGuid, if AppendPartialGuid is true.
+            /// </summary>
+            public string FullName
+            {
+                get
+                {
+                    // return value
+                    return NameWithPartialGuid;
+                }
+            }
+            #endregion
+            
             #region HasException
             /// <summary>
             /// This property returns true if this object has an 'Exception'.
@@ -88,6 +126,23 @@ namespace DataJuggler.Blazor.FileUpload
                     
                     // return value
                     return hasException;
+                }
+            }
+            #endregion
+            
+            #region HasPartialGuid
+            /// <summary>
+            /// This property returns true if the 'PartialGuid' exists.
+            /// </summary>
+            public bool HasPartialGuid
+            {
+                get
+                {
+                    // initial value
+                    bool hasPartialGuid = (!String.IsNullOrWhiteSpace(this.PartialGuid));
+                    
+                    // return value
+                    return hasPartialGuid;
                 }
             }
             #endregion
@@ -123,7 +178,14 @@ namespace DataJuggler.Blazor.FileUpload
                 get
                 {
                     // initial value
-                    string nameWithPartialGuid = Name + "." + PartialGuid;
+                    string nameWithPartialGuid = Name;
+                    
+                    // if the value for AppendPartialGuid is true
+                    if (AppendPartialGuid)
+                    {
+                        // Append the PartialGuid
+                        nameWithPartialGuid = Name + "." + PartialGuid;
+                    }
 
                     // return value
                     return nameWithPartialGuid;
