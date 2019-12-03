@@ -6,8 +6,9 @@
 <div class="fileuploader">
     <FileUpload CustomSuccessMessage="Your file uploaded successfully." OnChange="OnFileUploaded"
                 PartialGuidLength="10" MaxFileSize="4194304" FilterByExtension="true" AllowedExtensions=".jpg;.png;"
-                CustomExtensionMessage="Only .jpg and .png files are allowed."
-                FileTooLargeMessage="The file uploaded must be 4 megabytes or smaller."></FileUpload>
+                CustomExtensionMessage="Only .jpg and .png files are allowed." AppendPartialGuid="true"
+                FileTooLargeMessage="The file uploaded must be 4 megabytes or smaller.">
+    </FileUpload>
     @status
 </div>
 
@@ -28,7 +29,7 @@
         else
         {
             // get the status
-            status = "The file " + uploadedFileInfo.Name + " was uploaded.";
+            status = "The file " + uploadedFileInfo.FullName + " was uploaded.";
 
             // other information about the file is available
             DateTime lastModified = uploadedFileInfo.LastModified;

@@ -27,13 +27,14 @@ namespace DataJuggler.Blazor.FileUpload
         /// </summary>
         /// <param name="file"></param>
         /// <param name="partialGuid"></param>
-        public UploadedFileInfo(IFileListEntry file, string partialGuid)
+        public UploadedFileInfo(IFileListEntry file, string partialGuid, bool appendPartialGuid)
         {
             // verify both objects exist
             if ((file != null) && (!String.IsNullOrWhiteSpace(partialGuid)))
             {
                 // Set all the properties
                 this.LastModified = file.LastModified;
+                this.AppendPartialGuid = appendPartialGuid;
                 this.Name = file.Name;
                 this.PartialGuid = partialGuid;
                 this.Size = file.Size;
@@ -183,8 +184,8 @@ namespace DataJuggler.Blazor.FileUpload
                     // if the value for AppendPartialGuid is true
                     if (AppendPartialGuid)
                     {
-                        // Append the PartialGuid
-                        nameWithPartialGuid = Name + "." + PartialGuid;
+                        // set the return value
+                        nameWithPartialGuid = name.Substring(0, name.Length - extension.Length + 1) + partialGuid + extension;
                     }
 
                     // return value

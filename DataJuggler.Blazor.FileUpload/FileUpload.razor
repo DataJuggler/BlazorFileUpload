@@ -30,7 +30,7 @@
                 string partialGuid = Guid.NewGuid().ToString().Substring(0, PartialGuidLength);
 
                 // create the uploadedFileInfo
-                uploadedFileInfo = new UploadedFileInfo(file, partialGuid);
+                uploadedFileInfo = new UploadedFileInfo(file, partialGuid, AppendPartialGuid);
 
                 // if the file is too large
                 if ((MaxFileSize > 0) && (file.Size > MaxFileSize))
