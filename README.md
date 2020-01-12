@@ -59,8 +59,9 @@ font-size: 12px;
 Also in the wwwroot folder, create a new folder called Upload.
 That's it! You are ready to use BlazorFileUploader.
 
-# Update 1.12.2020: Documentation includes New Features for version 1.2.1:
-
+# Update 1.12.2020: Documentation
+Includes New Features for version 1.2.1.
+<br>
 # Parameters / Properties:
 
 # string AllowedExtensions - (Optional)
