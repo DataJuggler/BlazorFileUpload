@@ -1,4 +1,26 @@
-﻿/*
+﻿.button 
+{
+    display: inline-block;
+    margin-right: -8px;
+    margin-left: 0px;
+    margin-top: -8px;
+    border: none;
+    text-decoration: none;
+    font-family: Verdana;
+    font-size: 1.5em;
+    font-weight: 300;
+    color: white;
+    text-align: center;
+    transition: all 0.2s;
+    width: 120px;
+    height: 48px;
+    background-image: url('../images/blackbutton.jpg');
+    transform: scale(0.5);
+    transform-origin: left;    
+}
+
+
+/*
     This file is to show how CSS and other static resources (such as images) can be
     used from a library project/package.
 */

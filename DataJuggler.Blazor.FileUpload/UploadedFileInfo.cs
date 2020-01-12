@@ -8,6 +8,7 @@ namespace DataJuggler.Blazor.FileUpload
 {
     public class UploadedFileInfo
     {
+
         #region Private Variables
         private bool appendPartialGuid;
         private string partialGuid;
@@ -15,9 +16,14 @@ namespace DataJuggler.Blazor.FileUpload
         private string name;
         private long size;
         private string type;
+        private int height;
+        private int width;
         private bool aborted;
         private string errorMessage;
         private string extension;
+        private string uploadFolder;
+        private int customId;
+        private string tag;
         private Exception exception;
         #endregion
 
@@ -27,11 +33,14 @@ namespace DataJuggler.Blazor.FileUpload
         /// </summary>
         /// <param name="file"></param>
         /// <param name="partialGuid"></param>
-        public UploadedFileInfo(IFileListEntry file, string partialGuid, bool appendPartialGuid)
+        public UploadedFileInfo(IFileListEntry file, string partialGuid, bool appendPartialGuid, string uploadFolder)
         {
             // verify both objects exist
             if ((file != null) && (!String.IsNullOrWhiteSpace(partialGuid)))
             {
+                // store the arg
+                UploadFolder = uploadFolder;
+
                 // Set all the properties
                 this.LastModified = file.LastModified;
                 this.AppendPartialGuid = appendPartialGuid;
@@ -64,6 +73,20 @@ namespace DataJuggler.Blazor.FileUpload
             {
                 get { return appendPartialGuid; }
                 set { appendPartialGuid = value; }
+            }
+            #endregion
+            
+            #region CustomId
+            /// <summary>
+            /// This property gets or sets the value for RequireCustomIddSizeMessage.
+            /// Optional. This property can be used to set information such as databaseId, parentId,
+            /// categoryId or some other external classification. This value will lbe returned with
+            /// this class if included in the FileUpload component.
+            /// </summary>
+            public int CustomId
+            {
+                get { return customId; }
+                set { customId = value; }
             }
             #endregion
             
@@ -113,6 +136,20 @@ namespace DataJuggler.Blazor.FileUpload
                 }
             }
             #endregion
+
+            #region FullPath
+            /// <summary>
+            /// This read only property returns the File Name plus the PartialGuid, if AppendPartialGuid is true.
+            /// </summary>
+            public string FullPath
+            {
+                get
+                {
+                    // return value
+                    return Path.Combine(UploadFolder, FullName);
+                }
+            }
+            #endregion
             
             #region HasException
             /// <summary>
@@ -145,6 +182,18 @@ namespace DataJuggler.Blazor.FileUpload
                     // return value
                     return hasPartialGuid;
                 }
+            }
+            #endregion
+            
+            #region Height
+            /// <summary>
+            /// This property gets or sets the value for 'Height'.
+            /// This property is only available for .jpg and .png files for now.
+            /// </summary>
+            public int Height
+            {
+                get { return height; }
+                set { height = value; }
             }
             #endregion
             
@@ -216,6 +265,17 @@ namespace DataJuggler.Blazor.FileUpload
             }
             #endregion
             
+            #region Tag
+            /// This property gets or sets the value for Tag.
+            /// If set on the FileUpload control, this property can be used to pass information to help
+            /// name or classify uploaded files. 
+            public string Tag
+            {
+                get { return tag; }
+                set { tag = value; }
+            }
+            #endregion
+            
             #region Type
             /// <summary>
             /// This property gets or sets the value for 'Type'.
@@ -224,6 +284,29 @@ namespace DataJuggler.Blazor.FileUpload
             {
                 get { return type; }
                 set { type = value; }
+            }
+            #endregion
+            
+            #region UploadFolder
+            /// <summary>
+            /// This property gets or sets the value for 'UploadFolder'.
+            /// </summary>
+            public string UploadFolder
+            {
+                get { return uploadFolder; }
+                set { uploadFolder = value; }
+            }
+            #endregion
+            
+            #region Width
+            /// <summary>
+            /// This property gets or sets the value for 'Width'.
+            /// This property is only available for .jpg and .png files for now.
+            /// </summary>
+            public int Width
+            {
+                get { return width; }
+                set { width = value; }
             }
             #endregion
             

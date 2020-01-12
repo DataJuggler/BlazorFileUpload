@@ -6,23 +6,71 @@
     <Authors>DataJuggler</Authors>
     <Description>This package is built upon BlazorInputFile by Steve Sanderson at Microsoft. https://github.com/SteveSandersonMS/BlazorInputFile
 
-All I did was wrap in it a component to make it easy to use in a Blazor app.</Description>
-    <PackageReleaseNotes>
-      Update 1.0.10-Preview: A couple of Microsoft Components that are still in preview were updated.
+All I did was wrap in it a component to make it easy to use in a Blazor app.
 
-      Update 1.0.9-Preview: I added two new properties for FilterByExtension, and AllowedExtensions.
+Version 1.2.0+ has new features that are untested involving image required, min and max height and width values, so use with caution.
+
+I have tested it enough it works for my use cases. Most of the problems I have read about the control involve over 20 meg and multiple file uploads.</Description>
+    <PackageReleaseNotes>New Features for version 1.2.0:
+I added a method 'IsImageFile', that for now returns true if the extions is .png or .jpg's only.
+This method is used in conjunction with the following new parameters:
+
+1. RequiredHeight &amp; RequiredWidth, which if set means the uploaded file must exactly match
+on height and width, else the CustomRequiredSizeMessage is shown. The CustomRequiredSizeMessage
+must be set for this validation to take effect.
+
+2. MinHeight &amp; MinWidth, which if set means the uploaded file must be at least this many pixels
+on height and width, else the CustomMinSizeMessage is shown. The CustomMinSizeMessage 
+must be set for this validation to take effect.
+
+3. MaxHeight &amp; MaxWidth, which if set means the uploaded file must be less than this many pixels
+on height and width, else the CustomMaxSizeMessage is shown. The CustomMaxSizeMessage 
+must be set for this validation to take effect.
+
+4. The Status property is now a public [Parameter], so you can set a variable to Status and set it from 
+outside the component.
+
+5. Two new custom [Parameters] were added for int CustomId and string Tag. These values are set
+on the FileUploadComponent as parameters, which can help to classify or store informaiton about 
+the uploaded file. These values are returned with UploadedFileInfo.
+
+6. The code was moved to a partial class, which makes it easier to work on.
+
+All this new code is untested, so please use with caution and report any problems, and feel free to report if 
+something works also. 
+
+
+A new Image Gallery sample and video is in the works, but I needed to upload a new version for testing first.
+
+New features for version 1.1.0:
+
+There is a new required parameter called UploadFolder for the constructor of the class UploadFileInfo.
+
+A request came in for returning the FullPath as a property of the class UploadFileInfo, so I added the constructor to make sure the Upload Folder is also available.
+
+The read only property FullPath is also new, and it returns the full file path on Disc using Path.Combine(UploadFolder, FullName);
+
+I am building a new image gallery sample, and will post a video on YouTube later today if I can finish it.
+Please visit my YouTube channel and subscribe if you haven't already.
+
+https://www.youtube.com/channel/UCaw0joqvisKr3lYJ9Pd2vHA
+
+
+Update 1.0.10-Preview: A couple of Microsoft Components that are still in preview were updated.
+
+Update 1.0.9-Preview: I added two new properties for FilterByExtension, and AllowedExtensions.
       If FilterByExtension is true, the uploaded file's extension must be in the AllowedExtensions string.
       Example: .jpg;.png; (the delimiter really doesn't matter as the compare is a contains operator).
 
 
 
-      Update 1.0.8-Preview: When I added the check for if file.Size is greater than MaxFileSize, I forgot to check if MaxFileSize is set (greater than zero).
+Update 1.0.8-Preview: When I added the check for if file.Size is greater than MaxFileSize, I forgot to check if MaxFileSize is set (greater than zero).
 
-      Update 1.0.7-Preview: I added a couple of new properties for MaxFileSize and a FileTooLargeMessage to enable you to change the default message of 'The file uploaded is too large' if you want to do so.
+Update 1.0.7-Preview: I added a couple of new properties for MaxFileSize and a FileTooLargeMessage to enable you to change the default message of 'The file uploaded is too large' if you want to do so.
 
       I also added an Aborted property, so the client gets a signal that the upload was aborted, and the Exception is returned that might help with debugging / client validation.
 
-      Update 1.0.6-Preview: I decided to return more information about the file instead of just the name to make it actually useful.
+Update 1.0.6-Preview: I decided to return more information about the file instead of just the name to make it actually useful.
 
       I also broke the FileUploaded method, but now is the time to break it before anyone starts using it. Now I return an object called UploadedFileInfo, with 6 properties.
       1. string Name
@@ -41,18 +89,23 @@ All I did was wrap in it a component to make it easy to use in a Blazor app.</De
       When leaving it as the default value, the filename uploaded is named (filename.extension).partialguidstring
       Example: JohnSmithResume.doc.sxlasdfclaej
 
-    </PackageReleaseNotes>
+</PackageReleaseNotes>
     <PackageTags>C#, Blazor, FileUpload, BlazorFileUpload</PackageTags>
     <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
-    <Version>1.0.12-Preview</Version>
+    <Version>1.2.1</Version>
     <PackageLicenseFile>LICENSE</PackageLicenseFile>
     <PackageProjectUrl>https://github.com/DataJuggler/BlazorFileUpload</PackageProjectUrl>
+    <PackageIcon>BlazorFileUploadIcon.png</PackageIcon>
+    <PackageIconUrl />
+    <RepositoryUrl>https://github.com/DataJuggler/BlazorFileUpload.git</RepositoryUrl>
+    <RepositoryType>Git - GitHub</RepositoryType>
   </PropertyGroup>
 
 
   <ItemGroup>
     <PackageReference Include="Microsoft.AspNetCore.Components" Version="3.1.0" />
     <PackageReference Include="Microsoft.AspNetCore.Components.Web" Version="3.1.0" />
+    <PackageReference Include="System.Drawing.Common" Version="4.7.0" />
   </ItemGroup>
 
 
@@ -66,6 +119,15 @@ All I did was wrap in it a component to make it easy to use in a Blazor app.</De
       <Pack>True</Pack>
       <PackagePath></PackagePath>
     </None>
+    <None Include="BlazorFileUploadIcon.png">
+      <Pack>True</Pack>
+      <PackagePath></PackagePath>
+    </None>
+  </ItemGroup>
+
+
+  <ItemGroup>
+    <Folder Include="wwwroot\Images\" />
   </ItemGroup>
 
 </Project>
