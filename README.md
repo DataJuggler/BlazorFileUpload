@@ -90,7 +90,7 @@ This property allows you to set a value such as a databaseId, parentId, category
 This value is returned with UploadFileInfo after the file is uploaded, if set.
 Example: CustomId="@SelectedPlayerId" (where @SelectedPlayerId is a variable available to the current scope).
 
-# CustomMaxHeightMessage (Optional)
+# string CustomMaxHeightMessage (Optional)
 This property allows you to set a message to handle uploaded image files that are larger than the bounds you specified in MaxHeight.
 This applies only to Image files that .png and .jpg extensions for now. Contact me if that is an issue for you.
 The MaxHeight value and CustomMaxHeightMessage must be both be set for this validation to work.
@@ -98,7 +98,7 @@ The upload is aborted if both of these values are set, and the system can determ
 This is new code and untested, please report the good, the bad and the ugly.
 Example: CustomMaxHeightMessage="The image uploaded exceeds the maximum height of 960 pixels.".
 
-# CustomMinHeightMessage (Optional)
+# string CustomMinHeightMessage (Optional)
 This property allows you to set a message to handle uploaded image files that are smaller than the bounds you specified in MinHeight.
 This applies only to Image files that .png and .jpg extensions for now. Contact me if that is an issue for you.
 The MixHeight value and CustomMixHeightMessage must be both be set for this validation to work.
@@ -106,14 +106,55 @@ The upload is aborted if both of these values are set, and the system can determ
 This is new code and untested, please report the good, the bad and the ugly.
 Example: CustomMinHeightMessage="The image uploaded must have a height of atleast 640 pixels".
 
-# CustomRequiredSizeMessage
+# string CustomRequiredSizeMessage (Optional)
 This property allows you to specify a message to handle uploaded image files that must be EXACTLY the bound you specifie in 
 RequiredHeight and RequiredWidth. This applies only to Image files that .png and .jpg extensions for now. Contact me if that is an issue for you. The MixHeight value and CustomMixHeightMessage must be both be set for this validation to work.
 The upload is aborted if either validation fails for RequiredHeight or RequiredWidth, and if this message is set, and the system can determine that the height and / or widht is different than the required value you specified.
 This is new code and untested, please report the good, the bad and the ugly.
 Example: CustomMinHeightMessage="The image uploaded must have a height of atleast 640 pixels".
 
-# More To Come, This Is A Work In Progress
+# string CustomSuccessMessage (Optional)
+This property gets or sets the value for CustomSuccessMessage.
+Example: CustomSuccessMessage = 'Congratulations, your file has been uploaded and is being processed.'
+
+# string FileTooLargeMessage
+This property gets or sets the value for FileTooLargeMessage.
+This property is used in conjuction with the MaxFileSize property.
+Example: 'Files must be 4 megabytes or smaller.'
+
+# bool FilterByExtension
+ This property gets or sets the value for FilterByExtension.
+ If true, only files with a matching extension will be allowed.
+ Example: FilterByExtension="true"
+ 
+ # bool HasCustomMaxHeightMessage
+ This read only property returns true if this object has a 'CustomMaxHeightMessage' set.
+  
+  # bool HasCustomMinHeightMessage
+  This read only property returns true if this object has a 'CustomMinHeightMessage' set.
+  
+  # bool HasCustomRequiredSizeMessage
+  This read only property returns true if this object has a 'CustomRequiredSizeMessage' set.
+  
+  # bool HasMaxHeight
+  This read only property returns true if this object has a 'MaxHeight' value set.
+  
+  # bool HasMaxWidth
+  This read only property returns true if this object has a 'MaxWidth' value set.
+  
+  # bool HasMinHeight
+  This read only property returns true if this object has a 'MinHeight' value set.
+  
+  # bool HasMinWidth
+  This read only property returns true if this object has a 'MinWidth' value set.
+  
+  # bool HasRequiredHeight
+  This read only property returns true if this object has a 'RequiredHeight' value set.
+  
+  # bool HasRequiredWidth
+  This read only property returns true if this object has a 'RequiredWidth' value set.
+
+# More To Come, This Documentation Is A Work In Progress
 
 If you like this project, please subscribe to my YouTube channel:
 
