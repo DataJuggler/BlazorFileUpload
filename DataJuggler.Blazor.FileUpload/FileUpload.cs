@@ -241,6 +241,9 @@ namespace DataJuggler.Blazor.FileUpload
                                 // Set additional properties for UploadFileInfo from this component; these values may be null.
                                 uploadedFileInfo.CustomId = CustomId;
                                 uploadedFileInfo.Tag = Tag;
+
+                                // The upload has completed
+                                UploadComplete = true;
                             }
                             else
                             {
@@ -287,7 +290,7 @@ namespace DataJuggler.Blazor.FileUpload
                     finally
                     {
                         // Notify the caller the upload was successful or aborted due to an error 
-                        FileUploaded(uploadedFileInfo);
+                        FileUploaded(uploadedFileInfo);                        
                     }
                 }
             }
@@ -402,6 +405,17 @@ namespace DataJuggler.Blazor.FileUpload
             public string CustomMaxHeightMessage { get; set; }
             #endregion
 
+            #region CustomMaxWidthMessage
+            /// <summary>
+            /// This property gets or sets the value for CustomMaxWidthMessage.
+            /// If an uploaded file is a .png or .jpg file and the file exceeds MaxWidth pixels, the StatusMessage
+            /// will be set to CustomMaxWidthMessage. You must set CustomMaxWidthMessage and MaxWidth for this
+            /// validation to work.
+            /// </summary>
+            [Parameter]
+            public string CustomMaxWidthMessage { get; set; }
+            #endregion
+
             #region CustomMinHeightMessage
             /// <summary>
             /// This property gets or sets the value for CustomMinHeightMessage.
@@ -411,6 +425,17 @@ namespace DataJuggler.Blazor.FileUpload
             /// </summary>
             [Parameter]
             public string CustomMinHeightMessage { get; set; }
+            #endregion
+
+            #region CustomMinWidthMessage
+            /// <summary>
+            /// This property gets or sets the value for CustomMinWidthMessage.
+            /// If an uploaded file is a .png or .jpg file and the file.Width is lower than MinWidth, the StatusMessage
+            /// will be set to CustomMinWidthMessage. You must set CustomMinWidthMessage and MinWidth for this
+            /// validation to work.
+            /// </summary>
+            [Parameter]
+            public string CustomMinWidthMessage { get; set; }
             #endregion
 
             #region CustomRequiredSizeMessage
@@ -453,7 +478,7 @@ namespace DataJuggler.Blazor.FileUpload
             
             #region HasCustomMaxHeightMessage
             /// <summary>
-            /// This property returns true if this object has a 'CustomMaxHeightMessage'.
+            /// This property returns true if this object has a 'CustomMaxHeightMessage' set.
             /// </summary>
             public bool HasCustomMaxHeightMessage
             {
@@ -464,6 +489,23 @@ namespace DataJuggler.Blazor.FileUpload
                     
                     // return value
                     return hasCustomMaxHeightMessage;
+                }
+            }
+            #endregion
+
+            #region HasCustomMaxWidthMessage
+            /// <summary>
+            /// This property returns true if this object has a 'CustomMaxWidthMessage'.
+            /// </summary>
+            public bool HasCustomMaxWidthMessage
+            {
+                get
+                {
+                    // initial value
+                    bool hasCustomMaxWidthMessage = (!String.IsNullOrEmpty(CustomMaxWidthMessage));
+                    
+                    // return value
+                    return hasCustomMaxWidthMessage;
                 }
             }
             #endregion
@@ -481,6 +523,23 @@ namespace DataJuggler.Blazor.FileUpload
                     
                     // return value
                     return hasCustomMinHeightMessage;
+                }
+            }
+            #endregion
+            
+            #region HasCustomMinWidthMessage
+            /// <summary>
+            /// This property returns true if this object has a 'CustomMinWidthMessage'.
+            /// </summary>
+            public bool HasCustomMinWidthMessage
+            {
+                get
+                {
+                    // initial value
+                    bool hasCustomMinWidthMessage = (!String.IsNullOrEmpty(CustomMinWidthMessage));
+                    
+                    // return value
+                    return hasCustomMinWidthMessage;
                 }
             }
             #endregion
