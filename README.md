@@ -123,38 +123,41 @@ This property is used in conjuction with the MaxFileSize property.
 Example: 'Files must be 4 megabytes or smaller.'
 
 # bool FilterByExtension
- This property gets or sets the value for FilterByExtension.
- If true, only files with a matching extension will be allowed.
- Example: FilterByExtension="true"
- 
- # bool HasCustomMaxHeightMessage
- This read only property returns true if this object has a 'CustomMaxHeightMessage' set.
-  
-  # bool HasCustomMinHeightMessage
-  This read only property returns true if this object has a 'CustomMinHeightMessage' set.
-  
-  # bool HasCustomRequiredSizeMessage
-  This read only property returns true if this object has a 'CustomRequiredSizeMessage' set.
-  
-  # bool HasMaxHeight
-  This read only property returns true if this object has a 'MaxHeight' value set.
-  
-  # bool HasMaxWidth
-  This read only property returns true if this object has a 'MaxWidth' value set.
-  
-  # bool HasMinHeight
-  This read only property returns true if this object has a 'MinHeight' value set.
-  
-  # bool HasMinWidth
-  This read only property returns true if this object has a 'MinWidth' value set.
-  
-  # bool HasRequiredHeight
-  This read only property returns true if this object has a 'RequiredHeight' value set.
-  
-  # bool HasRequiredWidth
-  This read only property returns true if this object has a 'RequiredWidth' value set.
+This property gets or sets the value for FilterByExtension.
+If true, only files with a matching extension will be allowed.
+Example: FilterByExtension="true"
 
-# More To Come, This Documentation Is A Work In Progress
+# bool HasCustomMaxHeightMessage
+This read only property returns true if this object has a 'CustomMaxHeightMessage' set.
+  
+# bool HasCustomMinHeightMessage
+This read only property returns true if this object has a 'CustomMinHeightMessage' set.
+  
+# bool HasCustomRequiredSizeMessage
+This read only property returns true if this object has a 'CustomRequiredSizeMessage' set.
+  
+# bool HasMaxHeight
+This read only property returns true if this object has a 'MaxHeight' value set.
+  
+# bool HasMaxWidth
+This read only property returns true if this object has a 'MaxWidth' value set.
+  
+# bool HasMinHeight
+This read only property returns true if this object has a 'MinHeight' value set.
+  
+# bool HasMinWidth
+This read only property returns true if this object has a 'MinWidth' value set.
+  
+# bool HasRequiredHeight
+This read only property returns true if this object has a 'RequiredHeight' value set.
+  
+# bool HasRequiredWidth
+This read only property returns true if this object has a 'RequiredWidth' value set.
+
+# bool HasStatus
+This read only property returns true if this object has a 'Status' value set.
+  
+# More To Come, Done with the H's. This Documentation Is A Work In Progress
 
 If you like this project, please subscribe to my YouTube channel:
 
