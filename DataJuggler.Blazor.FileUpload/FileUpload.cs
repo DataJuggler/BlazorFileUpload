@@ -29,6 +29,7 @@ namespace DataJuggler.Blazor.FileUpload
         #region Private Variables
         private string status;
         private bool uploadComplete;
+        private string buttonText;
         #endregion
 
         #region Methods
@@ -320,6 +321,25 @@ namespace DataJuggler.Blazor.FileUpload
                 return isImageFile;
             }
             #endregion
+
+            #region ResetFinished()
+            /// <summary>
+            /// This event is fired after a file is uploaded, and is used to notify subscribers of the OnChange event.
+            /// </summary>
+            private void ResetFinished()
+            {  
+                try
+                {
+                    // Notify the client the Reset button was clicked.
+                    OnReset.InvokeAsync("Reset");
+                }
+                catch (Exception error)
+                {
+                    // for debugging only
+                    string err = error.ToString();
+                }                
+            }
+            #endregion
             
             #region Reset()
             /// <summary>
@@ -330,6 +350,12 @@ namespace DataJuggler.Blazor.FileUpload
                 // Erase all messages
                 Status = "";
                 UploadComplete = false;
+                
+                // Notify any subscribers to this event
+                ResetFinished();
+
+                // Update the UI
+                StateHasChanged();
             }
             #endregion
             
@@ -363,6 +389,17 @@ namespace DataJuggler.Blazor.FileUpload
             /// </summary>
             [Parameter]
             public string ButtonClassName { get; set; } = "button";
+            #endregion
+            
+            #region ButtonText
+            /// <summary>
+            /// This property gets or sets the value for 'ButtonText'.
+            /// </summary>
+            public string ButtonText
+            {
+                get { return buttonText; }
+                set { buttonText = value; }
+            }
             #endregion
             
             #region CustomErrorMessage
@@ -736,6 +773,15 @@ namespace DataJuggler.Blazor.FileUpload
             /// The parameter UploadFileInfo contains information about the uploaded file.
             /// </summary>
             [Parameter] public EventCallback<UploadedFileInfo> OnChange { get; set; }
+            #endregion
+
+            #region OnReset
+            /// <summary>
+            /// This property gets or sets the value for OnReset.
+            /// This event will get called after the user clicks the Reset button.
+            /// This is needed so clients can reset or adjust the UI when the Reset button is clicked.
+            /// </summary>
+            [Parameter] public EventCallback<string> OnReset { get; set; }
             #endregion
             
             #region PartialGuidLength

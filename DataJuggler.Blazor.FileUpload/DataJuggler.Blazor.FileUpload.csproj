@@ -11,7 +11,16 @@ All I did was wrap in it a component to make it easy to use in a Blazor app.
 Version 1.2.0+ has new features that are untested involving image required, min and max height and width values, so use with caution.
 
 I have tested it enough it works for my use cases. Most of the problems I have read about the control involve over 20 meg and multiple file uploads.</Description>
-    <PackageReleaseNotes>Fix for version 1.2.4: I typed 1.3.3 for the fix for version 1.2.3. Sorry, I can type but my vision is not very good.
+    <PackageReleaseNotes>Version 1.2.6: Apparently my 1.2.5 OnReset method isn't working, so I added a string parameter to the event
+declaration. I actually tested it this time, and it seems to work with a project reference, so it should work now.
+
+Version 1.2.5: I added an OnReset event / parameter property so that when the new Reset button is clicked,
+subscribers to the event can be notified that the UI has been reset.
+
+Possible use cases include a displayed image or attachment might need to be removed when the Reset button
+is clicked.
+
+Fix for version 1.2.4: I typed 1.3.3 for the fix for version 1.2.3. Sorry, I can type but my vision is not very good.
 
 Fix for version 1.2.3: I created the new property UploadComplete, but I wasn't setting it to true after a
 file was uploaded.
@@ -100,7 +109,7 @@ Update 1.0.6-Preview: I decided to return more information about the file instea
 </PackageReleaseNotes>
     <PackageTags>C#, Blazor, FileUpload, BlazorFileUpload</PackageTags>
     <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
-    <Version>1.2.4</Version>
+    <Version>1.2.6</Version>
     <PackageLicenseFile>LICENSE</PackageLicenseFile>
     <PackageProjectUrl>https://github.com/DataJuggler/BlazorFileUpload</PackageProjectUrl>
     <PackageIcon>BlazorFileUploadIcon.png</PackageIcon>

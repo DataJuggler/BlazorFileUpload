@@ -7,8 +7,7 @@
     border: none;
     text-decoration: none;
     font-family: Verdana;
-    font-size: 1.5em;
-    font-weight: 300;
+    font-size: 16px;
     color: white;
     text-align: center;
     transition: all 0.2s;
@@ -18,7 +17,6 @@
     transform: scale(0.5);
     transform-origin: left;    
 }
-
 
 /*
     This file is to show how CSS and other static resources (such as images) can be
