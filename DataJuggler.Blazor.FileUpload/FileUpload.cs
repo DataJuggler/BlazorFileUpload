@@ -32,6 +32,16 @@ namespace DataJuggler.Blazor.FileUpload
         private string buttonText;
         #endregion
 
+        #region FileUpload()
+        /// <summary>
+        /// Create a new instance of a FileUpload
+        /// </summary>
+        public FileUpload()
+        {
+            
+        }
+        #endregion
+
         #region Methods
 
             #region CheckSize(string extension, MemoryStream ms, UploadedFileInfo uploadedFileInfo)

@@ -7,6 +7,7 @@
     <FileUpload CustomSuccessMessage="Your file uploaded successfully." OnChange="OnFileUploaded"
                 PartialGuidLength="10" MaxFileSize="4194304" FilterByExtension="true" 
                 AllowedExtensions=".jpg;.png;" ShowResetButton="true" OnReset="OnReset"
+                ButtonClassName="button"
                 CustomExtensionMessage="Only .jpg and .png files are allowed." AppendPartialGuid="true"                
                 FileTooLargeMessage="The file uploaded must be 4 megabytes or smaller.">
     </FileUpload>
@@ -15,6 +16,7 @@
         <span class="buttonwide height48"><span class="movedown8 fontverdana20">Choose File</span></span>
     }
 </label>
+
 
 @status
 
@@ -59,6 +61,9 @@
     /// <param name="notUsedByRequiredArg"></param>
     private void OnReset(string notUsedByRequiredArg)
     {
+        // erase status
+        status = "";
+
         // toggle to true
         showUploadButton = true;
 
