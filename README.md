@@ -43,9 +43,20 @@ Replace the existing text in Index.razor with the code below:
     // display the filename after upload
     string status;
 
-    private void OnFileUploaded(string fileName)
-    {
-        status = "The file " + fileName + " was uploaded.";
+    private void OnFileUploaded(UploadFileInfo uploadFileInfo)
+    {   
+         // get the status
+         status = "The file " + uploadedFileInfo.FullName + " was uploaded.";
+
+         // showUploadButton is now false until the Reset button is clicked.
+         showUploadButton = false;
+         
+          // other information about the file is available
+          //DateTime lastModified = uploadedFileInfo.LastModified;
+          //string nameAsItIsOnDisk = uploadedFileInfo.NameWithPartialGuid;
+          //string partialGuid = uploadedFileInfo.PartialGuid;
+          //long size = uploadedFileInfo.Size;
+          //string type = uploadedFileInfo.Type;
     }
 }
 
