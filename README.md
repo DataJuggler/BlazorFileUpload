@@ -80,6 +80,8 @@ This optional parameter is a semicolon delimited list of extensions that If set,
 This is used in conjunction with the CustomExtensionMessage.
 Example: AllowedExtensions=".jpg;.png;"
 
+Note: The AllowedExtensions is a filter for after the file has uploaded, the extension is checked and if the extension is not included the upload is aborted. This does not filter the file dialog browser.
+
 # bool AppendPartialGuid - Default Value = true
 If true, the file name of the uploaded file will be changed to include some random characters to ensure uniqueness in case
 a user or users uploads two files with the same name.
@@ -202,6 +204,23 @@ Example: MinWidth="640"
 This property gets or sets the delegate that will be called after a file is uploaded.
 This method returns an UploadFileInfo object which contains information about the file that was uploaded.
 Example: OnChange="OnFileUploaded"
+
+# OnReset (Optional)
+This property gets or sets the delegate that will be called after the Reset button is clicked.
+This can be used to change a displayed image or any other UI changes needed after a file is removed.
+Example: OnReset="MyOnResetMethod"
+
+    private void MyOnResetMethod(string notUsedButRequiredArg)
+    {
+        // erase status
+        status = "";
+
+        // toggle to true
+        showUploadButton = true;
+
+        // Refresh the UI
+        StateHasChanged();
+    }
 
 # PartialGuidLength
 This property specifies how many characters of a PartialGuid will be added to ensure uniqueness.
