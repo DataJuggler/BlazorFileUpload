@@ -1,22 +1,31 @@
 ﻿@page "/"
 @using DataJuggler.Blazor.FileUpload
 
-<h3>File Upload Test</h3>
+<h3>Sample 1 - Standard Input File Button</h3>
 
-<label class="custom-file-upload">
+<div>
     <FileUpload CustomSuccessMessage="Your file uploaded successfully." OnChange="OnFileUploaded"
-                PartialGuidLength="10" MaxFileSize="4194304" FilterByExtension="true" 
-                AllowedExtensions=".jpg;.png;" ShowResetButton="true" OnReset="OnReset"
-                ButtonClassName="button"
-                CustomExtensionMessage="Only .jpg and .png files are allowed." AppendPartialGuid="true"                
-                FileTooLargeMessage="The file uploaded must be 4 megabytes or smaller.">
+        ShowStatus="false"  PartialGuidLength="10" MaxFileSize="4194304" FilterByExtension="true"
+        AllowedExtensions=".jpg;.png;" ShowResetButton="true" OnReset="OnReset" 
+        CustomExtensionMessage="Only .jpg and .png files are allowed." AppendPartialGuid="true"                
+        FileTooLargeMessage="The file uploaded must be 4 megabytes or smaller.">
     </FileUpload>
-    @if (showUploadButton)
-    {
-        <span class="buttonwide height48"><span class="movedown8 fontverdana20">Choose File</span></span>
-    }
-</label>
+</div>
 
+<div class="height48"></div>
+
+<h3>Sample 2 - Default Custom Button</h3>
+
+<div>
+    <FileUpload CustomSuccessMessage="Your file uploaded successfully." OnChange="OnFileUploaded"
+        ShowStatus="false"  PartialGuidLength="10" MaxFileSize="4194304" FilterByExtension="true" 
+        ShowCustomButton="true" ButtonText="Select File" ButtonClassName="buttonwide"
+        AllowedExtensions=".jpg;.png;" ShowResetButton="true" OnReset="OnReset"
+        InputFileClassName="customfileupload"
+        CustomExtensionMessage="Only .jpg and .png files are allowed." AppendPartialGuid="true"                
+        FileTooLargeMessage="The file uploaded must be 4 megabytes or smaller.">
+    </FileUpload>
+</div>
 
 @status
 
@@ -55,7 +64,7 @@
     }
 
     /// <summary>
-    /// THis method is used to get a notification from the FileUpload component after
+    /// This method is used to get a notification from the FileUpload component after
     /// the Reset button is clicked.
     /// </summary>
     /// <param name="notUsedByRequiredArg"></param>

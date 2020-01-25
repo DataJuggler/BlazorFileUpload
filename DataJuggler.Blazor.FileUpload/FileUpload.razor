@@ -2,9 +2,21 @@
 
 @if (!uploadComplete)
 {  
-    <div class="my-component">
-        <InputFile OnChange="HandleSelection" />
-    </div>
+    @if (ShowCustomButton)
+    {
+        <label>
+            <InputFile InputFileClassName="@InputFileClassName" OnChange="HandleSelection" />
+             <span class="@CustomButtonClassName">
+                <span class="@CustomButtonTextClassName">@ButtonText</span>
+            </span>
+        </label>
+    }
+    else
+    {
+        <div class="inputfilecontainer">
+            <InputFile InputFileClassName="@InputFileClassName" OnChange="HandleSelection" />
+        </div>    
+    }
 }
 else if (ShowResetButton)
 {
@@ -13,6 +25,6 @@ else if (ShowResetButton)
 
 @if ((ShowStatus) && (HasStatus))
 {
-    <p>@status</p>
+    <p class="@MessageClassName">@status</p>
 }
 

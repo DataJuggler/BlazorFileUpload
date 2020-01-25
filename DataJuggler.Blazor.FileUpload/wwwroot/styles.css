@@ -13,9 +13,86 @@
     transition: all 0.2s;
     width: 120px;
     height: 48px;
-    background-image: url('../images/blackbutton.jpg');
+    background-image: url('images/buttons/blackbutton.jpg');
     transform: scale(0.5);
     transform-origin: left;    
+}
+.buttonwide
+{
+    display: inline-block;
+    border: none;
+    text-decoration: none;
+    cursor: pointer;
+    font-family: Verdana;
+    font-size: 20px;
+    font-weight: 300;
+    color: white;
+    text-align: center;
+    transition: all 0.2s;
+    width: 160px;
+    height: 48px;
+    background-image: url('Images/buttons/BlackButtonWide.jpg');
+    transform: scale(0.5);
+    transform-origin: left;    
+}
+.custombuttontextstyle
+{
+    position: relative;
+    top: 8px;
+    font-family: Verdana;
+    font-size: 20px;
+}
+.customfileupload
+{  
+    display: inline-block;
+    cursor: pointer;
+    height:48px;
+    min-height: 48px;
+    visibility: hidden;
+    position: fixed;
+    left: 0px;
+    top: 0px;
+}
+.fileupload
+{
+    font-family: Verdana;
+    font-size: 12px;
+    cursor: pointer;
+    margin-bottom: 8px;
+    width: 80px;
+    visibility: visible;
+}
+.fontverdana20
+{
+    font-family: Verdana;
+    font-size: 20px;
+    color: white;
+    text-align: center;
+}
+.height48
+{
+    height: 48px;
+    min-height: 48px;
+    max-height: 48px;
+}
+.inputfile
+{
+    font-family: Verdana;
+    font-size: 12px;
+    margin-bottom: 8px;
+    cursor: pointer;
+    display: inline-block;
+}
+.inputfilecontainer
+{
+    cursor: pointer;
+}
+.message
+{
+    font-family: Verdana;
+    font-size: 12px;
+    color: black;
+    width: 100%;
 }
 
 /*
@@ -28,4 +105,9 @@
     padding: 1em;
     margin: 1em 0;
     background-image: url('background.png');
+}
+
+input[type=file], /* FF, IE7+, chrome (except button) */
+input[type=file]::-webkit-file-upload-button { /* chromes and blink button */
+    cursor: pointer; 
 }

@@ -30,6 +30,11 @@ namespace DataJuggler.Blazor.FileUpload
         private string status;
         private bool uploadComplete;
         private string buttonText;
+        private string inputFileClassName;
+        private string messageClassName;
+        private bool showCustomButton;
+        private string customButtonClassName;
+        private string customButtonTextClassName;
         #endregion
 
         #region FileUpload()
@@ -38,7 +43,8 @@ namespace DataJuggler.Blazor.FileUpload
         /// </summary>
         public FileUpload()
         {
-            
+            // Perform initializations for this object
+            Init();
         }
         #endregion
 
@@ -307,6 +313,21 @@ namespace DataJuggler.Blazor.FileUpload
             }
             #endregion
             
+            #region Init()
+            /// <summary>
+            /// This method performs initializations for this object.
+            /// </summary>
+            public void Init()
+            {
+                // Set the Default Values
+                MessageClassName = "message";
+                InputFileClassName = "inputfile";
+                CustomButtonClassName = "buttonwide";
+                ButtonText = "Choose File";
+                CustomButtonTextClassName = "custombuttontextstyle";
+            }
+            #endregion
+            
             #region IsImageFile(string extensions)
             /// <summary>
             /// This method returns true if the extension is an Image File (.jpg or .png for now)
@@ -405,10 +426,34 @@ namespace DataJuggler.Blazor.FileUpload
             /// <summary>
             /// This property gets or sets the value for 'ButtonText'.
             /// </summary>
+            [Parameter]
             public string ButtonText
             {
                 get { return buttonText; }
                 set { buttonText = value; }
+            }
+            #endregion
+            
+            #region CustomButtonClassName
+            /// <summary>
+            /// This property gets or sets the value for 'CustomButtonClassName'.
+            /// </summary>
+            public string CustomButtonClassName
+            {
+                get { return customButtonClassName; }
+                set { customButtonClassName = value; }
+            }
+            #endregion
+            
+            #region CustomButtonTextClassName
+            /// <summary>
+            /// This property gets or sets the value for 'CustomButtonTextClassName'.
+            /// </summary>
+            [Parameter]
+            public string CustomButtonTextClassName
+            {
+                get { return customButtonTextClassName; }
+                set { customButtonTextClassName = value; }
             }
             #endregion
             
@@ -727,6 +772,18 @@ namespace DataJuggler.Blazor.FileUpload
             }
             #endregion
 
+            #region InputFileClassName
+            /// <summary>
+            /// This property gets or sets the value for 'InputFileClassName'.
+            /// </summary>
+            [Parameter]
+            public string InputFileClassName
+            {
+                get { return inputFileClassName; }
+                set { inputFileClassName = value; }
+            }
+            #endregion
+            
             #region MaxFileSize
             /// <summary>
             /// This property gets or sets the value for MaxFileSize.
@@ -756,6 +813,18 @@ namespace DataJuggler.Blazor.FileUpload
             public int MaxWidth { get; set; }
             #endregion
 
+            #region MessageClassName
+            /// <summary>
+            /// This property gets or sets the value for 'MessageClassName'.
+            /// </summary>
+            [Parameter]
+            public string MessageClassName
+            {
+                get { return messageClassName; }
+                set { messageClassName = value; }
+            }
+            #endregion
+            
             #region MinHeight
             /// <summary>
             /// This property gets or sets the value for MinHeight.
@@ -834,6 +903,29 @@ namespace DataJuggler.Blazor.FileUpload
             [Parameter] public string ResetButtonText { get; set; } = "Reset";
             #endregion
 
+            #region ShowCustomButton
+            /// <summary>
+            /// This property gets or sets the value for 'ShowCustomButton'.
+            /// </summary>
+            [Parameter]
+            public bool ShowCustomButton
+            {
+                get { return showCustomButton; }
+                set 
+                { 
+                    // set the value
+                    showCustomButton = value;
+
+                    // if showCustomButton is true
+                    if (showCustomButton)
+                    {
+                        // change to custom button
+                        inputFileClassName = "customfileupload";
+                    }
+                }
+            }
+            #endregion
+            
             #region ShowResetButton
             /// <summary>
             /// This property gets or sets the value for ShowResetButton.
