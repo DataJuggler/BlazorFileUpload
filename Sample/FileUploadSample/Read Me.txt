@@ -1,0 +1,30 @@
+﻿I changed the sample to use the Nuget package instead of the project.
+
+If you deploy this, I am working on including this inside the Nuget package, 
+but for now I had to add the following css to site.css:
+
+.customupload
+{
+    display: inline-block;
+    visibility: visible;
+}
+.customupload input[type=file]
+{
+    visibility: hidden;
+    display: none;
+}
+
+And in the .razor component, I added the customupload class to the div surrounding the FileUpload:
+
+<div class="customupload">
+    <FileUpload CustomSuccessMessage="Your file uploaded successfully." OnChange="OnFileUploaded"
+        ShowStatus="false"  PartialGuidLength="10" MaxFileSize="4194304" FilterByExtension="true" 
+        ShowCustomButton="true" ButtonText="Select File" ButtonClassName="buttonwide"        
+        AllowedExtensions=".jpg;.png;" ShowResetButton="true" OnReset="OnReset" 
+        CustomExtensionMessage="Only .jpg and .png files are allowed." AppendPartialGuid="true"                
+        FileTooLargeMessage="The file uploaded must be 4 megabytes or smaller.">
+    </FileUpload>
+</div>
+
+I am trying to embed more of the behavior in the component, but this works for now.
+
