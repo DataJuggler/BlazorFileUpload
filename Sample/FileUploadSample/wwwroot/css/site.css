@@ -1,5 +1,15 @@
 @import url('open-iconic/font/css/open-iconic-bootstrap.min.css');
 
+.customupload
+{
+    display: inline-block;
+    visibility: visible;
+}
+.customupload input[type=file]
+{
+    visibility: hidden;
+    display: none;
+}
 .fontverdana20
 {
     font-family: Verdana;
