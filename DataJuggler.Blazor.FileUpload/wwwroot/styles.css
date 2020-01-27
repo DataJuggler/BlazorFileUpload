@@ -46,9 +46,10 @@
 {  
     display: inline-block;
     cursor: pointer;
-    height:48px;
+    height: 48px;
     min-height: 48px;
     visibility: hidden;
+    display: none;
     position: fixed;
     left: 0px;
     top: 0px;
@@ -108,6 +109,8 @@
 }
 
 input[type=file], /* FF, IE7+, chrome (except button) */
-input[type=file]::-webkit-file-upload-button { /* chromes and blink button */
+input[type=file]::-webkit-file-upload-button 
+{ 
+    /* chromes and blink button */
     cursor: pointer; 
 }

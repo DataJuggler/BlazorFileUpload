@@ -15,6 +15,11 @@
     text-align: center;
     vertical-align: central;
 }
+.hiddenfileupload
+{
+    display: none;
+    visibility: hidden;
+}
 .movedown8
 {
     position: relative;
@@ -24,6 +29,13 @@
 {
     width: 100%;
 }
+
+input[type=file], /* FF, IE7+, chrome (except button) */
+input[type=file]::-webkit-file-upload-button 
+{ /* chromes and blink button */
+    cursor: pointer;
+}
+
 
 html, body {
     font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;

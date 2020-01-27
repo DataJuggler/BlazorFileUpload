@@ -5,12 +5,12 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\..\DataJuggler.Blazor.FileUpload\DataJuggler.Blazor.FileUpload.csproj" />
+    <Folder Include="wwwroot\Images\" />
+    <Folder Include="wwwroot\Upload\" />
   </ItemGroup>
 
   <ItemGroup>
-    <Folder Include="wwwroot\Images\" />
-    <Folder Include="wwwroot\Upload\" />
+    <ProjectReference Include="..\..\DataJuggler.Blazor.FileUpload\DataJuggler.Blazor.FileUpload.csproj" />
   </ItemGroup>
 
 </Project>
