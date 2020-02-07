@@ -3,9 +3,11 @@ This is a wrapper of Steve Sanderson's BlazorFileInput:
 
 https://github.com/SteveSandersonMS/BlazorInputFile  
 
+Breaking Change Version 1.3.2: ButtonClassName is now CustomButtonClassName. I was confusing ResetButtonClassName with ButtonClassName, so I renamed ButtonClassName to CustomButtonClassName, and ResetButtonClassName is used only for the Reset button.
+
 <b>You must use Dot Net Core SDK 3.1 for BlazorFileUpload component to work.</b>
 
-I am using Visual Studio 16.4.2, but any version 16.4+ should be fine.
+I am using Visual Studio 16.4.4, but any version 16.4+ should be fine.
 
 <b>Nuget Package: DataJuggler.Blazor.FileUpload</b>
 
@@ -88,10 +90,10 @@ a user or users uploads two files with the same name.
 This is used in conjunction with the PartialGuidLength property. 
 Example: AppendPartialGuid="true". The file uploaded will be changed to something similar to: myphoto.dl30xm37-sk7.png.
 
-# string ButtonClassName - (Optional) - Defaults to 'button'
-This property gets or sets the value for ButtonClassName. If ShowResetButton is true, this value is used to allow you to customize
-the Reset button's appearance by setting a CSS class name.
-Example: ButtonClassName="woodbutton". 
+# string CustomButtonClassName - (Optional) - Defaults to 'button'
+This property gets or sets the value for CustomButtonClassName. If ShowCustomButton is true, this value is used to allow you to customize
+the button's appearance by setting a CSS class name.
+Example: CustomButtonClassName="buttonwide". 
 
 # string CustomErrorMessage - (Optional) Default Value = "An error occurred uploading your file.";
 If an error occurs uploading a file, this message will be shown to the user.
