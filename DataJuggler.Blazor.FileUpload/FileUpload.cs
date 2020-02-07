@@ -35,6 +35,7 @@ namespace DataJuggler.Blazor.FileUpload
         private bool showCustomButton;
         private string customButtonClassName;
         private string customButtonTextClassName;
+        private string resetButtonClassName;
         #endregion
 
         #region FileUpload()
@@ -323,6 +324,7 @@ namespace DataJuggler.Blazor.FileUpload
                 MessageClassName = "message";
                 InputFileClassName = "inputfile";
                 CustomButtonClassName = "buttonwide";
+                ResetButtonClassName = "button";
                 ButtonText = "Choose File";
                 CustomButtonTextClassName = "custombuttontextstyle";
             }
@@ -412,16 +414,6 @@ namespace DataJuggler.Blazor.FileUpload
             public bool AppendPartialGuid { get; set; } = true;
             #endregion
 
-            #region ButtonClassName
-            /// <summary>
-            /// This property gets or sets the value for ButtonClassName.
-            /// If ShowResetButton is true, this value is used to allow you to customize
-            /// the Reset button's appearance by setting a CSS class name.
-            /// </summary>
-            [Parameter]
-            public string ButtonClassName { get; set; } = "button";
-            #endregion
-            
             #region ButtonText
             /// <summary>
             /// This property gets or sets the value for 'ButtonText'.
@@ -438,6 +430,7 @@ namespace DataJuggler.Blazor.FileUpload
             /// <summary>
             /// This property gets or sets the value for 'CustomButtonClassName'.
             /// </summary>
+            [Parameter]
             public string CustomButtonClassName
             {
                 get { return customButtonClassName; }
@@ -895,6 +888,18 @@ namespace DataJuggler.Blazor.FileUpload
             public int RequiredWidth { get; set; }
             #endregion
 
+            #region ResetButtonClassName
+            /// <summary>
+            /// This property gets or sets the value for 'ResetButtonClassName'.
+            /// </summary>
+            [Parameter]
+            public string ResetButtonClassName
+            {
+                get { return resetButtonClassName; }
+                set { resetButtonClassName = value; }
+            }
+            #endregion
+            
             #region ResetButtonText
             /// <summary>
             /// This value will be shown on a button after an upload is complete provided that

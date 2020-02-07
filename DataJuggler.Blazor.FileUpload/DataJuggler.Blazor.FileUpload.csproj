@@ -11,7 +11,17 @@ All I did was wrap in it a component to make it easy to use in a Blazor app.
 Version 1.2.0+ has new features that are untested involving image required, min and max height and width values, so use with caution.
 
 I have tested it enough it works for my use cases. Most of the problems I have read about the control involve over 20 meg and multiple file uploads.</Description>
-    <PackageReleaseNotes>Version 1.3.0: I think I have the use Custom button simplified, as I added a new property for ShowCustomButton,
+    <PackageReleaseNotes>Version 1.3.2: Somehow the Parameter Tag from issue 1.3.1 wasn't there. Fixed now.
+
+Version 1.3.1: 
+
+1. While testing I discovered some confusion between ButtonClassName and CustomButtonClassName. As used in the component, ButtonClassName was used for the Reset button only, so I renamed ButtonClassName to ResetButtomClassName.
+
+2. CustomButtonClassName was not a Parameter, now that is fixed.
+
+Sorry for the breaking change, but if I am confused between ButtonClassName and CustomButtonClassName, everyone probably is also, so I hope this adds some clarity.
+
+Version 1.3.0: I think I have the use Custom button simplified, as I added a new property for ShowCustomButton,
 and other properties for ButtonClassName, ButtonTextClassName and some other properties.
 
 The samples page on GitHub now has a standard button and a custom button on the same page to show how
@@ -123,7 +133,7 @@ Update 1.0.6-Preview: I decided to return more information about the file instea
 </PackageReleaseNotes>
     <PackageTags>C#, Blazor, FileUpload, BlazorFileUpload</PackageTags>
     <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
-    <Version>1.3.0</Version>
+    <Version>1.3.2</Version>
     <PackageLicenseFile>LICENSE</PackageLicenseFile>
     <PackageProjectUrl>https://github.com/DataJuggler/BlazorFileUpload</PackageProjectUrl>
     <PackageIcon>BlazorFileUploadIcon.png</PackageIcon>

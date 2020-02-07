@@ -19,63 +19,24 @@
 <div class="customupload">
     <FileUpload CustomSuccessMessage="Your file uploaded successfully." OnChange="OnFileUploaded"
         ShowStatus="false"  PartialGuidLength="10" MaxFileSize="4194304" FilterByExtension="true" 
-        ShowCustomButton="true" ButtonText="Select File" ButtonClassName="buttonwide"        
+        ShowCustomButton="true" ButtonText="Select File" CustomButtonClassName="buttonwide"        
         AllowedExtensions=".jpg;.png;" ShowResetButton="true" OnReset="OnReset" 
+        ResetButtonClassName="button" ResetButtonText="Reset"
         CustomExtensionMessage="Only .jpg and .png files are allowed." AppendPartialGuid="true"                
         FileTooLargeMessage="The file uploaded must be 4 megabytes or smaller.">
     </FileUpload>
 </div>
 
+<br />
 @status
 
 
 @code
 {
-    // test
-    string status;
-    bool showUploadButton = true;
+    // All the code is now the Index.razor.cs file. Expand the node in Solution Explorer for
+    // Index.razor, and this will show you Index.razor.cs, or right click this file and select
+    // Go To PageModel.
 
-    private void OnFileUploaded(UploadedFileInfo uploadedFileInfo)
-    {
-        // if aborted
-        if (uploadedFileInfo.Aborted)
-        {
-            // get the status
-            status = uploadedFileInfo.ErrorMessage;
-        }
-        else
-        {
-            // get the status
-            status = "The file " + uploadedFileInfo.FullName + " was uploaded.";
-
-            // showUploadButton is now false until the Reset button is clicked.
-            showUploadButton = false;
-
-            // other information about the file is available
-            //DateTime lastModified = uploadedFileInfo.LastModified;
-            //string nameAsItIsOnDisk = uploadedFileInfo.NameWithPartialGuid;
-            //string partialGuid = uploadedFileInfo.PartialGuid;
-            //long size = uploadedFileInfo.Size;
-            //string type = uploadedFileInfo.Type;
-
-            // The above information can be used to display, and / or process a file
-        }
-    }
-
-    /// <summary>
-    /// This method is used to get a notification from the FileUpload component after
-    /// the Reset button is clicked.
-    /// </summary>
-    /// <param name="notUsedByRequiredArg"></param>
-    private void OnReset(string notUsedByRequiredArg)
-    {
-        // erase status
-        status = "";
-
-        // toggle to true
-        showUploadButton = true;
-
-        // Refresh the UI
-        StateHasChanged();
-    }
+    // If you have any comments or questions, please create an issue on Git Hub as I do mind questions
+    // and I welcome any feedback or ways to make it more reusable for other people.
 }
