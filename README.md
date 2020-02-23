@@ -1,13 +1,28 @@
 # BlazorFileUpload
 This is a wrapper of Steve Sanderson's BlazorFileInput:
 
-https://github.com/SteveSandersonMS/BlazorInputFile  
+https://github.com/SteveSandersonMS/BlazorInputFile
+
+Update 2.23.2020: I created a new sample project that saves data including the path to upload profile pictures and images to SQL Server. The sample code is located here:
+
+Blazor Image Gallery: https://github.com/DataJuggler/BlazorImageGallery
+
+This samples takes a little more work to get setup, as you must:
+1. Create a SQL Server database and execute a sql script to create the two tables and stored procedures
+2. Build a connectionstring and paste the value into a Systen environment variable.
+
+There also a complete tutorial on blogger: https://datajugglerblazor.blogspot.com/2020/02/building-blazor-image-gallery-complete.html
+
+And also a video
+
+Building Blazor Image Gallery
+https://youtu.be/3xKXJQ4qThQ
 
 Breaking Change Version 1.3.2: ButtonClassName is now CustomButtonClassName. I was confusing ResetButtonClassName with ButtonClassName, so I renamed ButtonClassName to CustomButtonClassName, and ResetButtonClassName is used only for the Reset button.
 
-<b>You must use Dot Net Core SDK 3.1 for BlazorFileUpload component to work.</b>
+<b>You must use Dot Net Core 3.1 for BlazorFileUpload component to work.</b>
 
-I am using Visual Studio 16.4.4, but any version 16.4+ should be fine.
+I am using Visual Studio 16.4.5, but any version 16.4+ should be fine.
 
 <b>Nuget Package: DataJuggler.Blazor.FileUpload</b>
 
