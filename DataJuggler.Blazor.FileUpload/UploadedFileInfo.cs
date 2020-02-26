@@ -25,6 +25,7 @@ namespace DataJuggler.Blazor.FileUpload
         private int customId;
         private string tag;
         private Exception exception;
+        private MemoryStream stream;
         #endregion
 
         #region Constructor
@@ -185,6 +186,23 @@ namespace DataJuggler.Blazor.FileUpload
             }
             #endregion
             
+            #region HasStream
+            /// <summary>
+            /// This property returns true if this object has a 'Stream'.
+            /// </summary>
+            public bool HasStream
+            {
+                get
+                {
+                    // initial value
+                    bool hasStream = (this.Stream != null);
+                    
+                    // return value
+                    return hasStream;
+                }
+            }
+            #endregion
+            
             #region Height
             /// <summary>
             /// This property gets or sets the value for 'Height'.
@@ -262,6 +280,17 @@ namespace DataJuggler.Blazor.FileUpload
             {
                 get { return size; }
                 set { size = value; }
+            }
+            #endregion
+            
+            #region Stream
+            /// <summary>
+            /// This property gets or sets the value for 'Stream'.
+            /// </summary>
+            public MemoryStream Stream
+            {
+                get { return stream; }
+                set { stream = value; }
             }
             #endregion
             

@@ -3,6 +3,12 @@
 #region using statements
 
 using DataJuggler.Blazor.FileUpload;
+using System.IO;
+using System;
+using System.Collections.Generic;
+using DataJuggler.UltimateHelper.Core;
+using DataJuggler.UltimateHelper.Core.Objects;
+using Microsoft.AspNetCore.Components;
 
 #endregion
 
@@ -18,6 +24,8 @@ namespace FileUploadSample.Pages
 
         #region Private Variables
         private string status;
+        private MarkupString xmlString;
+        private List<XmlLine> lines;
         #endregion
 
         #region Methods
@@ -50,6 +58,86 @@ namespace FileUploadSample.Pages
                 }
             }
             #endregion
+
+            #region OnFileUploaded(UploadedFileInfo uploadedFileInfo)
+            /// <summary>
+            /// This method is used to handle a MemoryStream returned from the uploaded file,
+            /// and the memory stream is going to be attempted to be converted to an Xml string.
+            /// </summary>
+            private void OnFileUploaded2(UploadedFileInfo uploadedFileInfo)
+            {
+                try
+                {
+                    // if aborted
+                    if (uploadedFileInfo.Aborted)
+                    {
+                        // get the status
+                        XmlString = (MarkupString) uploadedFileInfo.ErrorMessage;
+                    }
+                    else
+                    {
+                        // if the MemoryStream was uploaded
+                        if (uploadedFileInfo.HasStream)
+                        {
+                            System.Text.Encoding encoding = System.Text.Encoding.UTF8;
+                            string temp = encoding.GetString(uploadedFileInfo.Stream.ToArray());
+
+                            // Get the lines
+                            List<TextLine> lines = WordParser.GetTextLines(temp.TrimEnd());
+
+                            // If the lines collection exists and has one or more items
+                            if (ListHelper.HasOneOrMoreItems(lines))
+                            {
+                                // local
+                                int count = 0;
+
+                                // Create the lines
+                                this.Lines = new List<XmlLine>();
+
+                                // Iterate the collection of TextLine objects
+                                foreach (TextLine line in lines)
+                                {
+                                    if (TextHelper.Exists(line.Text))
+                                    {
+                                        // cast the XmlLine as a Line
+                                        XmlLine xmlLine = new XmlLine();
+
+                                        // Set the properties
+                                        xmlLine.Text = line.Text;
+
+                                        // not the first line or the last line
+                                        if (count != 0)
+                                        {
+                                            // Indent
+                                            xmlLine.Indent = true;
+                                        }
+                                    
+                                        // Add this line
+                                        this.Lines.Add(xmlLine);
+                                        
+                                        // increment the count
+                                        count++;
+                                    }
+                                }
+
+                                // Make sure we indent
+                                this.Lines[this.Lines.Count - 1].Indent = false;
+                            }
+                        }
+                    }
+                }
+                catch (Exception error)
+                {   
+                    // for debugging only for this sample
+                    string err = error.ToString();
+                }
+                finally
+                {
+                    // Might be needed ?
+                    StateHasChanged();
+                }
+            }
+            #endregion
             
             #region OnReset(string notUsedByRequiredArg)
             /// <summary>
@@ -59,7 +147,8 @@ namespace FileUploadSample.Pages
             {
                 // erase status
                 status = "";
-                
+                Lines = null;
+
                 // Refresh the UI
                 StateHasChanged();
             }
@@ -69,6 +158,34 @@ namespace FileUploadSample.Pages
 
         #region Properties
 
+            #region HasLines
+            /// <summary>
+            /// This property returns true if this object has a 'Lines'.
+            /// </summary>
+            public bool HasLines
+            {
+                get
+                {
+                    // initial value
+                    bool hasLines = (this.Lines != null);
+                    
+                    // return value
+                    return hasLines;
+                }
+            }
+            #endregion
+            
+            #region Lines
+            /// <summary>
+            /// This property gets or sets the value for 'Lines'.
+            /// </summary>
+            public List<XmlLine> Lines
+            {
+                get { return lines; }
+                set { lines = value; }
+            }
+            #endregion
+            
             #region Status
             /// <summary>
             /// This property gets or sets the value for 'Status'.
@@ -77,6 +194,17 @@ namespace FileUploadSample.Pages
             {
                 get { return status; }
                 set { status = value; }
+            }
+            #endregion
+            
+            #region XmlString
+            /// <summary>
+            /// This property gets or sets the value for 'XmlString'.
+            /// </summary>
+            public MarkupString XmlString
+            {
+                get { return xmlString; }
+                set { xmlString = value; }
             }
             #endregion
             

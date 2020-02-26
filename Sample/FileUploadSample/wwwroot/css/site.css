@@ -30,14 +30,56 @@
     display: none;
     visibility: hidden;
 }
+.indent
+{
+    position: relative;
+    left: 24px;
+}
+.indentnone
+{
+    position: relative;
+    left: 0px;
+}
 .movedown8
 {
     position: relative;
     top: 8px;
 }
+.moveup64
+{
+    margin-top: -64px;
+}
+.sampleprojectinfo
+{
+   
+}
+.videocover
+{
+    background-image: url('../Images/BlazorImageGallery.png');
+    width: 640px;
+    height: 320px;
+    background-repeat: no-repeat;
+    transform: scale(0.5);
+    transform-origin: left;
+    border: none;
+    outline: none;
+    margin-top: -64px;
+}
+.videocover:focus
+{
+    outline: none;
+}
 .width100percent
 {
     width: 100%;
+}
+.xml
+{
+    background-color: black;
+    border: 1px solid white;
+    color: ghostwhite;
+    font-family: Arial;
+    font-size: 14px;
 }
 
 input[type=file], /* FF, IE7+, chrome (except button) */

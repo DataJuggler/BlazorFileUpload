@@ -10,7 +10,8 @@
   </ItemGroup>
 
   <ItemGroup>
-    <PackageReference Include="DataJuggler.Blazor.FileUpload" Version="1.3.2" />
+    <PackageReference Include="DataJuggler.Blazor.FileUpload" Version="1.3.3" />
+    <PackageReference Include="DataJuggler.UltimateHelper.Core" Version="1.2.1" />
   </ItemGroup>
 
 </Project>

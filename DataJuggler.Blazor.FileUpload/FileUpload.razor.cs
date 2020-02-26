@@ -36,6 +36,7 @@ namespace DataJuggler.Blazor.FileUpload
         private string customButtonClassName;
         private string customButtonTextClassName;
         private string resetButtonClassName;
+        private bool saveToDisk;
         #endregion
 
         #region FileUpload()
@@ -238,10 +239,20 @@ namespace DataJuggler.Blazor.FileUpload
                             // if we should continue
                             if (!abort)
                             {
-                                // save the file using the FullName (If AppendPartialGuid is still true, than the Name.PartialGuid is the FullName
-                                using (FileStream fileStream = new FileStream(Path.Combine(UploadFolder, uploadedFileInfo.FullName), FileMode.Create, FileAccess.Write))
+                                // if the value for SaveToDisk is true
+                                if (SaveToDisk)
                                 {
-                                    ms.WriteTo(fileStream);
+                                    // save the file using the FullName (If AppendPartialGuid is still true, than the Name.PartialGuid is the FullName
+                                    using (FileStream fileStream = new FileStream(Path.Combine(UploadFolder, uploadedFileInfo.FullName), FileMode.Create, FileAccess.Write))
+                                    {
+                                        ms.WriteTo(fileStream);
+                                    }
+                                }
+                                else
+                                {
+                                    // Set the MemoryStream, to allow people to save outside of the project 
+                                    // folder, to disk or other processing like virus scan.
+                                    uploadedFileInfo.Stream = ms;
                                 }
                                 
                                 // if there is a CustomSave
@@ -327,6 +338,7 @@ namespace DataJuggler.Blazor.FileUpload
                 ResetButtonClassName = "button";
                 ButtonText = "Choose File";
                 CustomButtonTextClassName = "custombuttontextstyle";
+                SaveToDisk = true;
             }
             #endregion
             
@@ -908,6 +920,18 @@ namespace DataJuggler.Blazor.FileUpload
             [Parameter] public string ResetButtonText { get; set; } = "Reset";
             #endregion
 
+            #region SaveToDisk
+            /// <summary>
+            /// This property gets or sets the value for 'SaveToDisk'.
+            /// </summary>
+            [Parameter]
+            public bool SaveToDisk
+            {
+                get { return saveToDisk; }
+                set { saveToDisk = value; }
+            }
+            #endregion
+            
             #region ShowCustomButton
             /// <summary>
             /// This property gets or sets the value for 'ShowCustomButton'.
