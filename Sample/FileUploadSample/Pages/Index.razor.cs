@@ -59,7 +59,7 @@ namespace FileUploadSample.Pages
             }
             #endregion
 
-            #region OnFileUploaded(UploadedFileInfo uploadedFileInfo)
+            #region OnFileUploaded2(UploadedFileInfo uploadedFileInfo)
             /// <summary>
             /// This method is used to handle a MemoryStream returned from the uploaded file,
             /// and the memory stream is going to be attempted to be converted to an Xml string.

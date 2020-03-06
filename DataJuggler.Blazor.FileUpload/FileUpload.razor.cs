@@ -207,10 +207,19 @@ namespace DataJuggler.Blazor.FileUpload
                             uploadedFileInfo.Extension = fileInfo.Extension.ToLower();
                             
                             // if FilterByExtension is true and the AllowedExtensions text exists
-                            if ((FilterByExtension) && (!string.IsNullOrWhiteSpace(AllowedExtensions)))
+                            if ((FilterByExtension) && (!String.IsNullOrWhiteSpace(AllowedExtensions)))
                             {
-                                // If the allowed extensions
-                                abort = !AllowedExtensions.ToLower().Contains(fileInfo.Extension);
+                                // verify the extension exists
+                                if (!String.IsNullOrWhiteSpace(fileInfo.Extension))
+                                {
+                                    // If the allowed extensions // fixed issue where uploading 
+                                    abort = !AllowedExtensions.ToLower().Contains(fileInfo.Extension.ToLower());
+                                }
+                                else
+                                {
+                                    // you must have an extension
+                                    abort = true;
+                                }
                             }
                             
                             // Set aborted to true
