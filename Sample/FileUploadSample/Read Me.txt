@@ -1,4 +1,6 @@
-﻿I changed the sample to use the Nuget package instead of the project.
+﻿I am currently working on the sample, so I have the project reference in instead of the Nuget package.
+
+You can switch to Nuget by adding: DataJuggler.Blazor.FileUpload and removing project reference.
 
 If you deploy this, I am working on including this inside the Nuget package, 
 but for now I had to add the following css to site.css:
