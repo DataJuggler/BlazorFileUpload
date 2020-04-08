@@ -1,7 +1,14 @@
 ﻿@implements IDisposable
 @inject IJSRuntime JSRuntime
 
-<input type="file" class="@InputFileClassName" @ref="inputFileElement" @attributes="UnmatchedParameters" />
+@if (Visible)
+{
+    <input type="file" class="@InputFileClassName" @ref="inputFileElement" @attributes="UnmatchedParameters" />
+}
+else
+{
+    <input type="file" class="@InputFileClassName" @ref="inputFileElement" @attributes="UnmatchedParameters" hidden />
+}
 
 @code {
     [Parameter(CaptureUnmatchedValues = true)] public Dictionary<string, object> UnmatchedParameters { get; set; }
@@ -9,6 +16,7 @@
     [Parameter] public int MaxMessageSize { get; set; } = 20 * 1024; // TODO: Use SignalR default
     [Parameter] public int MaxBufferSize { get; set; } = 1024 * 1024;
     [Parameter] public string InputFileClassName { get; set; }
+    [Parameter] public bool Visible { get; set; } = true;
 
     ElementReference inputFileElement;
     IDisposable thisReference;

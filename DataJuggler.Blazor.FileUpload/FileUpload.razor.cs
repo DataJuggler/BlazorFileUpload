@@ -36,6 +36,7 @@ namespace DataJuggler.Blazor.FileUpload
         private string customButtonClassName;
         private string customButtonTextClassName;
         private string resetButtonClassName;
+        private bool visible;
         private bool saveToDisk;
         #endregion
 
@@ -348,6 +349,7 @@ namespace DataJuggler.Blazor.FileUpload
                 ButtonText = "Choose File";
                 CustomButtonTextClassName = "custombuttontextstyle";
                 SaveToDisk = true;
+                Visible = true;
             }
             #endregion
             
@@ -1028,6 +1030,18 @@ namespace DataJuggler.Blazor.FileUpload
             /// </summary>
             [Parameter]
             public string UploadFolder { get; set; } = "wwwroot/Upload/";
+            #endregion
+            
+            #region Visible
+            /// <summary>
+            /// This property gets or sets the value for 'Visible'.
+            /// </summary>
+            [Parameter]
+            public bool Visible
+            {
+                get { return visible; }
+                set { visible = value; }
+            }
             #endregion
             
         #endregion
