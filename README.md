@@ -37,30 +37,31 @@ For usage, create a new Blazor project.
 
 Add a reference to DataJuggler.Blazor.FileUpload Nuget Package, or reference the projects as the Sample does.
 In the Pages folder of the new Blazor project, Modiify _Host.cshtml to have the following reference:
-<script src="_content/BlazorInputFile/inputfile.js"></script>
+
+    <script src="_content/BlazorInputFile/inputfile.js"></script>
 
 Place the above reference directly above the reference to blazor.server.js:
-<script src="_framework/blazor.server.js"></script>
+
+    <script src="_framework/blazor.server.js"></script>
 <br/><br/>
 Replace the existing text in Index.razor with the code below:
 
-@page "/"
-@using DataJuggler.Blazor.FileUpload
+    @page "/"
+    @using DataJuggler.Blazor.FileUpload
 
-<h3>File Upload Test</h3>
+    <h3>File Upload Test</h3>
 
-<div class="fileuploader">
-<FileUpload CustomSuccessMessage="Your file uploaded successfully." OnChange="OnFileUploaded"></FileUpload>
-@status
-</div>
+    <div class="fileuploader">
+        <FileUpload CustomSuccessMessage="Your file uploaded successfully." OnChange="OnFileUploaded"></FileUpload>
+        @status
+    </div>
 
-@code
-{
-    
+    @code
+    {
     // display the filename after upload
     string status;
 
-    private void OnFileUploaded(UploadFileInfo uploadFileInfo)
+    private void OnFileUploaded(UploadedFileInfo uploadedFileInfo)
     {   
          // get the status
          status = "The file " + uploadedFileInfo.FullName + " was uploaded.";
