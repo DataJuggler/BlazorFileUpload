@@ -1,7 +1,7 @@
 ﻿<Project Sdk="Microsoft.NET.Sdk.Razor">
 
   <PropertyGroup>
-    <TargetFramework>netstandard2.1</TargetFramework>
+    <TargetFramework>net5.0</TargetFramework>
     <RazorLangVersion>3.0</RazorLangVersion>
     <Authors>DataJuggler</Authors>
     <Description>This package is built upon BlazorInputFile by Steve Sanderson at Microsoft. https://github.com/SteveSandersonMS/BlazorInputFile
@@ -11,7 +11,9 @@ All I did was wrap in it a component to make it easy to use in a Blazor app.
 Version 1.2.0+ has new features that are untested involving image required, min and max height and width values, so use with caution.
 
 I have tested it enough it works for my use cases. Most of the problems I have read about the control involve over 20 meg and multiple file uploads.</Description>
-    <PackageReleaseNotes>Version 1.3.5: I added a Visible property to make it easier to hide the standard file input.
+    <PackageReleaseNotes>Version 1.4.0: This version of for .Net 5.0. I am still using Steve Sanderson's Blazor Input File because it worked, and the new version for .Net 5.0 I can't get working yet.
+
+Version 1.3.5: I added a Visible property to make it easier to hide the standard file input.
 
 Version 1.3.4: I fixed an issue where the AllowedExtensions was failing if a file was named fileName.JPG or filename.PNG, since the extension is upper case.
 
@@ -144,7 +146,7 @@ Update 1.0.6-Preview: I decided to return more information about the file instea
 </PackageReleaseNotes>
     <PackageTags>C#, Blazor, FileUpload, BlazorFileUpload</PackageTags>
     <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
-    <Version>1.3.5</Version>
+    <Version>1.4.0</Version>
     <PackageLicenseFile>LICENSE</PackageLicenseFile>
     <PackageProjectUrl>https://github.com/DataJuggler/BlazorFileUpload</PackageProjectUrl>
     <PackageIcon>BlazorFileUploadIcon.png</PackageIcon>
@@ -155,14 +157,9 @@ Update 1.0.6-Preview: I decided to return more information about the file instea
 
 
   <ItemGroup>
-    <PackageReference Include="Microsoft.AspNetCore.Components" Version="3.1.2" />
-    <PackageReference Include="Microsoft.AspNetCore.Components.Web" Version="3.1.2" />
-    <PackageReference Include="System.Drawing.Common" Version="4.7.0" />
-  </ItemGroup>
-
-
-  <ItemGroup>
-    <ProjectReference Include="..\BlazorInputFile\BlazorInputFile.csproj" />
+    <PackageReference Include="Microsoft.AspNetCore.Components" Version="5.0.0" />
+    <PackageReference Include="Microsoft.AspNetCore.Components.Web" Version="5.0.0" />
+    <PackageReference Include="System.Drawing.Common" Version="5.0.0" />
   </ItemGroup>
 
 
@@ -180,6 +177,11 @@ Update 1.0.6-Preview: I decided to return more information about the file instea
 
   <ItemGroup>
     <Folder Include="wwwroot\Images\" />
+  </ItemGroup>
+
+
+  <ItemGroup>
+    <ProjectReference Include="..\BlazorInputFile\BlazorInputFile.csproj" />
   </ItemGroup>
 
 </Project>

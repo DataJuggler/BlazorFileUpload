@@ -173,7 +173,7 @@ namespace DataJuggler.Blazor.FileUpload
                 // locals
                 UploadedFileInfo uploadedFileInfo = null;
                 bool abort = false;
-                
+
                 // locals
                 MemoryStream ms = null;                               
                 

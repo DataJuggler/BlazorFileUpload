@@ -6,8 +6,8 @@ using DataJuggler.Blazor.FileUpload;
 using System.IO;
 using System;
 using System.Collections.Generic;
-using DataJuggler.UltimateHelper.Core;
-using DataJuggler.UltimateHelper.Core.Objects;
+using DataJuggler.UltimateHelper;
+using DataJuggler.UltimateHelper.Objects;
 using Microsoft.AspNetCore.Components;
 
 #endregion
