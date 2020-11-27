@@ -7,12 +7,12 @@ using System.Collections.Generic;
 using System.Text;
 using Microsoft.AspNetCore.Components;
 using System.IO;
-using BlazorInputFile;
 using System.Threading.Tasks;
 using System.Linq;
 using System.Drawing;
 using System.Drawing.Drawing2D;
 using System.Drawing.Imaging;
+using Microsoft.AspNetCore.Components.Forms;
 
 #endregion
 
@@ -40,7 +40,7 @@ namespace DataJuggler.Blazor.FileUpload
         private bool saveToDisk;
         #endregion
 
-        #region FileUpload()
+        #region Construcctor()
         /// <summary>
         /// Create a new instance of a FileUpload
         /// </summary>
@@ -53,11 +53,11 @@ namespace DataJuggler.Blazor.FileUpload
 
         #region Methods
 
-            #region CheckSize(string extension, MemoryStream ms, UploadedFileInfo uploadedFileInfo)
+            #region CheckSize(string extension, Stream ms, UploadedFileInfo uploadedFileInfo)
             /// <summary>
             /// This method returns the Size
             /// </summary>
-            public UploadedFileInfo CheckSize(string extension, MemoryStream ms, UploadedFileInfo uploadedFileInfo)
+            public UploadedFileInfo CheckSize(string extension, Stream stream, UploadedFileInfo uploadedFileInfo)
             {
                 try
                 {
@@ -65,7 +65,7 @@ namespace DataJuggler.Blazor.FileUpload
                     if (IsImageFile(extension))
                     {
                         // get the image from the memory stream
-                        Image image = Bitmap.FromStream(ms);
+                        Image image = Bitmap.FromStream(stream);
 
                         // set the properties for the return value
                         uploadedFileInfo.Height = image.Height;
@@ -164,20 +164,67 @@ namespace DataJuggler.Blazor.FileUpload
             }
             #endregion
             
-            #region HandleSelection(IFileListEntry[] files)
+            #region Init()
             /// <summary>
-            /// method returns a list of Selection
+            /// This method performs initializations for this object.
             /// </summary>
-            async Task HandleSelection(IFileListEntry[] files)
+            public void Init()
             {
-                // locals
+                // Set the Default Values
+                MessageClassName = "message";
+                InputFileClassName = "inputfile";
+                CustomButtonClassName = "buttonwide";
+                ResetButtonClassName = "button";
+                ButtonText = "Choose File";
+                CustomButtonTextClassName = "custombuttontextstyle";
+                SaveToDisk = true;
+                Visible = true;
+            }
+            #endregion
+            
+            #region IsImageFile(string extensions)
+            /// <summary>
+            /// This method returns true if the extension is an Image File (.jpg or .png for now)
+            /// </summary>
+            public bool IsImageFile(string extension)
+            {
+                // initial value
+                bool isImageFile = false;
+
+                // if the string exists
+                if (!String.IsNullOrEmpty(extension))
+                {
+                    // if a .jpg or a .png
+                    if ((extension.ToLower() == ".jpg") || (extension.ToLower() == ".png"))
+                    {
+                        // set to true
+                        isImageFile = true;
+                    }
+                }
+                
+                // return value
+                return isImageFile;
+            }
+            #endregion
+
+            #region OnFileChange(InputFileChangeEventArgs eventArgs)
+            /// <summary>
+            /// This method gives you access to the files that were uploaded
+            /// </summary>
+            /// <param name="eventArgs"></param>
+            private void OnFileChange(InputFileChangeEventArgs eventArgs)
+            {
+                //// Get access to the file
+                IBrowserFile file = eventArgs.File;
+
+                 // locals
                 UploadedFileInfo uploadedFileInfo = null;
                 bool abort = false;
-
-                // locals
-                MemoryStream ms = null;                               
                 
-                var file = files.FirstOrDefault();
+                // locals
+                Stream stream = null; 
+                
+                // verify the file exists
                 if (file != null)
                 {
                     try
@@ -229,14 +276,11 @@ namespace DataJuggler.Blazor.FileUpload
                             // if we should continue
                             if (!abort)
                             {
-                                // create the memoryStream
-                                ms = new MemoryStream();
-
                                 // await for the data to be copied to the memory stream
-                                await file.Data.CopyToAsync(ms);
+                                stream = file.OpenReadStream(MaxFileSize);
 
                                 // Check for abort 1 more time
-                                uploadedFileInfo = CheckSize(fileInfo.Extension, ms, uploadedFileInfo);
+                                uploadedFileInfo = CheckSize(fileInfo.Extension, stream, uploadedFileInfo);
 
                                 // if abort
                                 if (uploadedFileInfo.Aborted)
@@ -252,17 +296,21 @@ namespace DataJuggler.Blazor.FileUpload
                                 // if the value for SaveToDisk is true
                                 if (SaveToDisk)
                                 {
-                                    // save the file using the FullName (If AppendPartialGuid is still true, than the Name.PartialGuid is the FullName
-                                    using (FileStream fileStream = new FileStream(Path.Combine(UploadFolder, uploadedFileInfo.FullName), FileMode.Create, FileAccess.Write))
-                                    {
-                                        ms.WriteTo(fileStream);
-                                    }
+                                    // get the path
+                                    string path = Path.Combine(UploadFolder, uploadedFileInfo.FullName);
+
+                                    // Save tghe file
+                                    SaveFileStream(path, stream);
                                 }
                                 else
                                 {
+                                    // set the memoryStream
+                                    MemoryStream memoryStream = new MemoryStream();
+                                    stream.CopyToAsync(memoryStream);
+
                                     // Set the MemoryStream, to allow people to save outside of the project 
                                     // folder, to disk or other processing like virus scan.
-                                    uploadedFileInfo.Stream = ms;
+                                    uploadedFileInfo.Stream = memoryStream;
                                 }
                                 
                                 // if there is a CustomSave
@@ -334,49 +382,6 @@ namespace DataJuggler.Blazor.FileUpload
                 }
             }
             #endregion
-            
-            #region Init()
-            /// <summary>
-            /// This method performs initializations for this object.
-            /// </summary>
-            public void Init()
-            {
-                // Set the Default Values
-                MessageClassName = "message";
-                InputFileClassName = "inputfile";
-                CustomButtonClassName = "buttonwide";
-                ResetButtonClassName = "button";
-                ButtonText = "Choose File";
-                CustomButtonTextClassName = "custombuttontextstyle";
-                SaveToDisk = true;
-                Visible = true;
-            }
-            #endregion
-            
-            #region IsImageFile(string extensions)
-            /// <summary>
-            /// This method returns true if the extension is an Image File (.jpg or .png for now)
-            /// </summary>
-            public bool IsImageFile(string extension)
-            {
-                // initial value
-                bool isImageFile = false;
-
-                // if the string exists
-                if (!String.IsNullOrEmpty(extension))
-                {
-                    // if a .jpg or a .png
-                    if ((extension.ToLower() == ".jpg") || (extension.ToLower() == ".png"))
-                    {
-                        // set to true
-                        isImageFile = true;
-                    }
-                }
-                
-                // return value
-                return isImageFile;
-            }
-            #endregion
 
             #region ResetFinished()
             /// <summary>
@@ -412,6 +417,20 @@ namespace DataJuggler.Blazor.FileUpload
 
                 // Update the UI
                 StateHasChanged();
+            }
+            #endregion
+
+            #region SaveFileStream(String path, Stream stream)
+            /// <summary>
+            /// This method saves the stream
+            /// </summary>
+            /// <param name="path"></param>
+            /// <param name="stream"></param>
+            private void SaveFileStream(String path, Stream stream)
+            {  
+                var fileStream = new FileStream(path, FileMode.Create, FileAccess.Write);
+                stream.CopyToAsync(fileStream);
+                fileStream.Dispose();
             }
             #endregion
             

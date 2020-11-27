@@ -1,11 +1,11 @@
-﻿@using BlazorInputFile
+﻿
 
 @if (!uploadComplete)
 {  
     @if (ShowCustomButton)
     {
         <label>
-            
+            <InputFile InputFileClassName="@InputFileClassName" OnChange="OnFileChange" Visible="@Visible" />
              <span class="@CustomButtonClassName">
                 <span class="@CustomButtonTextClassName">@ButtonText</span>
             </span>
@@ -14,7 +14,7 @@
     else
     {
         <div class="inputfilecontainer">
-            <InputFile Visible="@Visible" OnChange="@HandleSelection" />
+            <InputFile Visible="@Visible" OnChange="@OnFileChange" />
         </div>    
     }
 }

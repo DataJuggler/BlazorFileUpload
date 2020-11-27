@@ -1,8 +1,8 @@
-﻿using BlazorInputFile;
-using System;
+﻿using System;
 using System.Collections.Generic;
 using System.IO;
 using System.Text;
+using Microsoft.AspNetCore.Components.Forms;
 
 namespace DataJuggler.Blazor.FileUpload
 {
@@ -34,7 +34,7 @@ namespace DataJuggler.Blazor.FileUpload
         /// </summary>
         /// <param name="file"></param>
         /// <param name="partialGuid"></param>
-        public UploadedFileInfo(IFileListEntry file, string partialGuid, bool appendPartialGuid, string uploadFolder)
+        public UploadedFileInfo(IBrowserFile file, string partialGuid, bool appendPartialGuid, string uploadFolder)
         {
             // verify both objects exist
             if ((file != null) && (!String.IsNullOrWhiteSpace(partialGuid)))
@@ -43,18 +43,50 @@ namespace DataJuggler.Blazor.FileUpload
                 UploadFolder = uploadFolder;
 
                 // Set all the properties
-                this.LastModified = file.LastModified;
+                this.LastModified = file.LastModified.DateTime;
                 this.AppendPartialGuid = appendPartialGuid;
                 this.Name = file.Name;
                 this.PartialGuid = partialGuid;
                 this.Size = file.Size;
-                this.Type = file.Type;
+                this.Type = GetExtension(file.Name);
             }
         }
         #endregion
 
-        #region Properties
+        #region Methods
+
+            #region GetExtension(string fileName)
+            /// <summary>
+            /// This method returns the Extension
+            /// </summary>
+            public string GetExtension(string fileName)
+            {
+                // initial value
+                string extension = "";
+
+                // if the string exists
+                if (!String.IsNullOrEmpty(fileName))
+                {
+                    // get the last index of a period
+                    int index = fileName.LastIndexOf(".");
+
+                    // if the string exists
+                    if (index >= 0)
+                    {
+                        // set the extension
+                        extension = fileName.Substring(index);
+                    }
+                }
+                
+                // return value
+                return extension;
+            }
+            #endregion
             
+        #endregion
+
+        #region Properties
+
             #region Aborted
             /// <summary>
             /// This property gets or sets the value for 'Aborted'.

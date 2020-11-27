@@ -7,8 +7,6 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "FileUploadSample", "..\Samp
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "DataJuggler.Blazor.FileUpload", "DataJuggler.Blazor.FileUpload.csproj", "{D7577575-71FF-4AE9-87AD-3C1A9D30DE63}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "BlazorInputFile", "..\BlazorInputFile\BlazorInputFile.csproj", "{C6A78E38-D377-4DEA-A4E5-D2DC857C48CB}"
-EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -23,10 +21,6 @@ Global
 		{D7577575-71FF-4AE9-87AD-3C1A9D30DE63}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{D7577575-71FF-4AE9-87AD-3C1A9D30DE63}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{D7577575-71FF-4AE9-87AD-3C1A9D30DE63}.Release|Any CPU.Build.0 = Release|Any CPU
-		{C6A78E38-D377-4DEA-A4E5-D2DC857C48CB}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{C6A78E38-D377-4DEA-A4E5-D2DC857C48CB}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{C6A78E38-D377-4DEA-A4E5-D2DC857C48CB}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{C6A78E38-D377-4DEA-A4E5-D2DC857C48CB}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
