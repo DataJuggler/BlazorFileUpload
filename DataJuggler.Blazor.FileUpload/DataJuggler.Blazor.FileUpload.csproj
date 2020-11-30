@@ -14,7 +14,9 @@ Standard or .Net Core.
 Version 1.2.0+ has new features that are untested involving image required, min and max height and width values, so use with caution.
 
 I have tested it enough it works for my use cases. Most of the problems I have read about the control involve over 20 meg and multiple file uploads.</Description>
-    <PackageReleaseNotes>Version 1.4.1: I had a prroblem with my first attempt at .Net 5. Trying again.
+    <PackageReleaseNotes>Version 1.5.0: I am trying to be somewhat consistent with my other packages. The 1 is this is still version one of this product, the 5 is .Net 5.0. This version should actually work. I tested it a little this time.
+
+Version 1.4.1: I had a prroblem with my first attempt at .Net 5. Trying again.
 
 Version 1.4.0: This version of for .Net 5.0. I am still using Steve Sanderson's Blazor Input File because it worked, and the new version for .Net 5.0 I can't get working yet.
 
@@ -151,14 +153,14 @@ Update 1.0.6-Preview: I decided to return more information about the file instea
 </PackageReleaseNotes>
     <PackageTags>C#, Blazor, FileUpload, BlazorFileUpload</PackageTags>
     <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
-    <Version>1.5.0</Version>
+    <Version>1.5.1</Version>
     <PackageLicenseFile>LICENSE</PackageLicenseFile>
     <PackageProjectUrl>https://github.com/DataJuggler/BlazorFileUpload</PackageProjectUrl>
     <PackageIcon>BlazorFileUploadIcon.png</PackageIcon>
     <PackageIconUrl />
     <RepositoryUrl>https://github.com/DataJuggler/BlazorFileUpload.git</RepositoryUrl>
     <RepositoryType>Git - GitHub</RepositoryType>
-    <AssemblyVersion>1.4.1.0</AssemblyVersion>
+    <AssemblyVersion>1.5.1.0</AssemblyVersion>
   </PropertyGroup>
 
 

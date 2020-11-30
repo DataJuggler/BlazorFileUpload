@@ -48,8 +48,8 @@ namespace FileUploadSample.Pages
                     status = "The file " + uploadedFileInfo.FullName + " was uploaded.";
                     
                     // other information about the file is available
-                    //DateTime lastModified = uploadedFileInfo.LastModified;
-                    //string nameAsItIsOnDisk = uploadedFileInfo.NameWithPartialGuid;
+                    // DateTime lastModified = uploadedFileInfo.LastModified;
+                    // string nameAsItIsOnDisk = uploadedFileInfo.NameWithPartialGuid;
                     //string partialGuid = uploadedFileInfo.PartialGuid;
                     //long size = uploadedFileInfo.Size;
                     //string type = uploadedFileInfo.Type;
