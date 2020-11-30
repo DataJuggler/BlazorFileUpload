@@ -4,7 +4,7 @@
     <TargetFramework>net5.0</TargetFramework>
     <RazorLangVersion>3.0</RazorLangVersion>
     <Authors>DataJuggler</Authors>
-    <Description>
+    <Description>This package makes uploading files easy for .Net 5 Blazor projects.
 
 This package was originally built upon BlazorInputFile by Steve Sanderson at Microsoft. https://github.com/SteveSandersonMS/BlazorInputFile
 
@@ -14,7 +14,9 @@ Standard or .Net Core.
 Version 1.2.0+ has new features that are untested involving image required, min and max height and width values, so use with caution.
 
 I have tested it enough it works for my use cases. Most of the problems I have read about the control involve over 20 meg and multiple file uploads.</Description>
-    <PackageReleaseNotes>Version 1.5.0: I am trying to be somewhat consistent with my other packages. The 1 is this is still version one of this product, the 5 is .Net 5.0. This version should actually work. I tested it a little this time.
+    <PackageReleaseNotes>Version 1.5.1: This version works. Sorry for the confusion during testing.
+
+Version 1.5.0: I am trying to be somewhat consistent with my other packages. The 1 is this is still version one of this product, the 5 is .Net 5.0. This version should actually work. I tested it a little this time.
 
 Version 1.4.1: I had a prroblem with my first attempt at .Net 5. Trying again.
 
