@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.IO;
 using System.Text;
+using System.Drawing;
 using Microsoft.AspNetCore.Components.Forms;
 
 namespace DataJuggler.Blazor.FileUpload
@@ -26,6 +27,7 @@ namespace DataJuggler.Blazor.FileUpload
         private string tag;
         private Exception exception;
         private MemoryStream stream;
+        private Image image;
         #endregion
 
         #region Constructor
@@ -46,6 +48,7 @@ namespace DataJuggler.Blazor.FileUpload
                 this.LastModified = file.LastModified.DateTime;
                 this.AppendPartialGuid = appendPartialGuid;
                 this.Name = file.Name;
+                this.Extension = GetExtension(file.Name);
                 this.PartialGuid = partialGuid;
                 this.Size = file.Size;
                 this.Type = GetExtension(file.Name);
@@ -244,6 +247,17 @@ namespace DataJuggler.Blazor.FileUpload
             {
                 get { return height; }
                 set { height = value; }
+            }
+            #endregion
+            
+            #region Image
+            /// <summary>
+            /// This property gets or sets the value for 'Image'.
+            /// </summary>
+            public Image Image
+            {
+                get { return image; }
+                set { image = value; }
             }
             #endregion
             

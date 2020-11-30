@@ -12,6 +12,7 @@ using System.Linq;
 using System.Drawing;
 using System.Drawing.Drawing2D;
 using System.Drawing.Imaging;
+using System.Threading;
 using Microsoft.AspNetCore.Components.Forms;
 
 #endregion
@@ -37,10 +38,10 @@ namespace DataJuggler.Blazor.FileUpload
         private string customButtonTextClassName;
         private string resetButtonClassName;
         private bool visible;
-        private bool saveToDisk;
+        private bool saveToDisk;        
         #endregion
 
-        #region Construcctor()
+        #region Constructor()
         /// <summary>
         /// Create a new instance of a FileUpload
         /// </summary>
@@ -64,82 +65,84 @@ namespace DataJuggler.Blazor.FileUpload
                     // if the file is a .jpg or a .png
                     if (IsImageFile(extension))
                     {
-                        // get the image from the memory stream
-                        Image image = Bitmap.FromStream(stream);
+                        
 
-                        // set the properties for the return value
-                        uploadedFileInfo.Height = image.Height;
-                        uploadedFileInfo.Width = image.Width;
+                        //// Set the image
+                        //uploadedFileInfo.Image = image;
+
+                        //// set the properties for the return value
+                        //uploadedFileInfo.Height = image.Height;
+                        //uploadedFileInfo.Width = image.Width;
 
                         // The RequiredHeight is an exact match
 
-                        // if the RequiredHeight or RequiredWidth and a message is set the upload file
-                        if (HasRequiredHeight || (HasRequiredWidth) && (HasCustomRequiredSizeMessage))
-                        {
-                            // check Required Size
+                        //// if the RequiredHeight or RequiredWidth and a message is set the upload file
+                        //if (HasRequiredHeight || (HasRequiredWidth) && (HasCustomRequiredSizeMessage))
+                        //{
+                        //    // check Required Size
 
-                            // if a RequiredHeight is set
-                            if ((HasRequiredHeight) && (image.Height != RequiredHeight))
-                            {
-                                // Abort for file being incorrect height
-                                uploadedFileInfo.Aborted = true;
-                            }
-                            else if ((HasRequiredWidth) && (image.Width != RequiredWidth))
-                            {
-                                 // Abort for file being incorrect width
-                                uploadedFileInfo.Aborted = true;
-                            }
-                        }
+                        //    // if a RequiredHeight is set
+                        //    if ((HasRequiredHeight) && (image.Height != RequiredHeight))
+                        //    {
+                        //        // Abort for file being incorrect height
+                        //        uploadedFileInfo.Aborted = true;
+                        //    }
+                        //    else if ((HasRequiredWidth) && (image.Width != RequiredWidth))
+                        //    {
+                        //         // Abort for file being incorrect width
+                        //        uploadedFileInfo.Aborted = true;
+                        //    }
+                        //}
 
-                        // if not aborted
-                        if (!uploadedFileInfo.Aborted)
-                        {
-                            // check Min Size
+                        //// if not aborted
+                        //if (!uploadedFileInfo.Aborted)
+                        //{
+                        //    // check Min Size
 
-                            // if a MinHeight is set
-                            if ((HasMinHeight) && (image.Height != MinHeight))
-                            {
-                                // Abort for file being incorrect height
-                                uploadedFileInfo.Aborted = true;
-                            }
-                            else if ((HasMinWidth) && (image.Width != MinWidth))
-                            {
-                                    // Abort for file being incorrect width
-                                uploadedFileInfo.Aborted = true;
-                            }
+                        //    // if a MinHeight is set
+                        //    if ((HasMinHeight) && (image.Height != MinHeight))
+                        //    {
+                        //        // Abort for file being incorrect height
+                        //        uploadedFileInfo.Aborted = true;
+                        //    }
+                        //    else if ((HasMinWidth) && (image.Width != MinWidth))
+                        //    {
+                        //            // Abort for file being incorrect width
+                        //        uploadedFileInfo.Aborted = true;
+                        //    }
 
-                            // if Aborted
-                            if (uploadedFileInfo.Aborted)
-                            {   
-                                // Set the Status
-                                Status = CustomMinHeightMessage;
-                            }
-                        }
+                        //    // if Aborted
+                        //    if (uploadedFileInfo.Aborted)
+                        //    {   
+                        //        // Set the Status
+                        //        Status = CustomMinHeightMessage;
+                        //    }
+                        //}
 
-                        // if not aborted
-                        if (!uploadedFileInfo.Aborted)
-                        {
-                            // check Max Size
+                        //// if not aborted
+                        //if (!uploadedFileInfo.Aborted)
+                        //{
+                        //    // check Max Size
 
-                            // if a MaxHeight is set
-                            if ((HasMaxHeight) && (image.Height != MaxHeight))
-                            {
-                                // Abort for file being incorrect height
-                                uploadedFileInfo.Aborted = true;
-                            }
-                            else if ((HasMaxWidth) && (image.Width != MaxWidth))
-                            {
-                                    // Abort for file being incorrect width
-                                uploadedFileInfo.Aborted = true;
-                            }
+                        //    // if a MaxHeight is set
+                        //    if ((HasMaxHeight) && (image.Height != MaxHeight))
+                        //    {
+                        //        // Abort for file being incorrect height
+                        //        uploadedFileInfo.Aborted = true;
+                        //    }
+                        //    else if ((HasMaxWidth) && (image.Width != MaxWidth))
+                        //    {
+                        //            // Abort for file being incorrect width
+                        //        uploadedFileInfo.Aborted = true;
+                        //    }
 
-                            // if Aborted
-                            if (uploadedFileInfo.Aborted)
-                            {   
-                                // Set the Status
-                                Status = CustomMaxHeightMessage;
-                            }
-                        }
+                        //    // if Aborted
+                        //    if (uploadedFileInfo.Aborted)
+                        //    {   
+                        //        // Set the Status
+                        //        Status = CustomMaxHeightMessage;
+                        //    }
+                        //}
                     }
                 }
                 catch (Exception error)
@@ -212,7 +215,7 @@ namespace DataJuggler.Blazor.FileUpload
             /// This method gives you access to the files that were uploaded
             /// </summary>
             /// <param name="eventArgs"></param>
-            private void OnFileChange(InputFileChangeEventArgs eventArgs)
+            private async void OnFileChange(InputFileChangeEventArgs eventArgs)
             {
                 //// Get access to the file
                 IBrowserFile file = eventArgs.File;
@@ -222,7 +225,7 @@ namespace DataJuggler.Blazor.FileUpload
                 bool abort = false;
                 
                 // locals
-                Stream stream = null; 
+                MemoryStream ms = null;         
                 
                 // verify the file exists
                 if (file != null)
@@ -234,7 +237,7 @@ namespace DataJuggler.Blazor.FileUpload
                         
                         // create the uploadedFileInfo
                         uploadedFileInfo = new UploadedFileInfo(file, partialGuid, AppendPartialGuid, UploadFolder);
-                        
+
                         // if the file is too large
                         if ((MaxFileSize > 0) && (file.Size > MaxFileSize))
                         {
@@ -275,12 +278,15 @@ namespace DataJuggler.Blazor.FileUpload
 
                             // if we should continue
                             if (!abort)
-                            {
+                            {  
+                                // create the memoryStream
+                                ms = new MemoryStream();
+
                                 // await for the data to be copied to the memory stream
-                                stream = file.OpenReadStream(MaxFileSize);
+                                await file.OpenReadStream(MaxFileSize).CopyToAsync(ms);
 
                                 // Check for abort 1 more time
-                                uploadedFileInfo = CheckSize(fileInfo.Extension, stream, uploadedFileInfo);
+                                 uploadedFileInfo = CheckSize(fileInfo.Extension, ms, uploadedFileInfo);
 
                                 // if abort
                                 if (uploadedFileInfo.Aborted)
@@ -296,21 +302,20 @@ namespace DataJuggler.Blazor.FileUpload
                                 // if the value for SaveToDisk is true
                                 if (SaveToDisk)
                                 {
-                                    // get the path
-                                    string path = Path.Combine(UploadFolder, uploadedFileInfo.FullName);
+                                    // save the file using the FullName (If AppendPartialGuid is still true, than the Name.PartialGuid is the FullName
+                                    using (FileStream fileStream = new FileStream(Path.Combine(UploadFolder, uploadedFileInfo.FullName), FileMode.Create, FileAccess.Write))
+                                    {
+                                        ms.WriteTo(fileStream);
+                                    }
 
                                     // Save tghe file
-                                    SaveFileStream(path, stream);
+                                    // SaveFileStream(path, file);
                                 }
                                 else
                                 {
-                                    // set the memoryStream
-                                    MemoryStream memoryStream = new MemoryStream();
-                                    stream.CopyToAsync(memoryStream);
-
                                     // Set the MemoryStream, to allow people to save outside of the project 
-                                    // folder, to disk or other processing like virus scan.
-                                    uploadedFileInfo.Stream = memoryStream;
+                                    // folder, to disk or other processing like virus scans.
+                                    uploadedFileInfo.Stream = ms;
                                 }
                                 
                                 // if there is a CustomSave
@@ -383,6 +388,16 @@ namespace DataJuggler.Blazor.FileUpload
             }
             #endregion
 
+            #region OnInitialized()
+            /// <summary>
+            /// This event will fire at startup
+            /// </summary>
+            protected override void OnInitialized()
+            {
+              
+            }
+            #endregion
+
             #region ResetFinished()
             /// <summary>
             /// This event is fired after a file is uploaded, and is used to notify subscribers of the OnChange event.
@@ -426,11 +441,36 @@ namespace DataJuggler.Blazor.FileUpload
             /// </summary>
             /// <param name="path"></param>
             /// <param name="stream"></param>
-            private void SaveFileStream(String path, Stream stream)
+            private async void SaveFileStream(String path, IBrowserFile file)
             {  
-                var fileStream = new FileStream(path, FileMode.Create, FileAccess.Write);
-                stream.CopyToAsync(fileStream);
-                fileStream.Dispose();
+                // locals
+                //double totalRead = 0;
+                //int bytesRead = 0;
+                //long totalBytes = 0;
+
+                try
+                {
+                    // copy 8 megs at a time
+                    // var buffer = new byte[8 * 1048576];
+
+                    FileStream fs = File.OpenWrite(path);
+                    
+                    await file.OpenReadStream().CopyToAsync(fs);
+
+                    fs.Close();
+                    
+
+                    // close the file stream
+                    // fs.Close();
+
+                    // destory the file stream object
+                    // fs.Dispose();
+                }
+                catch (Exception error)
+                {
+                    // for debugging only for now
+                    string err = error.ToString();
+                }
             }
             #endregion
             
