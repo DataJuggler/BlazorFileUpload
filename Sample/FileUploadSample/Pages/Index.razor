@@ -9,7 +9,7 @@
 <div>
     <FileUpload CustomSuccessMessage="Your file uploaded successfully." OnChange="OnFileUploaded"
         ShowStatus="false"  PartialGuidLength="10" MaxFileSize="4194304" FilterByExtension="true"
-        AllowedExtensions=".jpg;.png;" ShowResetButton="true" OnReset="OnReset" 
+        AllowedExtensions=".jpg,.png" ShowResetButton="true" OnReset="OnReset" 
         CustomExtensionMessage="Only .jpg and .png files are allowed." AppendPartialGuid="true"
         Visible="true" FileTooLargeMessage="The file uploaded must be 4 megabytes or smaller.">
     </FileUpload>
@@ -23,7 +23,7 @@
     <FileUpload CustomSuccessMessage="Your file uploaded successfully." OnChange="OnFileUploaded"
         Visible="false" ShowStatus="false"  PartialGuidLength="10" MaxFileSize="4194304" 
         FilterByExtension="true" ShowCustomButton="true" ButtonText="Select File"
-        CustomButtonClassName="buttonwide" AllowedExtensions=".jpg;.png;" ShowResetButton="true"
+        CustomButtonClassName="buttonwide" AllowedExtensions=".jpg,.png" ShowResetButton="true"
         OnReset="OnReset" ResetButtonClassName="button" ResetButtonText="Reset"
         CustomExtensionMessage="Only .jpg and .png files are allowed." AppendPartialGuid="true"
         FileTooLargeMessage="The file uploaded must be 4 megabytes or smaller.">
@@ -42,7 +42,7 @@ Select the Xml file located in the Xml folder of this project. <br />
     <FileUpload CustomSuccessMessage="Your file uploaded successfully." OnChange="OnFileUploaded2"
         Visible="false" ShowStatus="false"  PartialGuidLength="10" MaxFileSize="4194304" 
         FilterByExtension="true" ShowCustomButton="true" ButtonText="Select File" 
-        CustomButtonClassName="buttonwide" AllowedExtensions=".xml;" ShowResetButton="true"
+        CustomButtonClassName="buttonwide" AllowedExtensions=".xml" ShowResetButton="true"
         OnReset="OnReset" SaveToDisk="false" ResetButtonClassName="button" ResetButtonText="Reset"
         CustomExtensionMessage="Only .xml files are allowed." AppendPartialGuid="true"                
         FileTooLargeMessage="The file uploaded must be 4 megabytes or smaller.">
