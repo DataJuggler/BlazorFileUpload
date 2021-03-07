@@ -206,7 +206,7 @@ namespace DataJuggler.Blazor.FileUpload
                 // return value
                 return isImageFile;
             }
-            #endregion
+        #endregion
 
             #region OnFileChange(InputFileChangeEventArgs eventArgs)
             /// <summary>
@@ -215,175 +215,44 @@ namespace DataJuggler.Blazor.FileUpload
             /// <param name="eventArgs"></param>
             private async void OnFileChange(InputFileChangeEventArgs eventArgs)
             {
-                //// Get access to the file
-                IBrowserFile file = eventArgs.File;
+                // Starting the upload
+                UploadComplete = false;
 
-                 // locals
-                UploadedFileInfo uploadedFileInfo = null;
-                bool abort = false;
-                
-                // locals
-                MemoryStream ms = null;         
-                
-                // verify the file exists
-                if (file != null)
+                //// Get access to the file
+                if (!MultipleFiles)
+                    await UploadFile(eventArgs.File);
+                else
                 {
                     try
                     {
-                        // the partialGuid is need to ensure uniqueness
-                        string partialGuid = Guid.NewGuid().ToString().Substring(0, PartialGuidLength);
-                        
-                        // create the uploadedFileInfo
-                        uploadedFileInfo = new UploadedFileInfo(file, partialGuid, AppendPartialGuid, UploadFolder);
-
-                        // if the file is too large
-                        if ((MaxFileSize > 0) && (file.Size > MaxFileSize))
+                        // Will upload all the select files
+                        IReadOnlyList<IBrowserFile> files = eventArgs.GetMultipleFiles(MaxFileCount);
+                        foreach (IBrowserFile file in files)
+                            await UploadFile(file);
+                    }
+                    catch (InvalidOperationException)
+                    {
+                        // If this happens is because the has selected more files than allowed in MaxFileCount
+                        UploadedFileInfo uploadedFileInfo = new UploadedFileInfo(null, null, false, null)
                         {
-                            // Show the FileTooLargeMessage
-                            status = FileTooLargeMessage;
-                            
                             // Upload was aborted
-                            uploadedFileInfo.Aborted = true;
-                            uploadedFileInfo.ErrorMessage = FileTooLargeMessage;
-                            uploadedFileInfo.Exception = new Exception("The file uploaded was too large.");
-                        }
-                        else
-                        {
-                            // Create a new instance of a 'FileInfo' object.
-                            FileInfo fileInfo = new FileInfo(file.Name);
-                            
-                            // Set the extension. The ToLower is for just in case. I don't know if it's even possible for an extension to be upper case
-                            uploadedFileInfo.Extension = fileInfo.Extension.ToLower();
-                            
-                            // if FilterByExtension is true and the AllowedExtensions text exists
-                            if ((FilterByExtension) && (!String.IsNullOrWhiteSpace(AllowedExtensions)))
-                            {
-                                // verify the extension exists
-                                if (!String.IsNullOrWhiteSpace(fileInfo.Extension))
-                                {
-                                    // If the allowed extensions // fixed issue where uploading 
-                                    abort = !AllowedExtensions.ToLower().Contains(fileInfo.Extension.ToLower());
-                                }
-                                else
-                                {
-                                    // you must have an extension
-                                    abort = true;
-                                }
-                            }
-                            
-                            // Set aborted to true
-                            uploadedFileInfo.Aborted = abort;
+                            Aborted = true,
+                            ErrorMessage = FileCountExceededMessage,
+                            Exception = new Exception("The numbers of files to upload is bigger than maximum allowed.")
+                        };
 
-                            // if we should continue
-                            if (!abort)
-                            {  
-                                // create the memoryStream
-                                ms = new MemoryStream();
-
-                                // await for the data to be copied to the memory stream
-                                await file.OpenReadStream(MaxFileSize).CopyToAsync(ms);
-
-                                // Check for abort 1 more time
-                                 uploadedFileInfo = CheckSize(fileInfo.Extension, ms, uploadedFileInfo);
-
-                                // if abort
-                                if (uploadedFileInfo.Aborted)
-                                {
-                                    // Do not process due to size is not valid, message has already been set
-                                    abort = true;
-                                }
-                            }
-                            
-                            // if we should continue
-                            if (!abort)
-                            {
-                                // if the value for SaveToDisk is true
-                                if (SaveToDisk)
-                                {
-                                    // set the full path 
-                                    string path = Path.Combine(UploadFolder, uploadedFileInfo.FullName);
-                                
-                                    // save the file using the FullName (If AppendPartialGuid is still true, than the Name.PartialGuid is the FullName
-                                    using (FileStream fileStream = new FileStream(path, FileMode.Create, FileAccess.Write))
-                                    {
-                                        // write out the file
-                                        ms.WriteTo(fileStream);
-                                    }
-                                }
-                                else
-                                {
-                                    // Set the MemoryStream, to allow people to save outside of the project 
-                                    // folder, to disk or other processing like virus scans.
-                                    uploadedFileInfo.Stream = ms;
-                                }
-                                
-                                // if there is a CustomSave
-                                if (!String.IsNullOrWhiteSpace(CustomSuccessMessage))
-                                {
-                                    // Show the CustomSuccessMessage
-                                    status = CustomSuccessMessage;
-                                }
-                                else
-                                {
-                                    // set the status
-                                    status = $"Saved file {file.Size} bytes from {file.Name}";
-                                }
-
-                                // Set additional properties for UploadFileInfo from this component; these values may be null.
-                                uploadedFileInfo.CustomId = CustomId;
-                                uploadedFileInfo.Tag = Tag;
-
-                                // The upload has completed
-                                UploadComplete = true;
-                            }
-                            else
-                            {
-                                // If a CustomExtensionMessage has been set
-                                if (!string.IsNullOrWhiteSpace(CustomExtensionMessage))
-                                {
-                                    // Display the Custom extension doesn't validate message
-                                    uploadedFileInfo.ErrorMessage = CustomExtensionMessage;
-                                }
-                                else
-                                {
-                                    // Can't think of a better message than this yet, just woke up
-                                    uploadedFileInfo.ErrorMessage = "The file uploaded is an invalid extension.";
-                                }
-                                
-                                // Show the exception
-                                uploadedFileInfo.Exception = new Exception(uploadedFileInfo.ErrorMessage);
-                            }
-                        }
-                    }
-                    catch (Exception error)
-                    {
-                        // Upload was aborted
-                        uploadedFileInfo.Aborted = true;
-                        
-                        // Store the Exception
-                        uploadedFileInfo.Exception = error;
-                        
-                        // if a CustomErrorMessage is set
-                        if (!String.IsNullOrWhiteSpace(CustomErrorMessage))
-                        {
-                            // Show the custom error message
-                            status = CustomErrorMessage;
-                        }
-                        else
-                        {
-                            // show the full error
-                            status = error.ToString();
-                        }
-                        
-                        // set the error message
-                        uploadedFileInfo.ErrorMessage = status;
-                    }
-                    finally
-                    {
-                        // Notify the caller the upload was successful or aborted due to an error 
-                        FileUploaded(uploadedFileInfo);                        
+                        // Notify the caller the upload was aborted due to an error 
+                        FileUploaded(uploadedFileInfo);
                     }
                 }
+                // The upload has completed
+                UploadComplete = true;
+
+                // Refresh the UI
+                StateHasChanged();
+
+                // Fires the event to indicate that all files has been uploaded
+                await OnUploadCompleted.InvokeAsync();
             }
             #endregion
 
@@ -432,6 +301,183 @@ namespace DataJuggler.Blazor.FileUpload
                 // Update the UI
                 StateHasChanged();
             }
+        #endregion
+
+            #region UploadFile(IBrowserFile file)
+            /// <summary>
+            /// This method give access to a file that was uploaded.
+            /// </summary>
+            /// <param name="file"></param>
+            /// <returns></returns>
+            private async Task UploadFile(IBrowserFile file)
+            {
+                // locals
+                UploadedFileInfo uploadedFileInfo = null;
+                bool abort = false;
+
+                // locals
+                MemoryStream ms = null;
+
+                // verify the file exists
+                if (file != null)
+                {
+                    try
+                    {
+                        // the partialGuid is need to ensure uniqueness
+                        string partialGuid = Guid.NewGuid().ToString().Substring(0, PartialGuidLength);
+
+                        // create the uploadedFileInfo
+                        uploadedFileInfo = new UploadedFileInfo(file, partialGuid, AppendPartialGuid, UploadFolder);
+
+                        // if the file is too large
+                        if ((MaxFileSize > 0) && (file.Size > MaxFileSize))
+                        {
+                            // Show the FileTooLargeMessage
+                            status = FileTooLargeMessage;
+
+                            // Upload was aborted
+                            uploadedFileInfo.Aborted = true;
+                            uploadedFileInfo.ErrorMessage = FileTooLargeMessage;
+                            uploadedFileInfo.Exception = new Exception("The file uploaded was too large.");
+                        }
+                        else
+                        {
+                            // Create a new instance of a 'FileInfo' object.
+                            FileInfo fileInfo = new FileInfo(file.Name);
+
+                            // Set the extension. The ToLower is for just in case. I don't know if it's even possible for an extension to be upper case
+                            uploadedFileInfo.Extension = fileInfo.Extension.ToLower();
+
+                            // if FilterByExtension is true and the AllowedExtensions text exists
+                            if ((FilterByExtension) && (!String.IsNullOrWhiteSpace(AllowedExtensions)))
+                            {
+                                // verify the extension exists
+                                if (!String.IsNullOrWhiteSpace(fileInfo.Extension))
+                                {
+                                    // If the allowed extensions // fixed issue where uploading 
+                                    abort = !AllowedExtensions.ToLower().Contains(fileInfo.Extension.ToLower());
+                                }
+                                else
+                                {
+                                    // you must have an extension
+                                    abort = true;
+                                }
+                            }
+
+                            // Set aborted to true
+                            uploadedFileInfo.Aborted = abort;
+
+                            // if we should continue
+                            if (!abort)
+                            {
+                                // create the memoryStream
+                                ms = new MemoryStream();
+
+                                // await for the data to be copied to the memory stream
+                                await file.OpenReadStream(MaxFileSize).CopyToAsync(ms);
+
+                                // Check for abort 1 more time
+                                uploadedFileInfo = CheckSize(fileInfo.Extension, ms, uploadedFileInfo);
+
+                                // if abort
+                                if (uploadedFileInfo.Aborted)
+                                {
+                                    // Do not process due to size is not valid, message has already been set
+                                    abort = true;
+                                }
+                            }
+
+                            // if we should continue
+                            if (!abort)
+                            {
+                                // if the value for SaveToDisk is true
+                                if (SaveToDisk)
+                                {
+                                    // set the full path 
+                                    string path = Path.Combine(UploadFolder, uploadedFileInfo.FullName);
+
+                                    // save the file using the FullName (If AppendPartialGuid is still true, than the Name.PartialGuid is the FullName
+                                    using (FileStream fileStream = new FileStream(path, FileMode.Create, FileAccess.Write))
+                                    {
+                                        // write out the file
+                                        ms.WriteTo(fileStream);
+                                    }
+                                }
+                                else
+                                {
+                                    // Set the MemoryStream, to allow people to save outside of the project 
+                                    // folder, to disk or other processing like virus scans.
+                                    uploadedFileInfo.Stream = ms;
+                                }
+
+                                // if there is a CustomSave
+                                if (!String.IsNullOrWhiteSpace(CustomSuccessMessage))
+                                {
+                                    // Show the CustomSuccessMessage
+                                    status = CustomSuccessMessage;
+                                }
+                                else
+                                {
+                                    // set the status
+                                    status = $"Saved file {file.Size} bytes from {file.Name}";
+                                }
+
+                                // Set additional properties for UploadFileInfo from this component; these values may be null.
+                                uploadedFileInfo.CustomId = CustomId;
+                                uploadedFileInfo.Tag = Tag;
+
+                                // The upload has completed
+                                //UploadComplete = true;
+                            }
+                            else
+                            {
+                                // If a CustomExtensionMessage has been set
+                                if (!string.IsNullOrWhiteSpace(CustomExtensionMessage))
+                                {
+                                    // Display the Custom extension doesn't validate message
+                                    uploadedFileInfo.ErrorMessage = CustomExtensionMessage;
+                                }
+                                else
+                                {
+                                    // Can't think of a better message than this yet, just woke up
+                                    uploadedFileInfo.ErrorMessage = "The file uploaded is an invalid extension.";
+                                }
+
+                                // Show the exception
+                                uploadedFileInfo.Exception = new Exception(uploadedFileInfo.ErrorMessage);
+                            }
+                        }
+                    }
+                    catch (Exception error)
+                    {
+                        // Upload was aborted
+                        uploadedFileInfo.Aborted = true;
+
+                        // Store the Exception
+                        uploadedFileInfo.Exception = error;
+
+                        // if a CustomErrorMessage is set
+                        if (!String.IsNullOrWhiteSpace(CustomErrorMessage))
+                        {
+                            // Show the custom error message
+                            status = CustomErrorMessage;
+                        }
+                        else
+                        {
+                            // show the full error
+                            status = error.ToString();
+                        }
+
+                        // set the error message
+                        uploadedFileInfo.ErrorMessage = status;
+                    }
+                    finally
+                    {
+                        // Notify the caller the upload was successful or aborted due to an error 
+                        FileUploaded(uploadedFileInfo);
+                    }
+                }
+            }
             #endregion
 
         #endregion
@@ -444,8 +490,8 @@ namespace DataJuggler.Blazor.FileUpload
             /// Example: .jpg;.png;
             /// </summary>
             [Parameter]
-            public string AllowedExtensions { get; set; } = "";
-            #endregion
+                public string AllowedExtensions { get; set; } = "";
+                #endregion
             
             #region AppendPartialGuid
             /// <summary>
@@ -583,16 +629,25 @@ namespace DataJuggler.Blazor.FileUpload
             /// </summary>
             [Parameter]
             public string CustomSuccessMessage { get; set; } = "";
+        #endregion
+
+            #region FileCountExceededMessage
+            /// <summary>
+            /// This property gets or sets the value for FileTooLargeMessage.
+            /// Example: 'Selected files to upload must be 1 to 3.'
+            /// </summary>
+            [Parameter]
+            public string FileCountExceededMessage { get; set; } = "Number of files exceeds the maximum files allowed to upload";
             #endregion
-            
+
             #region FileTooLargeMessage
             /// <summary>
             /// This property gets or sets the value for FileTooLargeMessage.
             /// Example: 'Files must be 4 megabytes or smaller.'
             /// </summary>
             [Parameter]
-            public string FileTooLargeMessage { get; set; } = "The file uploaded is too large";
-            #endregion
+                public string FileTooLargeMessage { get; set; } = "The file uploaded is too large";
+                #endregion
             
             #region FilterByExtension
             /// <summary>
@@ -828,6 +883,15 @@ namespace DataJuggler.Blazor.FileUpload
             public long MaxFileSize { get; set; } = 0;
             #endregion
 
+            #region MaxFileCount
+            /// <summary>
+            /// This property gets or sets the value for MaxFileCount.
+            /// This property is the maximum number of files that can be upload at once.
+            /// </summary>
+            [Parameter]
+            public int MaxFileCount { get; set; } = 10;
+            #endregion
+
             #region MaxHeight
             /// <summary>
             /// This property gets or sets the value for MaxHeight.
@@ -835,8 +899,8 @@ namespace DataJuggler.Blazor.FileUpload
             /// will be rejected. Note: This only works for .jpg and .png files.
             /// </summary>
             [Parameter]
-            public int MaxHeight { get; set; }
-            #endregion
+                public int MaxHeight { get; set; }
+                #endregion
 
             #region MaxWidth
             /// <summary>
@@ -878,8 +942,18 @@ namespace DataJuggler.Blazor.FileUpload
             /// </summary>
             [Parameter]
             public int MinWidth { get; set; }
-            #endregion
-            
+        #endregion
+
+            #region MultipleFiles
+            /// <summary>
+            /// This property gets or sets the value for MultipleFiles.
+            /// If MultipleFiles is set true will allow selecting multiple files for 
+            /// upload.
+            /// </summary>
+            [Parameter]
+            public bool MultipleFiles { get; set; } = false;
+                #endregion
+
             #region OnChange
             /// <summary>
             /// This property gets or sets the value for OnChange.
@@ -887,7 +961,7 @@ namespace DataJuggler.Blazor.FileUpload
             /// The parameter UploadFileInfo contains information about the uploaded file.
             /// </summary>
             [Parameter] public EventCallback<UploadedFileInfo> OnChange { get; set; }
-            #endregion
+                #endregion
 
             #region OnReset
             /// <summary>
@@ -896,19 +970,27 @@ namespace DataJuggler.Blazor.FileUpload
             /// This is needed so clients can reset or adjust the UI when the Reset button is clicked.
             /// </summary>
             [Parameter] public EventCallback<string> OnReset { get; set; }
+        #endregion
+
+            #region OnUploadCompleted
+            /// <summary>
+            /// This property gets or sets the value for OnUploadCompleted.
+            /// This event will get called after the file all the files has been uploaded.
+            /// </summary>
+            [Parameter] public EventCallback OnUploadCompleted { get; set; }
             #endregion
-            
+
             #region PartialGuidLength
             /// <summary>
-             /// This property gets or sets the value for PartialGuidLength.
-             /// If append partial guid is true, this value is the number of characters 
-             /// appended to the filename.
-             /// Example: PartialGuidLength = 10.
-             /// Uploaded FileName: myphoto.472e205c-1.jpg'
+            /// This property gets or sets the value for PartialGuidLength.
+            /// If append partial guid is true, this value is the number of characters 
+            /// appended to the filename.
+            /// Example: PartialGuidLength = 10.
+            /// Uploaded FileName: myphoto.472e205c-1.jpg'
             /// </summary>
             [Parameter]
-            public int PartialGuidLength { get; set; } = 12;
-            #endregion
+                public int PartialGuidLength { get; set; } = 12;
+                #endregion
 
             #region RequiredHeight
             /// <summary>

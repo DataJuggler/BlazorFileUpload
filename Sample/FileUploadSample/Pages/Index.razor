@@ -8,10 +8,11 @@
 
 <div>
     <FileUpload CustomSuccessMessage="Your file uploaded successfully." OnChange="OnFileUploaded"
-        ShowStatus="false"  PartialGuidLength="10" MaxFileSize="4194304" FilterByExtension="true"
-        AllowedExtensions=".jpg,.png" ShowResetButton="true" OnReset="OnReset" 
-        CustomExtensionMessage="Only .jpg and .png files are allowed." AppendPartialGuid="true"
-        Visible="true" FileTooLargeMessage="The file uploaded must be 4 megabytes or smaller.">
+                ShowStatus="false" PartialGuidLength="10" MaxFileSize="4194304" FilterByExtension="true"
+                AllowedExtensions=".jpg,.png" ShowResetButton="true" OnReset="OnReset" 
+                MultipleFiles="true" MaxFileCount="3" FileCountExceededMessage="Selected files to upload must be 1 to 3."
+                CustomExtensionMessage="Only .jpg and .png files are allowed." AppendPartialGuid="true"
+                Visible="true" FileTooLargeMessage="The file uploaded must be 4 megabytes or smaller.">
     </FileUpload>
 </div>
 
@@ -21,35 +22,41 @@
 
 <div class="customupload">
     <FileUpload CustomSuccessMessage="Your file uploaded successfully." OnChange="OnFileUploaded"
-        Visible="false" ShowStatus="false"  PartialGuidLength="10" MaxFileSize="4194304" 
-        FilterByExtension="true" ShowCustomButton="true" ButtonText="Select File"
-        CustomButtonClassName="buttonwide" AllowedExtensions=".jpg,.png" ShowResetButton="true"
-        OnReset="OnReset" ResetButtonClassName="button" ResetButtonText="Reset"
-        CustomExtensionMessage="Only .jpg and .png files are allowed." AppendPartialGuid="true"
-        FileTooLargeMessage="The file uploaded must be 4 megabytes or smaller.">
+                Visible="false" ShowStatus="false" PartialGuidLength="10" MaxFileSize="4194304"
+                FilterByExtension="true" ShowCustomButton="true" ButtonText="Select File"
+                CustomButtonClassName="buttonwide" AllowedExtensions=".jpg,.png" ShowResetButton="true"
+                OnReset="OnReset" ResetButtonClassName="button" ResetButtonText="Reset"
+                CustomExtensionMessage="Only .jpg and .png files are allowed." AppendPartialGuid="true"
+                FileTooLargeMessage="The file uploaded must be 4 megabytes or smaller.">
     </FileUpload>
 </div>
 
 <br />
-@status
+<div class="alert alert-light" role="alert" >
+    @foreach (string item in @status)
+    {
+        <div class="indentnone">@item</div>
+    }
+</div>
 
 <br />
 <h3>Sample 3 - Memory Stream Example</h3>
 
-Select the Xml file located in the Xml folder of this project. <br />
+Select the Xml file located in the Xml folder of this project.
+<br />
 
 <div class="customupload">
     <FileUpload CustomSuccessMessage="Your file uploaded successfully." OnChange="OnFileUploaded2"
-        Visible="false" ShowStatus="false"  PartialGuidLength="10" MaxFileSize="4194304" 
-        FilterByExtension="true" ShowCustomButton="true" ButtonText="Select File" 
-        CustomButtonClassName="buttonwide" AllowedExtensions=".xml" ShowResetButton="true"
-        OnReset="OnReset" SaveToDisk="false" ResetButtonClassName="button" ResetButtonText="Reset"
-        CustomExtensionMessage="Only .xml files are allowed." AppendPartialGuid="true"                
-        FileTooLargeMessage="The file uploaded must be 4 megabytes or smaller.">
+                Visible="false" ShowStatus="false" PartialGuidLength="10" MaxFileSize="4194304"
+                FilterByExtension="true" ShowCustomButton="true" ButtonText="Select File"
+                CustomButtonClassName="buttonwide" AllowedExtensions=".xml" ShowResetButton="true"
+                OnReset="OnReset" SaveToDisk="false" ResetButtonClassName="button" ResetButtonText="Reset"
+                CustomExtensionMessage="Only .xml files are allowed." AppendPartialGuid="true"
+                FileTooLargeMessage="The file uploaded must be 4 megabytes or smaller.">
     </FileUpload>
 </div>
 
-@if  (HasLines)
+@if (HasLines)
 {
     <div class="xml">
         @foreach (XmlLine line in Lines)
@@ -71,7 +78,8 @@ Select the Xml file located in the Xml folder of this project. <br />
 }
 
 
-<br /><br />
+<br />
+<br />
 
 <div class="sampleprojectinfo">
     I have a new File Upload sample project: <br />
@@ -91,7 +99,6 @@ Select the Xml file located in the Xml folder of this project. <br />
     </div>
     <div class="height48"></div>
 </div>
-
 
 @code
 {
