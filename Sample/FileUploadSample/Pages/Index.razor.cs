@@ -23,13 +23,13 @@ namespace FileUploadSample.Pages
     {
 
         #region Private Variables
-        private string status;
+        private List<string> status = new List<string>();
         private MarkupString xmlString;
         private List<XmlLine> lines;
         #endregion
 
         #region Methods
-
+            
             #region OnFileUploaded(UploadedFileInfo uploadedFileInfo)
             /// <summary>
             /// method returns the File Uploaded
@@ -38,14 +38,12 @@ namespace FileUploadSample.Pages
             {
                 // if aborted
                 if (uploadedFileInfo.Aborted)
-                {
                     // get the status
-                    status = uploadedFileInfo.ErrorMessage;
-                }
+                    status.Add(uploadedFileInfo.ErrorMessage);
                 else
                 {
                     // get the status
-                    status = "The file " + uploadedFileInfo.FullName + " was uploaded.";
+                    status.Add($"The file {uploadedFileInfo.FullName} was uploaded.");
                     
                     // other information about the file is available
                     // DateTime lastModified = uploadedFileInfo.LastModified;
@@ -146,7 +144,7 @@ namespace FileUploadSample.Pages
             private void OnReset(string notUsedByRequiredArg)
             {
                 // erase status
-                status = "";
+                status = new List<string>();
                 Lines = null;
 
                 // Refresh the UI
@@ -190,7 +188,7 @@ namespace FileUploadSample.Pages
             /// <summary>
             /// This property gets or sets the value for 'Status'.
             /// </summary>
-            public string Status
+            public List<string> Status
             {
                 get { return status; }
                 set { status = value; }
