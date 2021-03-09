@@ -43,6 +43,7 @@ namespace DataJuggler.Blazor.FileUpload
         private double progressPercent;
         private bool progressVisible;
         private double progressWidth;
+        // test
         #endregion
 
         #region Constructor()

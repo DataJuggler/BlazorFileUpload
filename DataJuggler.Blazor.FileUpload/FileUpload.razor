@@ -12,7 +12,7 @@
     @if (ShowCustomButton)
     {
         <label>
-            <InputFile InputFileClassName="@InputFileClassName" OnChange="OnFileChange" Visible="@Visible" accept="@AllowedExtensions" multiple="@MultipleFiles" />
+            <InputFile InputFileClassName="@InputFileClassName" OnChange="OnFileChange" Visible="@Visible" accept="@AllowedExtensions"  />
              <span class="@CustomButtonClassName">
                 <span class="@CustomButtonTextClassName">@ButtonText</span>
             </span>
@@ -21,7 +21,7 @@
     else
     {
         <div class="inputfilecontainer">
-            <InputFile Visible="@Visible" OnChange="@OnFileChange" accept="@AllowedExtensions" multiple="@MultipleFiles" />
+            <InputFile Visible="@Visible" OnChange="@OnFileChange" accept="@AllowedExtensions"  />
         </div>    
     }
     @if (ProgressVisible)
