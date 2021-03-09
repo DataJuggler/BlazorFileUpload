@@ -1,5 +1,12 @@
 ﻿
-
+<style>
+    .progressbar
+    {
+        color: firebrick;
+        width: @ProgressWidth;
+        height: @ProgressHeight;
+    }
+</style>
 @if (!uploadComplete)
 {  
     @if (ShowCustomButton)
@@ -16,6 +23,12 @@
         <div class="inputfilecontainer">
             <InputFile Visible="@Visible" OnChange="@OnFileChange" />
         </div>    
+    }
+    @if (ProgressVisible)
+     {
+        <div class="progressbar">
+
+        </div>
     }
 }
 else if (ShowResetButton)
