@@ -20,9 +20,10 @@ https://youtu.be/3xKXJQ4qThQ
 
 Breaking Change Version 1.3.2: ButtonClassName is now CustomButtonClassName. I was confusing ResetButtonClassName with ButtonClassName, so I renamed ButtonClassName to CustomButtonClassName, and ResetButtonClassName is used only for the Reset button.
 
-<b>You must use Dot Net Core 3.1 for BlazorFileUpload component to work.</b>
+<b>This project has now been converted for .Net 5.</b>
 
-I am using Visual Studio 16.4.5, but any version 16.4+ should be fine.
+Update 1.16.2021:
+I am using Visual Studio 16.8.4, but any version 16.8+ should be fine.
 
 <b>Nuget Package: DataJuggler.Blazor.FileUpload</b>
 
