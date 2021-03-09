@@ -1,4 +1,4 @@
-﻿
+
 
 #region using statements
 
@@ -43,7 +43,6 @@ namespace DataJuggler.Blazor.FileUpload
         private double progressPercent;
         private bool progressVisible;
         private double progressWidth;
-        // test
         #endregion
 
         #region Constructor()
@@ -185,6 +184,7 @@ namespace DataJuggler.Blazor.FileUpload
                 CustomButtonTextClassName = "custombuttontextstyle";
                 SaveToDisk = true;
                 Visible = true;
+                ProgressVisible = true;
                 ProgressHeight = 32;
             }
             #endregion
@@ -289,8 +289,12 @@ namespace DataJuggler.Blazor.FileUpload
                                 byte[] buffer = new byte[4 * 1096];
                                 int bytesRead;
                                 double totalRead = 0;
-
+                                using var stream = file.OpenReadStream(MaxFileSize);
+                                byte[] buffer = new byte[4 * 1096];
+                                int bytesRead;
+                                double totalRead = 0;
                                 progressVisible = true;
+
 
                                 while ((bytesRead = await stream.ReadAsync(buffer)) != 0)
                                 {
@@ -301,7 +305,9 @@ namespace DataJuggler.Blazor.FileUpload
                                     StateHasChanged();
                                 }
 
-                                 progressVisible = false;
+
+                                // finished uploading
+                                progressVisible = false;
 
                                 //// await for the data to be copied to the memory stream
                                 //await file.OpenReadStream(MaxFileSize).CopyToAsync(ms);
@@ -938,13 +944,20 @@ namespace DataJuggler.Blazor.FileUpload
             /// This property gets or sets the value for 'ProgressHeight'.
             /// </summary>
             [Parameter]
+            public int PartialGuidLength { get; set; } = 12;
+            #endregion
+
+            #region ProgressHeight
+            /// <summary>
+            /// This property gets or sets the value for 'ProgressHeight'.
+            /// </summary>
             public double ProgressHeight
             {
                 get { return progressHeight; }
                 set { progressHeight = value; }
             }
             #endregion
-            
+
             #region ProgressPercent
             /// <summary>
             /// This property gets or sets the value for 'ProgressPercent'.
@@ -952,17 +965,17 @@ namespace DataJuggler.Blazor.FileUpload
             public double ProgressPercent
             {
                 get { return progressPercent; }
-                set 
-                { 
+                set
+                {
                     // set the value
-                    progressPercent = value;               
+                    progressPercent = value;
 
                     // set the width
                     progressWidth = value * 8;
                 }
             }
             #endregion
-            
+
             #region ProgressVisible
             /// <summary>
             /// This property gets or sets the value for 'ProgressVisible'.
@@ -982,6 +995,17 @@ namespace DataJuggler.Blazor.FileUpload
             {
                 get { return progressWidth; }
                 set { progressWidth = value; }
+            }
+            #endregion
+            
+            #region ProgressVisible
+            /// <summary>
+            /// This property gets or sets the value for 'ProgressVisible'.
+            /// </summary>
+            public bool ProgressVisible
+            {
+                get { return progressVisible; }
+                set { progressVisible = value; }
             }
             #endregion
             

@@ -1,4 +1,4 @@
-﻿
+
 <style>
     .progressbar
     {
@@ -7,29 +7,29 @@
         height: @ProgressHeight;
     }
 </style>
+
 @if (!uploadComplete)
-{  
+{
     @if (ShowCustomButton)
     {
         <label>
-            <InputFile InputFileClassName="@InputFileClassName" OnChange="OnFileChange" Visible="@Visible" accept="@AllowedExtensions"  />
-             <span class="@CustomButtonClassName">
-                <span class="@CustomButtonTextClassName">@ButtonText</span>
+
+            <InputFile InputFileClassName="@InputFileClassName" OnChange="OnFileChange" Visible="@Visible" accept="@AllowedExtensions" multiple="@MultipleFiles" />
+            <span class="@CustomButtonClassName">
             </span>
         </label>
     }
     else
     {
         <div class="inputfilecontainer">
-            <InputFile Visible="@Visible" OnChange="@OnFileChange" accept="@AllowedExtensions"  />
-        </div>    
-    }
-    @if (ProgressVisible)
-     {
-        <div class="progressbar">
-
+            <InputFile Visible="@Visible" OnChange="@OnFileChange" accept="@AllowedExtensions" multiple="@MultipleFiles" />
         </div>
     }
+    @if (ProgressVisible)
+    {
+        <div class="progressbar">
+        </div>
+    }   
 }
 else if (ShowResetButton)
 {
