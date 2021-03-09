@@ -43,6 +43,7 @@ namespace DataJuggler.Blazor.FileUpload
         private double progressPercent;
         private bool progressVisible;
         private double progressWidth;
+        private bool multipleFiles;
         #endregion
 
         #region Constructor()
@@ -285,10 +286,6 @@ namespace DataJuggler.Blazor.FileUpload
                             {  
                                 //// create the memoryStream
                                 ms = new MemoryStream();
-                                using var stream = file.OpenReadStream(MaxFileSize);
-                                byte[] buffer = new byte[4 * 1096];
-                                int bytesRead;
-                                double totalRead = 0;
                                 using var stream = file.OpenReadStream(MaxFileSize);
                                 byte[] buffer = new byte[4 * 1096];
                                 int bytesRead;
@@ -909,6 +906,18 @@ namespace DataJuggler.Blazor.FileUpload
             public int MinWidth { get; set; }
             #endregion
             
+            #region MultipleFiles
+            /// <summary>
+            /// This property gets or sets the value for 'MultipleFiles'.
+            /// </summary>
+            [Parameter]
+            public bool MultipleFiles
+            {
+                get { return multipleFiles; }
+                set { multipleFiles = value; }
+            }
+            #endregion
+            
             #region OnChange
             /// <summary>
             /// This property gets or sets the value for OnChange.
@@ -934,14 +943,6 @@ namespace DataJuggler.Blazor.FileUpload
              /// appended to the filename.
              /// Example: PartialGuidLength = 10.
              /// Uploaded FileName: myphoto.472e205c-1.jpg'
-            /// </summary>
-            [Parameter]
-            public int PartialGuidLength { get; set; } = 12;
-            #endregion
-
-            #region ProgressHeight
-            /// <summary>
-            /// This property gets or sets the value for 'ProgressHeight'.
             /// </summary>
             [Parameter]
             public int PartialGuidLength { get; set; } = 12;
@@ -995,17 +996,6 @@ namespace DataJuggler.Blazor.FileUpload
             {
                 get { return progressWidth; }
                 set { progressWidth = value; }
-            }
-            #endregion
-            
-            #region ProgressVisible
-            /// <summary>
-            /// This property gets or sets the value for 'ProgressVisible'.
-            /// </summary>
-            public bool ProgressVisible
-            {
-                get { return progressVisible; }
-                set { progressVisible = value; }
             }
             #endregion
             
