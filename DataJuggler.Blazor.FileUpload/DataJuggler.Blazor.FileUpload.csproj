@@ -14,7 +14,12 @@ Standard or .Net Core.
 Version 1.2.0+ has new features that are untested involving image required, min and max height and width values, so use with caution.
 
 I have tested it enough it works for my use cases. Most of the problems I have read about the control involve over 20 meg and multiple file uploads.</Description>
-    <PackageReleaseNotes>Version 1.5.1: This version works. Sorry for the confusion during testing.
+    <PackageReleaseNotes>Version 1.6.1: I updated all the components to the latest versions, and I am attempting to display the ButtonText. All this time the ButtonText was being ignored. I am working on a new project that needed this so I updated.
+Sorry for the delay.
+
+Version 1.6.0: Another user provided an update to support Multiple Files. Creating the Nuget package now, so version 1.6.0 is not thoroughly tested yet.
+
+Version 1.5.1: This version works. Sorry for the confusion during testing.
 
 Version 1.5.0: I am trying to be somewhat consistent with my other packages. The 1 is this is still version one of this product, the 5 is .Net 5.0. This version should actually work. I tested it a little this time.
 
@@ -155,21 +160,21 @@ Update 1.0.6-Preview: I decided to return more information about the file instea
 </PackageReleaseNotes>
     <PackageTags>C#, Blazor, FileUpload, BlazorFileUpload</PackageTags>
     <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
-    <Version>1.5.1</Version>
+    <Version>1.6.1</Version>
     <PackageLicenseFile>LICENSE</PackageLicenseFile>
     <PackageProjectUrl>https://github.com/DataJuggler/BlazorFileUpload</PackageProjectUrl>
     <PackageIcon>BlazorFileUploadIcon.png</PackageIcon>
     <PackageIconUrl />
     <RepositoryUrl>https://github.com/DataJuggler/BlazorFileUpload.git</RepositoryUrl>
     <RepositoryType>Git - GitHub</RepositoryType>
-    <AssemblyVersion>1.5.1.0</AssemblyVersion>
+    <AssemblyVersion>1.6.1.0</AssemblyVersion>
   </PropertyGroup>
 
 
   <ItemGroup>
-    <PackageReference Include="Microsoft.AspNetCore.Components" Version="5.0.0" />
-    <PackageReference Include="Microsoft.AspNetCore.Components.Web" Version="5.0.0" />
-    <PackageReference Include="System.Drawing.Common" Version="5.0.0" />
+    <PackageReference Include="Microsoft.AspNetCore.Components" Version="5.0.11" />
+    <PackageReference Include="Microsoft.AspNetCore.Components.Web" Version="5.0.11" />
+    <PackageReference Include="System.Drawing.Common" Version="5.0.2" />
   </ItemGroup>
 
 
