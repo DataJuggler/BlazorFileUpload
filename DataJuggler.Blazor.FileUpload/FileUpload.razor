@@ -6,6 +6,12 @@
         width: @ProgressWidth;
         height: @ProgressHeight;
     }
+    .verticalcenter
+    {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
 </style>
 
 @if (!uploadComplete)
@@ -14,8 +20,7 @@
     {
         <label>
             <InputFile InputFileClassName="@InputFileClassName" OnChange="OnFileChange" Visible="@Visible" accept="@AllowedExtensions" multiple="@MultipleFiles" />
-            <span class="@CustomButtonClassName">@ButtonText
-            </span>
+            <span class="verticalcenter @CustomButtonClassName">@ButtonText</span>
         </label>
     }
     else

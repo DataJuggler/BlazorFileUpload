@@ -14,7 +14,10 @@ Standard or .Net Core.
 Version 1.2.0+ has new features that are untested involving image required, min and max height and width values, so use with caution.
 
 I have tested it enough it works for my use cases. Most of the problems I have read about the control involve over 20 meg and multiple file uploads.</Description>
-    <PackageReleaseNotes>Version 1.6.1: I updated all the components to the latest versions, and I am attempting to display the ButtonText. All this time the ButtonText was being ignored. I am working on a new project that needed this so I updated.
+    <PackageReleaseNotes>10.14.2021
+Version 1.6.2: I added a vertical-align CSS snipped to ensure custom button text is vertically aligned.
+
+Version 1.6.1: I updated all the components to the latest versions, and I am attempting to display the ButtonText. All this time the ButtonText was being ignored. I am working on a new project that needed this so I updated.
 Sorry for the delay.
 
 Version 1.6.0: Another user provided an update to support Multiple Files. Creating the Nuget package now, so version 1.6.0 is not thoroughly tested yet.
@@ -160,7 +163,7 @@ Update 1.0.6-Preview: I decided to return more information about the file instea
 </PackageReleaseNotes>
     <PackageTags>C#, Blazor, FileUpload, BlazorFileUpload</PackageTags>
     <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
-    <Version>1.6.1</Version>
+    <Version>1.6.2</Version>
     <PackageLicenseFile>LICENSE</PackageLicenseFile>
     <PackageProjectUrl>https://github.com/DataJuggler/BlazorFileUpload</PackageProjectUrl>
     <PackageIcon>BlazorFileUploadIcon.png</PackageIcon>
