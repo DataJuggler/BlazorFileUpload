@@ -3,7 +3,7 @@ This is a wrapper of Steve Sanderson's BlazorFileInput: https://github.com/Steve
 
 Update 10.24.2021:
 
-Blazor Excelerate
+# Blazor Excelerate
 I have a new full Blazor Sample available called Blazor Excelerate
 
 https://github.com/DataJuggler/Blazor.Excelerate
