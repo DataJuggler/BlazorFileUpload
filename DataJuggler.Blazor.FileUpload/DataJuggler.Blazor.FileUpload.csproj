@@ -1,7 +1,7 @@
 ﻿<Project Sdk="Microsoft.NET.Sdk.Razor">
 
   <PropertyGroup>
-    <TargetFramework>net5.0</TargetFramework>
+    <TargetFrameworks>net6.0</TargetFrameworks>
     <RazorLangVersion>3.0</RazorLangVersion>
     <Authors>DataJuggler</Authors>
     <Description>This package makes uploading files easy for .Net 5 Blazor projects.
@@ -14,7 +14,9 @@ Standard or .Net Core.
 Version 1.2.0+ has new features that are untested involving image required, min and max height and width values, so use with caution.
 
 I have tested it enough it works for my use cases. Most of the problems I have read about the control involve over 20 meg and multiple file uploads.</Description>
-    <PackageReleaseNotes>10.14.2021
+    <PackageReleaseNotes>11.10.2021: This is now a .Net 6.0 project, and upgraded to Version 2.0.0
+		
+10.14.2021
 Version 1.6.2: I added a vertical-align CSS snipped to ensure custom button text is vertically aligned.
 
 Version 1.6.1: I updated all the components to the latest versions, and I am attempting to display the ButtonText. All this time the ButtonText was being ignored. I am working on a new project that needed this so I updated.
@@ -163,21 +165,21 @@ Update 1.0.6-Preview: I decided to return more information about the file instea
 </PackageReleaseNotes>
     <PackageTags>C#, Blazor, FileUpload, BlazorFileUpload</PackageTags>
     <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
-    <Version>1.6.2</Version>
+    <Version>2.0.0</Version>
     <PackageLicenseFile>LICENSE</PackageLicenseFile>
     <PackageProjectUrl>https://github.com/DataJuggler/BlazorFileUpload</PackageProjectUrl>
     <PackageIcon>BlazorFileUploadIcon.png</PackageIcon>
     <PackageIconUrl />
     <RepositoryUrl>https://github.com/DataJuggler/BlazorFileUpload.git</RepositoryUrl>
     <RepositoryType>Git - GitHub</RepositoryType>
-    <AssemblyVersion>1.6.1.0</AssemblyVersion>
+    <AssemblyVersion>2.0.0</AssemblyVersion>
   </PropertyGroup>
 
 
   <ItemGroup>
-    <PackageReference Include="Microsoft.AspNetCore.Components" Version="5.0.11" />
-    <PackageReference Include="Microsoft.AspNetCore.Components.Web" Version="5.0.11" />
-    <PackageReference Include="System.Drawing.Common" Version="5.0.2" />
+    <PackageReference Include="Microsoft.AspNetCore.Components" Version="6.0.0" />
+    <PackageReference Include="Microsoft.AspNetCore.Components.Web" Version="6.0.0" />
+    <PackageReference Include="System.Drawing.Common" Version="6.0.0" />
   </ItemGroup>
 
 

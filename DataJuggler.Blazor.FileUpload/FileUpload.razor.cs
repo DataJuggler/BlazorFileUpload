@@ -14,6 +14,7 @@ using System.Drawing.Drawing2D;
 using System.Drawing.Imaging;
 using System.Threading;
 using Microsoft.AspNetCore.Components.Forms;
+using System.Runtime.Versioning;
 
 #endregion
 
@@ -24,6 +25,7 @@ namespace DataJuggler.Blazor.FileUpload
     /// <summary>
     /// This class is the code behind for the BlazorFileUpload object.
     /// </summary>
+    [SupportedOSPlatform("windows")]
     public partial class FileUpload
     {
         
