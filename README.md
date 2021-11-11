@@ -1,7 +1,19 @@
 # BlazorFileUpload
-This is a wrapper of Steve Sanderson's BlazorFileInput:
+This is a wrapper of Steve Sanderson's BlazorFileInput: https://github.com/SteveSandersonMS/BlazorInputFile
 
-https://github.com/SteveSandersonMS/BlazorInputFile
+Update 10.24.2021:
+
+# Blazor Excelerate
+I have a new full Blazor Sample available called Blazor Excelerate
+
+https://github.com/DataJuggler/Blazor.Excelerate
+
+Live site:
+https://excelerate.datajuggler.com/
+
+Blazor Excelerate uses this Nuget package (DataJuggler.BlazorFileUpload) to upload Excel files.
+
+Blazor Excelerate also uses Nuget package DataJuggler.Excelerate to code generate C# classes from Excel Header rows.
 
 Update 2.23.2020: I created a new sample project that saves data including the path to upload profile pictures and images to SQL Server. The sample code is located here:
 
