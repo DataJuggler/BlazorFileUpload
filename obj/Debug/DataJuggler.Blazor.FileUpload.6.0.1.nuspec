@@ -1,0 +1,39 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<package xmlns="http://schemas.microsoft.com/packaging/2012/06/nuspec.xsd">
+  <metadata>
+    <id>DataJuggler.Blazor.FileUpload</id>
+    <version>6.0.1</version>
+    <authors>DataJuggler</authors>
+    <license type="expression">MIT</license>
+    <licenseUrl>https://licenses.nuget.org/MIT</licenseUrl>
+    <icon>BlazorFileUploadIcon.png</icon>
+    <projectUrl>https://github.com/DataJuggler/BlazorFileUpload</projectUrl>
+    <description>BlazorFileUpload makes it easy to upload files in Blazor projects. The 6.0 version is only for .NET6.
+Use 5.x version for .NET5.</description>
+    <releaseNotes>This version has been upaded for .NET6.</releaseNotes>
+    <tags>C# Blazor</tags>
+    <repository type="Git Git Hub" url="https://github.com/DataJuggler/BlazorFileUpload" />
+    <dependencies>
+      <group targetFramework="net6.0">
+        <dependency id="DataJuggler.UltimateHelper" version="6.0.2" exclude="Build,Analyzers" />
+        <dependency id="Microsoft.AspNetCore.Components" version="6.0.1" exclude="Build,Analyzers" />
+        <dependency id="Microsoft.AspNetCore.Components.Web" version="6.0.1" exclude="Build,Analyzers" />
+        <dependency id="System.Drawing.Common" version="6.0.0" exclude="Build,Analyzers" />
+      </group>
+    </dependencies>
+  </metadata>
+  <files>
+    <file src="C:\Projects\GitHub\BlazorFileUpload\BlazorFileUpload\bin\Debug\net6.0\BlazorFileUpload.dll" target="lib\net6.0\BlazorFileUpload.dll" />
+    <file src="C:\Projects\GitHub\BlazorFileUpload\BlazorFileUpload\obj\Debug\net6.0\staticwebassets\msbuild.DataJuggler.Blazor.FileUpload.Microsoft.AspNetCore.StaticWebAssets.props" target="build\Microsoft.AspNetCore.StaticWebAssets.props" />
+    <file src="C:\Projects\GitHub\BlazorFileUpload\BlazorFileUpload\obj\Debug\net6.0\staticwebassets\msbuild.build.DataJuggler.Blazor.FileUpload.props" target="build\DataJuggler.Blazor.FileUpload.props" />
+    <file src="C:\Projects\GitHub\BlazorFileUpload\BlazorFileUpload\obj\Debug\net6.0\staticwebassets\msbuild.buildMultiTargeting.DataJuggler.Blazor.FileUpload.props" target="buildMultiTargeting\DataJuggler.Blazor.FileUpload.props" />
+    <file src="C:\Projects\GitHub\BlazorFileUpload\BlazorFileUpload\obj\Debug\net6.0\staticwebassets\msbuild.buildTransitive.DataJuggler.Blazor.FileUpload.props" target="buildTransitive\DataJuggler.Blazor.FileUpload.props" />
+    <file src="C:\Projects\GitHub\BlazorFileUpload\BlazorFileUpload\wwwroot\background.png" target="staticwebassets\background.png" />
+    <file src="C:\Projects\GitHub\BlazorFileUpload\BlazorFileUpload\wwwroot\BlazorFileUpload.png" target="staticwebassets\BlazorFileUpload.png" />
+    <file src="C:\Projects\GitHub\BlazorFileUpload\BlazorFileUpload\wwwroot\BlazorFileUploadIcon.ico" target="staticwebassets\BlazorFileUploadIcon.ico" />
+    <file src="C:\Projects\GitHub\BlazorFileUpload\BlazorFileUpload\wwwroot\exampleJsInterop.js" target="staticwebassets\exampleJsInterop.js" />
+    <file src="C:\Projects\GitHub\BlazorFileUpload\BlazorFileUpload\wwwroot\Images\Buttons\BlackButton.jpg" target="staticwebassets\Images\Buttons\BlackButton.jpg" />
+    <file src="C:\Projects\GitHub\BlazorFileUpload\BlazorFileUpload\wwwroot\Images\Buttons\BlackButtonWide.jpg" target="staticwebassets\Images\Buttons\BlackButtonWide.jpg" />
+    <file src="C:\Projects\GitHub\BlazorFileUpload\BlazorFileUpload\BlazorFileUploadIcon.png" target="\BlazorFileUploadIcon.png" />
+  </files>
+</package>

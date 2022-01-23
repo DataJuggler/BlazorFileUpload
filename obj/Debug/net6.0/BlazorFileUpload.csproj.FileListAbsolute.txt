@@ -1,0 +1,16 @@
+C:\Projects\GitHub\BlazorFileUpload\BlazorFileUpload\bin\Debug\net6.0\BlazorFileUpload.staticwebassets.runtime.json
+C:\Projects\GitHub\BlazorFileUpload\BlazorFileUpload\bin\Debug\net6.0\BlazorFileUpload.deps.json
+C:\Projects\GitHub\BlazorFileUpload\BlazorFileUpload\bin\Debug\net6.0\BlazorFileUpload.dll
+C:\Projects\GitHub\BlazorFileUpload\BlazorFileUpload\bin\Debug\net6.0\ref\BlazorFileUpload.dll
+C:\Projects\GitHub\BlazorFileUpload\BlazorFileUpload\bin\Debug\net6.0\BlazorFileUpload.pdb
+C:\Projects\GitHub\BlazorFileUpload\BlazorFileUpload\obj\Debug\net6.0\BlazorFileUpload.csproj.AssemblyReference.cache
+C:\Projects\GitHub\BlazorFileUpload\BlazorFileUpload\obj\Debug\net6.0\BlazorFileUpload.GeneratedMSBuildEditorConfig.editorconfig
+C:\Projects\GitHub\BlazorFileUpload\BlazorFileUpload\obj\Debug\net6.0\BlazorFileUpload.AssemblyInfoInputs.cache
+C:\Projects\GitHub\BlazorFileUpload\BlazorFileUpload\obj\Debug\net6.0\BlazorFileUpload.AssemblyInfo.cs
+C:\Projects\GitHub\BlazorFileUpload\BlazorFileUpload\obj\Debug\net6.0\BlazorFileUpload.csproj.CoreCompileInputs.cache
+C:\Projects\GitHub\BlazorFileUpload\BlazorFileUpload\obj\Debug\net6.0\staticwebassets.build.json
+C:\Projects\GitHub\BlazorFileUpload\BlazorFileUpload\obj\Debug\net6.0\staticwebassets.development.json
+C:\Projects\GitHub\BlazorFileUpload\BlazorFileUpload\obj\Debug\net6.0\scopedcss\bundle\DataJuggler.Blazor.FileUpload.styles.css
+C:\Projects\GitHub\BlazorFileUpload\BlazorFileUpload\obj\Debug\net6.0\BlazorFileUpload.dll
+C:\Projects\GitHub\BlazorFileUpload\BlazorFileUpload\obj\Debug\net6.0\ref\BlazorFileUpload.dll
+C:\Projects\GitHub\BlazorFileUpload\BlazorFileUpload\obj\Debug\net6.0\BlazorFileUpload.pdb

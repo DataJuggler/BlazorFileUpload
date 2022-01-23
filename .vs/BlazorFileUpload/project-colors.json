@@ -1,0 +1,11 @@
+{
+  "Version": 1,
+  "ProjectMap": {
+    "3d455a9d-7a5c-4b8b-bce5-9cd9d1183c6d": {
+      "ProjectGuid": "3d455a9d-7a5c-4b8b-bce5-9cd9d1183c6d",
+      "DisplayName": "BlazorFileUpload",
+      "ColorIndex": 0
+    }
+  },
+  "NextColorIndex": 1
+}

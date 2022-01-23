@@ -1,0 +1,58 @@
+<Project Sdk="Microsoft.NET.Sdk.Razor">
+
+  <PropertyGroup>
+    <TargetFramework>net6.0</TargetFramework>
+    <Nullable>disable</Nullable>    
+    <PackageId>DataJuggler.Blazor.FileUpload</PackageId>
+    <Version>6.0.1</Version>
+    <PackageLicenseExpression>MIT</PackageLicenseExpression>
+    <GeneratePackageOnBuild>True</GeneratePackageOnBuild>
+    <Authors>DataJuggler</Authors>
+    <Company>DataJuggler</Company>
+    <Product>DataJuggler.Blazor.FileUpload</Product>
+    <Description>BlazorFileUpload makes it easy to upload files in Blazor projects. The 6.0 version is only for .NET6.
+Use 5.x version for .NET5.</Description>
+    <PackageIcon>BlazorFileUploadIcon.png</PackageIcon>
+    <RepositoryUrl>https://github.com/DataJuggler/BlazorFileUpload</RepositoryUrl>
+    <RepositoryType>Git Git Hub</RepositoryType>
+    <PackageTags>C#;Blazor;</PackageTags>
+    <PackageReleaseNotes>This version has been upaded for .NET6.</PackageReleaseNotes>
+    <PackageProjectUrl>https://github.com/DataJuggler/BlazorFileUpload</PackageProjectUrl>
+    <ApplicationIcon>wwwroot\BlazorFileUploadIcon.ico</ApplicationIcon>
+  </PropertyGroup>
+
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|AnyCPU'">
+    <NoWarn>1701;1702;IDE0090;IDE0063</NoWarn>
+  </PropertyGroup>
+
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|AnyCPU'">
+    <NoWarn>1701;1702;IDE0090;IDE0063</NoWarn>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <Compile Remove="Sample\**" />
+    <Content Remove="Sample\**" />
+    <EmbeddedResource Remove="Sample\**" />
+    <None Remove="Sample\**" />
+  </ItemGroup>
+
+
+  <ItemGroup>
+    <SupportedPlatform Include="browser" />
+  </ItemGroup>
+
+  <ItemGroup>    
+    <PackageReference Include="DataJuggler.UltimateHelper" Version="6.0.2" />    
+    <PackageReference Include="Microsoft.AspNetCore.Components" Version="6.0.1" />
+    <PackageReference Include="Microsoft.AspNetCore.Components.Web" Version="6.0.1" />
+    <PackageReference Include="System.Drawing.Common" Version="6.0.0" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Update="BlazorFileUploadIcon.png">
+      <Pack>True</Pack>
+      <PackagePath>\</PackagePath>
+    </None>
+  </ItemGroup>
+
+</Project>

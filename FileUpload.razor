@@ -1,0 +1,47 @@
+@namespace DataJuggler.Blazor.FileUpload
+<style>
+    .progressbar
+    {
+        color: firebrick;
+        width: @ProgressWidth;
+        height: @ProgressHeight;
+    }
+    .verticalcenter
+    {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+</style>
+
+@if (!uploadComplete)
+{
+    @if (ShowCustomButton)
+    {
+        <label>
+            <InputFile InputFileClassName="@InputFileClassName" OnChange="OnFileChange" Visible="@Visible" accept="@AllowedExtensions" multiple="@MultipleFiles" />
+            <span class="verticalcenter @CustomButtonClassName">@ButtonText</span>
+        </label>
+    }
+    else
+    {
+        <div class="inputfilecontainer">
+            <InputFile Visible="@Visible" OnChange="@OnFileChange" accept="@AllowedExtensions" multiple="@MultipleFiles" />
+        </div>
+    }
+    @if (ProgressVisible)
+    {
+        <div class="progressbar">
+        </div>
+    }   
+}
+else if (ShowResetButton)
+{
+    <button class="@ResetButtonClassName" @onclick="Reset">@ResetButtonText</button>
+}
+
+@if ((ShowStatus) && (HasStatus))
+{
+    <p class="@MessageClassName">@status</p>
+}
+
