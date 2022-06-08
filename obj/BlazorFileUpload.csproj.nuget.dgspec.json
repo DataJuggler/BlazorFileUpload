@@ -5,7 +5,7 @@
   },
   "projects": {
     "C:\\Projects\\GitHub\\BlazorFileUpload\\BlazorFileUpload\\BlazorFileUpload.csproj": {
-      "version": "6.0.1",
+      "version": "6.0.2",
       "restore": {
         "projectUniqueName": "C:\\Projects\\GitHub\\BlazorFileUpload\\BlazorFileUpload\\BlazorFileUpload.csproj",
         "projectName": "DataJuggler.Blazor.FileUpload",
@@ -14,18 +14,18 @@
         "outputPath": "C:\\Projects\\GitHub\\BlazorFileUpload\\BlazorFileUpload\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
-          "C:\\Program Files (x86)\\DevExpress 20.2\\Components\\Offline Packages"
+          "C:\\Program Files (x86)\\DevExpress 21.2\\Components\\Offline Packages"
         ],
         "configFilePaths": [
           "C:\\Users\\Corby\\AppData\\Roaming\\NuGet\\NuGet.Config",
-          "C:\\Program Files (x86)\\NuGet\\Config\\DevExpress 20.2.config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\DevExpress 21.2.config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
           "net6.0"
         ],
         "sources": {
-          "C:\\Program Files (x86)\\DevExpress 20.2\\Components\\System\\Components\\Packages": {},
+          "C:\\Program Files (x86)\\DevExpress 21.2\\Components\\System\\Components\\Packages": {},
           "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
           "https://api.nuget.org/v3/index.json": {}
         },
@@ -47,15 +47,15 @@
           "dependencies": {
             "DataJuggler.UltimateHelper": {
               "target": "Package",
-              "version": "[6.0.2, )"
+              "version": "[6.0.4, )"
             },
             "Microsoft.AspNetCore.Components": {
               "target": "Package",
-              "version": "[6.0.1, )"
+              "version": "[6.0.5, )"
             },
             "Microsoft.AspNetCore.Components.Web": {
               "target": "Package",
-              "version": "[6.0.1, )"
+              "version": "[6.0.5, )"
             },
             "System.Drawing.Common": {
               "target": "Package",
@@ -77,7 +77,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.101\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.300\\RuntimeIdentifierGraph.json"
         }
       }
     }
