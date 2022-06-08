@@ -1,7 +1,6 @@
 C:\Projects\GitHub\BlazorFileUpload\BlazorFileUpload\bin\Release\net6.0\BlazorFileUpload.staticwebassets.runtime.json
 C:\Projects\GitHub\BlazorFileUpload\BlazorFileUpload\bin\Release\net6.0\BlazorFileUpload.deps.json
 C:\Projects\GitHub\BlazorFileUpload\BlazorFileUpload\bin\Release\net6.0\BlazorFileUpload.dll
-C:\Projects\GitHub\BlazorFileUpload\BlazorFileUpload\bin\Release\net6.0\ref\BlazorFileUpload.dll
 C:\Projects\GitHub\BlazorFileUpload\BlazorFileUpload\bin\Release\net6.0\BlazorFileUpload.pdb
 C:\Projects\GitHub\BlazorFileUpload\BlazorFileUpload\obj\Release\net6.0\BlazorFileUpload.csproj.AssemblyReference.cache
 C:\Projects\GitHub\BlazorFileUpload\BlazorFileUpload\obj\Release\net6.0\BlazorFileUpload.GeneratedMSBuildEditorConfig.editorconfig
@@ -14,3 +13,4 @@ C:\Projects\GitHub\BlazorFileUpload\BlazorFileUpload\obj\Release\net6.0\scopedcs
 C:\Projects\GitHub\BlazorFileUpload\BlazorFileUpload\obj\Release\net6.0\BlazorFileUpload.dll
 C:\Projects\GitHub\BlazorFileUpload\BlazorFileUpload\obj\Release\net6.0\ref\BlazorFileUpload.dll
 C:\Projects\GitHub\BlazorFileUpload\BlazorFileUpload\obj\Release\net6.0\BlazorFileUpload.pdb
+C:\Projects\GitHub\BlazorFileUpload\BlazorFileUpload\obj\Release\net6.0\refint\BlazorFileUpload.dll
