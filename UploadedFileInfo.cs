@@ -97,7 +97,16 @@ namespace DataJuggler.Blazor.FileUpload
             public bool Aborted
             {
                 get { return aborted; }
-                set { aborted = value; }
+                set 
+                {
+                    aborted = value;
+
+                    if (aborted)
+                    {
+                        // break point only
+                        aborted = true;
+                    }
+                }
             }
             #endregion
             

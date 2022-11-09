@@ -1,0 +1,3 @@
+﻿<Project>
+  <Import Project="..\buildMultiTargeting\DataJuggler.Blazor.FileUpload.props" />
+</Project>

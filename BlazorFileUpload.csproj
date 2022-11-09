@@ -1,22 +1,31 @@
 <Project Sdk="Microsoft.NET.Sdk.Razor">
 
   <PropertyGroup>
-    <TargetFramework>net6.0</TargetFramework>
+    <TargetFramework>net7.0</TargetFramework>
     <Nullable>disable</Nullable>    
     <PackageId>DataJuggler.Blazor.FileUpload</PackageId>
-    <Version>6.0.2</Version>
+    <Version>7.0.0</Version>
     <PackageLicenseExpression>MIT</PackageLicenseExpression>
     <GeneratePackageOnBuild>True</GeneratePackageOnBuild>
     <Authors>DataJuggler</Authors>
     <Company>DataJuggler</Company>
     <Product>DataJuggler.Blazor.FileUpload</Product>
-    <Description>BlazorFileUpload makes it easy to upload files in Blazor projects. The 6.0 version is only for .NET6.
-Use 5.x version for .NET5.</Description>
+    <Description>BlazorFileUpload makes it easy to upload files in Blazor projects. The 7.0 version is only for .NET7.
+Use 6.x version for .NET6, 5.x for .NET5.</Description>
     <PackageIcon>BlazorFileUploadIcon.png</PackageIcon>
     <RepositoryUrl>https://github.com/DataJuggler/BlazorFileUpload</RepositoryUrl>
     <RepositoryType>Git Git Hub</RepositoryType>
-    <PackageTags>C#;Blazor;</PackageTags>
-    <PackageReleaseNotes>This version has been upaded for .NET6.</PackageReleaseNotes>
+    <PackageTags>C#;Blazor;File Upload;</PackageTags>
+    <PackageReleaseNotes>10.20.2022:
+v7.0.0.-rc1: This version is listed as pre-release until .NET7 is out of preview.
+
+This version has been upaded for .NET7.
+
+7.6.2022
+Version 6.0.3: I set the default MaxFileUpload to 40 meg by default.
+If you don't set any value, the file upload is aborted, and yesterday I had to 
+add the project reference to figure this out. I figure this will make it easier.
+I may add an Aborted Reason when I get some time.</PackageReleaseNotes>
     <PackageProjectUrl>https://github.com/DataJuggler/BlazorFileUpload</PackageProjectUrl>
     <ApplicationIcon>wwwroot\BlazorFileUploadIcon.ico</ApplicationIcon>
   </PropertyGroup>
@@ -42,10 +51,10 @@ Use 5.x version for .NET5.</Description>
   </ItemGroup>
 
   <ItemGroup>    
-    <PackageReference Include="DataJuggler.UltimateHelper" Version="6.0.4" />    
-    <PackageReference Include="Microsoft.AspNetCore.Components" Version="6.0.5" />
-    <PackageReference Include="Microsoft.AspNetCore.Components.Web" Version="6.0.5" />
-    <PackageReference Include="System.Drawing.Common" Version="6.0.0" />
+    <PackageReference Include="DataJuggler.UltimateHelper" Version="7.0.0" />    
+    <PackageReference Include="Microsoft.AspNetCore.Components" Version="7.0.0" />
+    <PackageReference Include="Microsoft.AspNetCore.Components.Web" Version="7.0.0" />
+    <PackageReference Include="System.Drawing.Common" Version="7.0.0" />
   </ItemGroup>
 
   <ItemGroup>

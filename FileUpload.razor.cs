@@ -191,6 +191,7 @@ namespace DataJuggler.Blazor.FileUpload
                 Visible = true;
                 ProgressVisible = true;
                 ProgressHeight = 32;
+                MaxFileSize = 40 * 1024 * 1024; // 40 meg
             }
             #endregion
             
