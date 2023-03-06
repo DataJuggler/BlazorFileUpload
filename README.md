@@ -5,6 +5,8 @@ This project has been updated to .NET 7.
 
 To see a complete working example, with source code please visit:
 
+<img src=https://excelerate.datajuggler.com/Images/logotextsparkled.png>
+
 Blazor Excelerate
 https://excelerate.datajuggler.com
 Code Generate C# Classes From Excel Header Rows
