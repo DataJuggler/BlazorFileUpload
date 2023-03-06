@@ -5,7 +5,7 @@
   },
   "projects": {
     "C:\\Projects\\GitHub\\BlazorFileUpload\\BlazorFileUpload\\BlazorFileUpload.csproj": {
-      "version": "7.0.2",
+      "version": "7.0.3",
       "restore": {
         "projectUniqueName": "C:\\Projects\\GitHub\\BlazorFileUpload\\BlazorFileUpload\\BlazorFileUpload.csproj",
         "projectName": "DataJuggler.Blazor.FileUpload",

@@ -19,3 +19,4 @@ C:\Projects\GitHub\BlazorFileUpload\BlazorFileUpload\obj\Release\net7.0\BlazorFi
 C:\Projects\GitHub\BlazorFileUpload\BlazorFileUpload\obj\Release\net7.0\refint\BlazorFileUpload.dll
 C:\Projects\GitHub\BlazorFileUpload\BlazorFileUpload\obj\Release\net7.0\BlazorFileUpload.pdb
 C:\Projects\GitHub\BlazorFileUpload\BlazorFileUpload\obj\Release\net7.0\ref\BlazorFileUpload.dll
+C:\Projects\GitHub\BlazorFileUpload\BlazorFileUpload\bin\Release\net7.0\README.md

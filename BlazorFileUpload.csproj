@@ -1,14 +1,15 @@
-<Project Sdk="Microsoft.NET.Sdk.Razor">
+﻿<Project Sdk="Microsoft.NET.Sdk.Razor">
 
   <PropertyGroup>
+	<PackageReadmeFile>README.md</PackageReadmeFile>
     <TargetFramework>net7.0</TargetFramework>
     <Nullable>disable</Nullable>    
     <PackageId>DataJuggler.Blazor.FileUpload</PackageId>
-    <Version>7.0.2</Version>
+    <Version>7.0.3</Version>
     <PackageLicenseExpression>MIT</PackageLicenseExpression>
     <GeneratePackageOnBuild>True</GeneratePackageOnBuild>
     <Authors>DataJuggler</Authors>
-    <Company>DataJuggler</Company>
+    <Company>DataJuggler</Company>	
     <Product>DataJuggler.Blazor.FileUpload</Product>
     <Description>BlazorFileUpload makes it easy to upload files in Blazor projects. The 7.0 version is only for .NET7.
 Use 6.x version for .NET6, 5.x for .NET5.</Description>
@@ -71,6 +72,13 @@ I may add an Aborted Reason when I get some time.</PackageReleaseNotes>
       <Pack>True</Pack>
       <PackagePath>\</PackagePath>
     </None>
+    <None Update="README.md">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+  </ItemGroup>
+	
+  <ItemGroup>		
+	<None Include="docs\README.md" Pack="true" PackagePath="\" />		
   </ItemGroup>
 
 </Project>

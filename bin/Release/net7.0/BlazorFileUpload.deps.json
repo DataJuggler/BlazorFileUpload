@@ -6,7 +6,7 @@
   "compilationOptions": {},
   "targets": {
     ".NETCoreApp,Version=v7.0": {
-      "BlazorFileUpload/7.0.2": {
+      "BlazorFileUpload/7.0.3": {
         "dependencies": {
           "DataJuggler.UltimateHelper": "7.1.1",
           "Microsoft.AspNetCore.Components": "7.0.3",
@@ -270,7 +270,7 @@
     }
   },
   "libraries": {
-    "BlazorFileUpload/7.0.2": {
+    "BlazorFileUpload/7.0.3": {
       "type": "project",
       "serviceable": false,
       "sha512": ""
