@@ -8,7 +8,7 @@ To see a complete working example, with source code please visit:
 <img src=https://excelerate.datajuggler.com/Images/ExcelerateLogoSmallWhite.png height=128 width=128>
 <img src=https://excelerate.datajuggler.com/Images/logotextsparkled.png>
 
-Blazor Excelerate
+Blazor Excelerate <br />
 https://excelerate.datajuggler.com <br />
 Code Generate C# Classes From Excel Header Rows
 
