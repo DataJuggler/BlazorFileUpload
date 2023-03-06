@@ -4,7 +4,7 @@
     <TargetFramework>net7.0</TargetFramework>
     <Nullable>disable</Nullable>    
     <PackageId>DataJuggler.Blazor.FileUpload</PackageId>
-    <Version>7.0.0</Version>
+    <Version>7.0.2</Version>
     <PackageLicenseExpression>MIT</PackageLicenseExpression>
     <GeneratePackageOnBuild>True</GeneratePackageOnBuild>
     <Authors>DataJuggler</Authors>
@@ -16,7 +16,16 @@ Use 6.x version for .NET6, 5.x for .NET5.</Description>
     <RepositoryUrl>https://github.com/DataJuggler/BlazorFileUpload</RepositoryUrl>
     <RepositoryType>Git Git Hub</RepositoryType>
     <PackageTags>C#;Blazor;File Upload;</PackageTags>
-    <PackageReleaseNotes>10.20.2022:
+    <PackageReleaseNotes>3.6.2023: Added a Read Me with links to Blazor Excelerate examples.
+v7.0.2
+
+
+3.6.2023: Updated some Nuget packages
+v7.0.1
+
+12.3.2022: Released 7.0.0 version.
+
+10.20.2022:
 v7.0.0.-rc1: This version is listed as pre-release until .NET7 is out of preview.
 
 This version has been upaded for .NET7.
@@ -31,11 +40,11 @@ I may add an Aborted Reason when I get some time.</PackageReleaseNotes>
   </PropertyGroup>
 
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|AnyCPU'">
-    <NoWarn>1701;1702;IDE0090;IDE0063</NoWarn>
+    <NoWarn>1701;1702;IDE0090;IDE0063;BL0007;</NoWarn>
   </PropertyGroup>
 
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|AnyCPU'">
-    <NoWarn>1701;1702;IDE0090;IDE0063</NoWarn>
+    <NoWarn>1701;1702;IDE0090;IDE0063;BL0007;</NoWarn>
   </PropertyGroup>
 
   <ItemGroup>
@@ -51,9 +60,9 @@ I may add an Aborted Reason when I get some time.</PackageReleaseNotes>
   </ItemGroup>
 
   <ItemGroup>    
-    <PackageReference Include="DataJuggler.UltimateHelper" Version="7.0.0" />    
-    <PackageReference Include="Microsoft.AspNetCore.Components" Version="7.0.0" />
-    <PackageReference Include="Microsoft.AspNetCore.Components.Web" Version="7.0.0" />
+    <PackageReference Include="DataJuggler.UltimateHelper" Version="7.1.1" />    
+    <PackageReference Include="Microsoft.AspNetCore.Components" Version="7.0.3" />
+    <PackageReference Include="Microsoft.AspNetCore.Components.Web" Version="7.0.3" />
     <PackageReference Include="System.Drawing.Common" Version="7.0.0" />
   </ItemGroup>
 

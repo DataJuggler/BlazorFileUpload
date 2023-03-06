@@ -1,0 +1,57 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<package xmlns="http://schemas.microsoft.com/packaging/2012/06/nuspec.xsd">
+  <metadata>
+    <id>DataJuggler.Blazor.FileUpload</id>
+    <version>7.0.2</version>
+    <authors>DataJuggler</authors>
+    <license type="expression">MIT</license>
+    <licenseUrl>https://licenses.nuget.org/MIT</licenseUrl>
+    <icon>BlazorFileUploadIcon.png</icon>
+    <projectUrl>https://github.com/DataJuggler/BlazorFileUpload</projectUrl>
+    <description>BlazorFileUpload makes it easy to upload files in Blazor projects. The 7.0 version is only for .NET7.
+Use 6.x version for .NET6, 5.x for .NET5.</description>
+    <releaseNotes>3.6.2023: Added a Read Me with links to Blazor Excelerate examples.
+v7.0.2
+
+
+3.6.2023: Updated some Nuget packages
+v7.0.1
+
+12.3.2022: Released 7.0.0 version.
+
+10.20.2022:
+v7.0.0.-rc1: This version is listed as pre-release until .NET7 is out of preview.
+
+This version has been upaded for .NET7.
+
+7.6.2022
+Version 6.0.3: I set the default MaxFileUpload to 40 meg by default.
+If you don't set any value, the file upload is aborted, and yesterday I had to 
+add the project reference to figure this out. I figure this will make it easier.
+I may add an Aborted Reason when I get some time.</releaseNotes>
+    <tags>C# Blazor File Upload</tags>
+    <repository type="Git Git Hub" url="https://github.com/DataJuggler/BlazorFileUpload" />
+    <dependencies>
+      <group targetFramework="net7.0">
+        <dependency id="DataJuggler.UltimateHelper" version="7.1.1" exclude="Build,Analyzers" />
+        <dependency id="Microsoft.AspNetCore.Components" version="7.0.3" exclude="Build,Analyzers" />
+        <dependency id="Microsoft.AspNetCore.Components.Web" version="7.0.3" exclude="Build,Analyzers" />
+        <dependency id="System.Drawing.Common" version="7.0.0" exclude="Build,Analyzers" />
+      </group>
+    </dependencies>
+  </metadata>
+  <files>
+    <file src="C:\Projects\GitHub\BlazorFileUpload\BlazorFileUpload\bin\Release\net7.0\BlazorFileUpload.dll" target="lib\net7.0\BlazorFileUpload.dll" />
+    <file src="C:\Projects\GitHub\BlazorFileUpload\BlazorFileUpload\wwwroot\BlazorFileUpload.png" target="staticwebassets\BlazorFileUpload.png" />
+    <file src="C:\Projects\GitHub\BlazorFileUpload\BlazorFileUpload\wwwroot\BlazorFileUploadIcon.ico" target="staticwebassets\BlazorFileUploadIcon.ico" />
+    <file src="C:\Projects\GitHub\BlazorFileUpload\BlazorFileUpload\wwwroot\Images\Buttons\BlackButton.jpg" target="staticwebassets\Images\Buttons\BlackButton.jpg" />
+    <file src="C:\Projects\GitHub\BlazorFileUpload\BlazorFileUpload\wwwroot\Images\Buttons\BlackButtonWide.jpg" target="staticwebassets\Images\Buttons\BlackButtonWide.jpg" />
+    <file src="C:\Projects\GitHub\BlazorFileUpload\BlazorFileUpload\wwwroot\background.png" target="staticwebassets\background.png" />
+    <file src="C:\Projects\GitHub\BlazorFileUpload\BlazorFileUpload\wwwroot\exampleJsInterop.js" target="staticwebassets\exampleJsInterop.js" />
+    <file src="C:\Projects\GitHub\BlazorFileUpload\BlazorFileUpload\obj\Release\net7.0\staticwebassets\msbuild.DataJuggler.Blazor.FileUpload.Microsoft.AspNetCore.StaticWebAssets.props" target="build\Microsoft.AspNetCore.StaticWebAssets.props" />
+    <file src="C:\Projects\GitHub\BlazorFileUpload\BlazorFileUpload\obj\Release\net7.0\staticwebassets\msbuild.build.DataJuggler.Blazor.FileUpload.props" target="build\DataJuggler.Blazor.FileUpload.props" />
+    <file src="C:\Projects\GitHub\BlazorFileUpload\BlazorFileUpload\obj\Release\net7.0\staticwebassets\msbuild.buildMultiTargeting.DataJuggler.Blazor.FileUpload.props" target="buildMultiTargeting\DataJuggler.Blazor.FileUpload.props" />
+    <file src="C:\Projects\GitHub\BlazorFileUpload\BlazorFileUpload\obj\Release\net7.0\staticwebassets\msbuild.buildTransitive.DataJuggler.Blazor.FileUpload.props" target="buildTransitive\DataJuggler.Blazor.FileUpload.props" />
+    <file src="C:\Projects\GitHub\BlazorFileUpload\BlazorFileUpload\BlazorFileUploadIcon.png" target="\BlazorFileUploadIcon.png" />
+  </files>
+</package>
