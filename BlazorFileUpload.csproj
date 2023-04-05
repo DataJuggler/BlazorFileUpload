@@ -5,7 +5,7 @@
     <TargetFramework>net7.0</TargetFramework>
     <Nullable>disable</Nullable>    
     <PackageId>DataJuggler.Blazor.FileUpload</PackageId>
-    <Version>7.0.3</Version>
+    <Version>7.0.4</Version>
     <PackageLicenseExpression>MIT</PackageLicenseExpression>
     <GeneratePackageOnBuild>True</GeneratePackageOnBuild>
     <Authors>DataJuggler</Authors>
@@ -17,7 +17,10 @@ Use 6.x version for .NET6, 5.x for .NET5.</Description>
     <RepositoryUrl>https://github.com/DataJuggler/BlazorFileUpload</RepositoryUrl>
     <RepositoryType>Git Git Hub</RepositoryType>
     <PackageTags>C#;Blazor;File Upload;</PackageTags>
-    <PackageReleaseNotes>3.6.2023: Added a Read Me with links to Blazor Excelerate examples.
+    <PackageReleaseNotes>4.5.2023: Upgraded Nuget package DataJuggler.UltimateHelper and
+Microsoft.AspCore.Components and Microsoft.AspCore.Components.Web.
+
+3.6.2023: Added a Read Me with links to Blazor Excelerate examples.
 v7.0.2
 
 
@@ -61,9 +64,9 @@ I may add an Aborted Reason when I get some time.</PackageReleaseNotes>
   </ItemGroup>
 
   <ItemGroup>    
-    <PackageReference Include="DataJuggler.UltimateHelper" Version="7.1.1" />    
-    <PackageReference Include="Microsoft.AspNetCore.Components" Version="7.0.3" />
-    <PackageReference Include="Microsoft.AspNetCore.Components.Web" Version="7.0.3" />
+    <PackageReference Include="DataJuggler.UltimateHelper" Version="7.1.2" />    
+    <PackageReference Include="Microsoft.AspNetCore.Components" Version="7.0.4" />
+    <PackageReference Include="Microsoft.AspNetCore.Components.Web" Version="7.0.4" />
     <PackageReference Include="System.Drawing.Common" Version="7.0.0" />
   </ItemGroup>
 
