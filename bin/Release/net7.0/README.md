@@ -33,7 +33,7 @@ Here is an example of creating a file upload component:
     
 
 To handle the File Upload event 'OnFileUploaded'. The code shown also starts a progress bar timer and reads the sheet names
-using Nuget package DataJuggler.Excelrate (the Nuget package that powers Blazor Excelerate). 
+using Nuget package DataJuggler.Excelerate (the Nuget package that powers Blazor Excelerate). 
 
     #region OnFileUploaded(UploadedFileInfo file)
     /// <summary>

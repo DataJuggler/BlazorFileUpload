@@ -17,6 +17,8 @@ using System.Threading;
 using Microsoft.AspNetCore.Components.Forms;
 using System.Runtime.Versioning;
 using DataJuggler.UltimateHelper;
+using DataJuggler.Blazor.Components.Interfaces;
+using DataJuggler.Blazor.Components;
 
 #endregion
 
@@ -28,7 +30,7 @@ namespace DataJuggler.Blazor.FileUpload
     /// This class is the code behind for the BlazorFileUpload object.
     /// </summary>
     [SupportedOSPlatform("windows")]
-    public partial class FileUpload
+    public partial class FileUpload : IBlazorComponent
     {
         
         #region Private Variables
@@ -48,6 +50,8 @@ namespace DataJuggler.Blazor.FileUpload
         private bool progressVisible;
         private double progressWidth;
         private bool multipleFiles;
+        private string name;
+        private IBlazorComponentParent parent;
         #endregion
 
         #region Constructor()
@@ -404,6 +408,21 @@ namespace DataJuggler.Blazor.FileUpload
             }
             #endregion          
 
+            #region ReceiveData(Message message)
+            /// <summary>
+            /// method receives messages from its parent
+            /// </summary>
+            public void ReceiveData(Message message)
+            {
+                // if reset
+                if (message.Text == "Reset")
+                {
+                    // Reset this control
+                    Reset();
+                }
+            }
+            #endregion
+            
             #region ResetFinished()
             /// <summary>
             /// This event is fired after a file is uploaded, and is used to notify subscribers of the OnChange event.
@@ -439,7 +458,7 @@ namespace DataJuggler.Blazor.FileUpload
                 // Update the UI
                 StateHasChanged();
             }
-            #endregion
+        #endregion
 
         #endregion
 
@@ -763,6 +782,23 @@ namespace DataJuggler.Blazor.FileUpload
             }
             #endregion
             
+            #region HasParent
+            /// <summary>
+            /// This property returns true if this object has a 'Parent'.
+            /// </summary>
+            public bool HasParent
+            {
+                get
+                {
+                    // initial value
+                    bool hasParent = (this.Parent != null);
+                    
+                    // return value
+                    return hasParent;
+                }
+            }
+            #endregion
+            
             #region HasRequiredHeight
             /// <summary>
             /// This property returns true if this object has a 'RequiredHeight'.
@@ -899,6 +935,17 @@ namespace DataJuggler.Blazor.FileUpload
             }
             #endregion
             
+            #region Name
+            /// <summary>
+            /// This property gets or sets the value for 'Name'.
+            /// </summary>
+            public string Name
+            {
+                get { return name; }
+                set { name = value; }
+            }
+            #endregion
+            
             #region OnChange
             /// <summary>
             /// This property gets or sets the value for OnChange.
@@ -915,6 +962,30 @@ namespace DataJuggler.Blazor.FileUpload
             /// This is needed so clients can reset or adjust the UI when the Reset button is clicked.
             /// </summary>
             [Parameter] public EventCallback<string> OnReset { get; set; }
+            #endregion
+            
+            #region Parent
+            /// <summary>
+            /// This property gets or sets the value for 'Parent'.
+            /// </summary>
+            [Parameter]
+            public IBlazorComponentParent Parent
+            {
+                get { return parent; }
+                set 
+                { 
+                    // set the parent
+                    parent = value;
+
+                    // if the parent exists
+                    if (parent != null)
+                    {
+                        // register with the parent
+                        parent.Register(this);
+                    }
+                    
+                }
+            }
             #endregion
             
             #region PartialGuidLength
@@ -1133,9 +1204,9 @@ namespace DataJuggler.Blazor.FileUpload
                 set { visible = value; }
             }
             #endregion
-            
+
         #endregion
-        
+
     }
     #endregion
 

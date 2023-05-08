@@ -5,7 +5,7 @@
   },
   "projects": {
     "C:\\Projects\\GitHub\\BlazorFileUpload\\BlazorFileUpload\\BlazorFileUpload.csproj": {
-      "version": "7.0.4",
+      "version": "7.0.5",
       "restore": {
         "projectUniqueName": "C:\\Projects\\GitHub\\BlazorFileUpload\\BlazorFileUpload\\BlazorFileUpload.csproj",
         "projectName": "DataJuggler.Blazor.FileUpload",
@@ -25,6 +25,7 @@
           "net7.0"
         ],
         "sources": {
+          "C:\\LocalNuget": {},
           "C:\\Program Files (x86)\\DevExpress 21.2\\Components\\System\\Components\\Packages": {},
           "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
           "https://api.nuget.org/v3/index.json": {}
@@ -45,17 +46,21 @@
         "net7.0": {
           "targetAlias": "net7.0",
           "dependencies": {
+            "DataJuggler.Blazor.Components": {
+              "target": "Package",
+              "version": "[7.7.3, )"
+            },
             "DataJuggler.UltimateHelper": {
               "target": "Package",
               "version": "[7.1.2, )"
             },
             "Microsoft.AspNetCore.Components": {
               "target": "Package",
-              "version": "[7.0.4, )"
+              "version": "[7.0.5, )"
             },
             "Microsoft.AspNetCore.Components.Web": {
               "target": "Package",
-              "version": "[7.0.4, )"
+              "version": "[7.0.5, )"
             },
             "System.Drawing.Common": {
               "target": "Package",
@@ -78,7 +83,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.202\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.203\\RuntimeIdentifierGraph.json"
         }
       }
     }

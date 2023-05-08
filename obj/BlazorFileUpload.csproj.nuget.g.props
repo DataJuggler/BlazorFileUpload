@@ -13,4 +13,7 @@
     <SourceRoot Include="C:\Users\Corby\.nuget\packages\" />
     <SourceRoot Include="C:\Program Files (x86)\DevExpress 21.2\Components\Offline Packages\" />
   </ItemGroup>
+  <ImportGroup Condition=" '$(ExcludeRestorePackageImports)' != 'true' ">
+    <Import Project="$(NuGetPackageRoot)datajuggler.blazor.components\7.7.3\buildTransitive\DataJuggler.Blazor.Components.props" Condition="Exists('$(NuGetPackageRoot)datajuggler.blazor.components\7.7.3\buildTransitive\DataJuggler.Blazor.Components.props')" />
+  </ImportGroup>
 </Project>
