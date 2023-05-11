@@ -3,7 +3,25 @@ This is a wrapper of Steve Sanderson's BlazorFileInput
 
 This project has been updated to .NET 7.
 
-To see a complete working example, with source code please visit:
+Update 5.11.2023<br>
+This project now implements DataJuggler.Blazor.Components.Interfaces, so you can register and talk to the component from a parent page or component.
+To see a working project example, clone this project
+
+BlazorGallery
+https://github.com/DataJuggler/BlazorGallery
+
+Or install via Nuget
+dotnet new --install DataJuggler.BlazorGallery
+
+Then to create a new instance
+dotnet new install DataJuggler.BlazorGallery
+
+Here is a video:
+
+How To Create A Blazor SQL Server Image Gallery In 5 Minutes
+https://youtu.be/yQz1dqYiy2g
+
+To see another complete working example, with source code please visit:
 
 <img src=https://excelerate.datajuggler.com/Images/ExcelerateLogoSmallWhite.png height=128 width=128>
 <img src=https://excelerate.datajuggler.com/Images/logotextsparkled.png>
