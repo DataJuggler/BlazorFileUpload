@@ -7,7 +7,7 @@ Update 5.11.2023<br>
 This project now implements DataJuggler.Blazor.Components.Interfaces, so you can register and talk to the component from a parent page or component.
 To see a working project example, clone this project
 
-BlazorGallery
+BlazorGallery<br>
 https://github.com/DataJuggler/BlazorGallery
 
 Or install via Nuget
@@ -18,7 +18,7 @@ dotnet new install DataJuggler.BlazorGallery
 
 Here is a video:
 
-How To Create A Blazor SQL Server Image Gallery In 5 Minutes
+How To Create A Blazor SQL Server Image Gallery In 5 Minutes<br>
 https://youtu.be/yQz1dqYiy2g
 
 To see another complete working example, with source code please visit:
