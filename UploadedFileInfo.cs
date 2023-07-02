@@ -1,9 +1,14 @@
-﻿using System;
-using System.Collections.Generic;
-using System.IO;
-using System.Text;
-using System.Drawing;
+﻿
+
+#region using statements
+
+using Microsoft.AspNetCore.Components;
 using Microsoft.AspNetCore.Components.Forms;
+using System;
+using System.Drawing;
+using System.IO;
+
+#endregion
 
 namespace DataJuggler.Blazor.FileUpload
 {
@@ -25,6 +30,7 @@ namespace DataJuggler.Blazor.FileUpload
         private string uploadFolder;
         private int customId;
         private string tag;
+        private bool lastFileInBatch;
         private Exception exception;
         private MemoryStream stream;
         private Image image;
@@ -267,6 +273,17 @@ namespace DataJuggler.Blazor.FileUpload
             {
                 get { return image; }
                 set { image = value; }
+            }
+            #endregion
+            
+            #region LastFileInBatch
+            /// <summary>
+            /// This property gets or sets the value for 'LastFileInBatch'.
+            /// </summary>
+            public bool LastFileInBatch
+            {
+                get { return lastFileInBatch; }
+                set { lastFileInBatch = value; }
             }
             #endregion
             

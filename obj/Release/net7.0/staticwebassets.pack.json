@@ -1,27 +1,27 @@
 {
   "Files": [
     {
-      "Id": "C:\\Projects\\GitHub\\BlazorFileUpload\\BlazorFileUpload\\wwwroot\\BlazorFileUpload.png",
+      "Id": "C:\\Projects\\GitHub\\BlazorFileUpload\\wwwroot\\BlazorFileUpload.png",
       "PackagePath": "staticwebassets\\BlazorFileUpload.png"
     },
     {
-      "Id": "C:\\Projects\\GitHub\\BlazorFileUpload\\BlazorFileUpload\\wwwroot\\BlazorFileUploadIcon.ico",
+      "Id": "C:\\Projects\\GitHub\\BlazorFileUpload\\wwwroot\\BlazorFileUploadIcon.ico",
       "PackagePath": "staticwebassets\\BlazorFileUploadIcon.ico"
     },
     {
-      "Id": "C:\\Projects\\GitHub\\BlazorFileUpload\\BlazorFileUpload\\wwwroot\\Images\\Buttons\\BlackButton.jpg",
+      "Id": "C:\\Projects\\GitHub\\BlazorFileUpload\\wwwroot\\Images\\Buttons\\BlackButton.jpg",
       "PackagePath": "staticwebassets\\Images\\Buttons\\BlackButton.jpg"
     },
     {
-      "Id": "C:\\Projects\\GitHub\\BlazorFileUpload\\BlazorFileUpload\\wwwroot\\Images\\Buttons\\BlackButtonWide.jpg",
+      "Id": "C:\\Projects\\GitHub\\BlazorFileUpload\\wwwroot\\Images\\Buttons\\BlackButtonWide.jpg",
       "PackagePath": "staticwebassets\\Images\\Buttons\\BlackButtonWide.jpg"
     },
     {
-      "Id": "C:\\Projects\\GitHub\\BlazorFileUpload\\BlazorFileUpload\\wwwroot\\background.png",
+      "Id": "C:\\Projects\\GitHub\\BlazorFileUpload\\wwwroot\\background.png",
       "PackagePath": "staticwebassets\\background.png"
     },
     {
-      "Id": "C:\\Projects\\GitHub\\BlazorFileUpload\\BlazorFileUpload\\wwwroot\\exampleJsInterop.js",
+      "Id": "C:\\Projects\\GitHub\\BlazorFileUpload\\wwwroot\\exampleJsInterop.js",
       "PackagePath": "staticwebassets\\exampleJsInterop.js"
     },
     {

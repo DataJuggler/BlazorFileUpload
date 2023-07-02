@@ -50,7 +50,9 @@ namespace DataJuggler.Blazor.FileUpload
         private bool progressVisible;
         private double progressWidth;
         private bool multipleFiles;
+        private int maxFilesCount;
         private string name;
+        private List<UploadedFileInfo> uploadedFiles;
         private IBlazorComponentParent parent;
         #endregion
 
@@ -171,76 +173,35 @@ namespace DataJuggler.Blazor.FileUpload
             /// <summary>
             /// This event is fired after a file is uploaded, and is used to notify subscribers of the OnChange event.
             /// </summary>
-            private void FileUploaded(UploadedFileInfo uploadedFileInfo)
-            {
-                // Notify the client a file was uploaded
-                OnChange.InvokeAsync(uploadedFileInfo);
-            }
-            #endregion
-            
-            #region Init()
-            /// <summary>
-            /// This method performs initializations for this object.
-            /// </summary>
-            public void Init()
-            {
-                // Set the Default Values
-                MessageClassName = "message";
-                InputFileClassName = "inputfile";
-                CustomButtonClassName = "buttonwide";
-                ResetButtonClassName = "button";
-                ButtonText = "Choose File";
-                CustomButtonTextClassName = "custombuttontextstyle";
-                SaveToDisk = true;
-                Visible = true;
-                ProgressVisible = true;
-                ProgressHeight = 32;
-                MaxFileSize = 40 * 1024 * 1024; // 40 meg
-            }
-            #endregion
-            
-            #region IsImageFile(string extensions)
-            /// <summary>
-            /// This method returns true if the extension is an Image File (.jpg or .png for now)
-            /// </summary>
-            public bool IsImageFile(string extension)
-            {
-                // initial value
-                bool isImageFile = false;
-
-                // if the string exists
-                if (!String.IsNullOrEmpty(extension))
+            private async Task<UploadedFileInfo> FileUploaded(UploadedFileInfo uploadedFileInfo)
+            { 
+                try
                 {
-                    // if a .jpg or a .png
-                    if ((extension.ToLower() == ".jpg") || (extension.ToLower() == ".png"))
-                    {
-                        // set to true
-                        isImageFile = true;
-                    }
+                    // Notify the client a file was uploaded
+                    await OnChange.InvokeAsync(uploadedFileInfo);
                 }
-                
+                catch (Exception error)
+                {
+                    // set the exception
+                    uploadedFileInfo.Exception = error;
+                }
+
                 // return value
-                return isImageFile;
+                return uploadedFileInfo;
             }
             #endregion
-
-            #region OnFileChange(InputFileChangeEventArgs eventArgs)
+            
+            #region HandleFileUpload(IBrowserFile file, bool lastFileInBatch)
             /// <summary>
-            /// This method gives you access to the files that were uploaded
+            /// returns the File Upload
             /// </summary>
-            /// <param name="eventArgs"></param>
-            private async void OnFileChange(InputFileChangeEventArgs eventArgs)
+            public async Task<UploadedFileInfo> HandleFileUpload(IBrowserFile file, bool lastFileInBatch)
             {
-                //// Get access to the file
-                IBrowserFile file = eventArgs.File;
-
-                 // locals
+                // locals
                 UploadedFileInfo uploadedFileInfo = null;
                 bool abort = false;
-                
-                // locals
                 MemoryStream ms = null;         
-                
+
                 // verify the file exists
                 if (file != null)
                 {
@@ -251,6 +212,9 @@ namespace DataJuggler.Blazor.FileUpload
                         
                         // create the uploadedFileInfo
                         uploadedFileInfo = new UploadedFileInfo(file, partialGuid, AppendPartialGuid, UploadFolder);
+
+                        // Is this the last file in the batch
+                        uploadedFileInfo.LastFileInBatch = lastFileInBatch;
 
                         // if the file is too large
                         if ((MaxFileSize > 0) && (file.Size > MaxFileSize))
@@ -293,14 +257,9 @@ namespace DataJuggler.Blazor.FileUpload
                             // if we should continue
                             if (!abort)
                             {  
-                                //// create the memoryStream
+                                // create the memoryStream
                                 ms = new MemoryStream();
-                                
-                                // file for progress bar had to be taken out. for some reason
-                                // it doesn't work in .NET6. rather than debugging the issue,
-                                // I am just happy to have it working. I may revisit the progress bar
-                                // soon
-
+                               
                                 // await for the data to be copied to the memory stream
                                 await file.OpenReadStream(MaxFileSize).CopyToAsync(ms);
 
@@ -400,10 +359,127 @@ namespace DataJuggler.Blazor.FileUpload
                         uploadedFileInfo.ErrorMessage = status;
                     }
                     finally
-                    {
-                        // Notify the caller the upload was successful or aborted due to an error 
-                        FileUploaded(uploadedFileInfo);                        
+                    {  
+                        // only call this for single files
+                        if (!MultipleFiles)
+                        {
+                            // Notify the caller the upload was successful or aborted due to an error 
+                            uploadedFileInfo = await FileUploaded(uploadedFileInfo);
+                        }
                     }
+                }
+                
+                // return value
+                return uploadedFileInfo;
+            }
+            #endregion
+            
+            #region Init()
+            /// <summary>
+            /// This method performs initializations for this object.
+            /// </summary>
+            public void Init()
+            {
+                // Set the Default Values
+                MessageClassName = "message";
+                InputFileClassName = "inputfile";
+                CustomButtonClassName = "buttonwide";
+                ResetButtonClassName = "button";
+                ButtonText = "Choose File";
+                CustomButtonTextClassName = "custombuttontextstyle";
+                SaveToDisk = true;
+                Visible = true;
+                ProgressVisible = true;
+                MaxFilesCount = 10;
+                ProgressHeight = 32;
+                MaxFileSize = 40 * 1024 * 1024; // 40 meg
+            }
+            #endregion
+            
+            #region IsImageFile(string extensions)
+            /// <summary>
+            /// This method returns true if the extension is an Image File (.jpg or .png for now)
+            /// </summary>
+            public bool IsImageFile(string extension)
+            {
+                // initial value
+                bool isImageFile = false;
+
+                // if the string exists
+                if (!String.IsNullOrEmpty(extension))
+                {
+                    // if a .jpg or a .png
+                    if ((extension.ToLower() == ".jpg") || (extension.ToLower() == ".png"))
+                    {
+                        // set to true
+                        isImageFile = true;
+                    }
+                }
+                
+                // return value
+                return isImageFile;
+            }
+            #endregion
+
+            #region OnFileChange(InputFileChangeEventArgs eventArgs)
+            /// <summary>
+            /// This method gives you access to the files that were uploaded
+            /// </summary>
+            /// <param name="eventArgs"></param>
+            private async void OnFileChange(InputFileChangeEventArgs eventArgs)
+            {
+                // locals
+                UploadedFileInfo uploadedFileInfo = null;
+                List<IBrowserFile> files = null;
+                IBrowserFile file = null;
+                
+                // if the value for MultipleFiles is true
+                if (MultipleFiles)
+                {
+                    // get one or more files
+                    files = eventArgs.GetMultipleFiles(MaxFilesCount).ToList();
+
+                    // If the files collection exists and has one or more items
+                    if (ListHelper.HasOneOrMoreItems(files))
+                    {
+                        // Create a new collection of 'UploadedFileInfo' objects.
+                        UploadedFiles = new List<UploadedFileInfo>();
+
+                        // used to determine if this is the last file in the batch
+                        int count = 0;
+                        bool lastFile = false;
+
+                        // Iterate the collection of IBrowserFile objects
+                        foreach (IBrowserFile fileInBatch in files)
+                        {
+                            // Increment the value for count
+                            count++;
+
+                            // is this the lastFile?
+                            lastFile = (count == files.Count);
+                            
+                            // Handle the FileUpload
+                            uploadedFileInfo = await HandleFileUpload(fileInBatch, lastFile);
+
+                            // Add this file
+                            UploadedFiles.Add(uploadedFileInfo);
+                        }
+
+                        // now notify the client subscribers
+                        foreach (UploadedFileInfo fileInfo in UploadedFiles)
+                        {
+                            // notify the client
+                            await FileUploaded(fileInfo);
+                        }
+                    }
+                }
+                else
+                {
+                    // Get access to the file
+                    file = eventArgs.File;
+
+                    // Handle the FileUpload
+                    uploadedFileInfo = await HandleFileUpload(file, true);
                 }
             }
             #endregion          
@@ -862,6 +938,18 @@ namespace DataJuggler.Blazor.FileUpload
             }
             #endregion
             
+            #region MaxFilesCount
+            /// <summary>
+            /// This property gets or sets the value for 'MaxFilesCount'.
+            /// </summary>
+            [Parameter]
+            public int MaxFilesCount
+            {
+                get { return maxFilesCount; }
+                set { maxFilesCount = value; }
+            }
+            #endregion
+            
             #region MaxFileSize
             /// <summary>
             /// This property gets or sets the value for MaxFileSize.
@@ -952,7 +1040,8 @@ namespace DataJuggler.Blazor.FileUpload
             /// This event will get called after the file is uploaded.
             /// The parameter UploadFileInfo contains information about the uploaded file.
             /// </summary>
-            [Parameter] public EventCallback<UploadedFileInfo> OnChange { get; set; }
+            [Parameter] 
+            public EventCallback<UploadedFileInfo> OnChange { get; set; }
             #endregion
 
             #region OnReset
@@ -1183,6 +1272,17 @@ namespace DataJuggler.Blazor.FileUpload
             }
             #endregion
             
+            #region UploadedFiles
+            /// <summary>
+            /// This property gets or sets the value for 'UploadedFiles'.
+            /// </summary>
+            public List<UploadedFileInfo> UploadedFiles
+            {
+                get { return uploadedFiles; }
+                set { uploadedFiles = value; }
+            }
+            #endregion
+            
             #region UploadFolder
             /// <summary>
              /// This property gets or sets the value for UploadFolder.
@@ -1201,7 +1301,16 @@ namespace DataJuggler.Blazor.FileUpload
             public bool Visible
             {
                 get { return visible; }
-                set { visible = value; }
+                set 
+                {
+                    visible = value;
+
+                    if (!visible)
+                    {
+                        // breakpoint only
+                        visible = false;
+                    }
+                }
             }
             #endregion
 

@@ -1,4 +1,5 @@
 @namespace DataJuggler.Blazor.FileUpload
+
 <style>
     .progressbar
     {
@@ -19,14 +20,28 @@
     @if (ShowCustomButton)
     {
         <label>
-            <InputFile InputFileClassName="@InputFileClassName" OnChange="OnFileChange" Visible="@Visible" accept="@AllowedExtensions" multiple="@MultipleFiles" />
+            @if (MultipleFiles)
+            {
+                <InputFile InputFileClassName="@InputFileClassName" OnChange="OnFileChange" Visible="@Visible" accept="@AllowedExtensions" multiple />
+            }
+            else
+            {
+                <InputFile InputFileClassName="@InputFileClassName" OnChange="OnFileChange" Visible="@Visible" accept="@AllowedExtensions" />
+            }
             <span class="verticalcenter @CustomButtonClassName">@ButtonText</span>
         </label>
     }
     else
     {
         <div class="inputfilecontainer">
-            <InputFile Visible="@Visible" OnChange="@OnFileChange" accept="@AllowedExtensions" multiple="@MultipleFiles" />
+            @if (MultipleFiles)
+            {
+                <InputFile Visible="@Visible" OnChange="@OnFileChange" accept="@AllowedExtensions" multiple />
+            }
+            else
+            {
+                <InputFile Visible="@Visible" OnChange="@OnFileChange" accept="@AllowedExtensions" />
+            }
         </div>
     }
     @if (ProgressVisible)

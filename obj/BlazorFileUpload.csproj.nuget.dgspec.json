@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Projects\\GitHub\\BlazorFileUpload\\BlazorFileUpload\\BlazorFileUpload.csproj": {}
+    "C:\\Projects\\GitHub\\BlazorFileUpload\\BlazorFileUpload.csproj": {}
   },
   "projects": {
-    "C:\\Projects\\GitHub\\BlazorFileUpload\\BlazorFileUpload\\BlazorFileUpload.csproj": {
-      "version": "7.0.6",
+    "C:\\Projects\\GitHub\\BlazorFileUpload\\BlazorFileUpload.csproj": {
+      "version": "7.1.0",
       "restore": {
-        "projectUniqueName": "C:\\Projects\\GitHub\\BlazorFileUpload\\BlazorFileUpload\\BlazorFileUpload.csproj",
+        "projectUniqueName": "C:\\Projects\\GitHub\\BlazorFileUpload\\BlazorFileUpload.csproj",
         "projectName": "DataJuggler.Blazor.FileUpload",
-        "projectPath": "C:\\Projects\\GitHub\\BlazorFileUpload\\BlazorFileUpload\\BlazorFileUpload.csproj",
+        "projectPath": "C:\\Projects\\GitHub\\BlazorFileUpload\\BlazorFileUpload.csproj",
         "packagesPath": "C:\\Users\\Corby\\.nuget\\packages\\",
-        "outputPath": "C:\\Projects\\GitHub\\BlazorFileUpload\\BlazorFileUpload\\obj\\",
+        "outputPath": "C:\\Projects\\GitHub\\BlazorFileUpload\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\DevExpress 21.2\\Components\\Offline Packages"
@@ -25,7 +25,6 @@
           "net7.0"
         ],
         "sources": {
-          "C:\\LocalNuget": {},
           "C:\\Program Files (x86)\\DevExpress 21.2\\Components\\System\\Components\\Packages": {},
           "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
           "https://api.nuget.org/v3/index.json": {}
@@ -56,11 +55,11 @@
             },
             "Microsoft.AspNetCore.Components": {
               "target": "Package",
-              "version": "[7.0.7, )"
+              "version": "[7.0.8, )"
             },
             "Microsoft.AspNetCore.Components.Web": {
               "target": "Package",
-              "version": "[7.0.7, )"
+              "version": "[7.0.8, )"
             },
             "System.Drawing.Common": {
               "target": "Package",

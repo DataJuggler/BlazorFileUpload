@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "cwMG5f9eXyGGMassOwWp36SJPnff2vFN7EXYNDDmRdM=",
+  "Hash": "QQl341us+HhbqpYxvZwjF0VHjjIXYLfnzaG67Owklfs=",
   "Source": "DataJuggler.Blazor.FileUpload",
   "BasePath": "_content/DataJuggler.Blazor.FileUpload",
   "Mode": "Default",
@@ -10,17 +10,17 @@
     {
       "Name": "DataJuggler.Blazor.FileUpload\\wwwroot",
       "Source": "DataJuggler.Blazor.FileUpload",
-      "ContentRoot": "C:\\Projects\\GitHub\\BlazorFileUpload\\BlazorFileUpload\\wwwroot\\",
+      "ContentRoot": "C:\\Projects\\GitHub\\BlazorFileUpload\\wwwroot\\",
       "BasePath": "_content/DataJuggler.Blazor.FileUpload",
       "Pattern": "**"
     }
   ],
   "Assets": [
     {
-      "Identity": "C:\\Projects\\GitHub\\BlazorFileUpload\\BlazorFileUpload\\wwwroot\\background.png",
+      "Identity": "C:\\Projects\\GitHub\\BlazorFileUpload\\wwwroot\\background.png",
       "SourceId": "DataJuggler.Blazor.FileUpload",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Projects\\GitHub\\BlazorFileUpload\\BlazorFileUpload\\wwwroot\\",
+      "ContentRoot": "C:\\Projects\\GitHub\\BlazorFileUpload\\wwwroot\\",
       "BasePath": "_content/DataJuggler.Blazor.FileUpload",
       "RelativePath": "background.png",
       "AssetKind": "All",
@@ -34,10 +34,10 @@
       "OriginalItemSpec": "wwwroot\\background.png"
     },
     {
-      "Identity": "C:\\Projects\\GitHub\\BlazorFileUpload\\BlazorFileUpload\\wwwroot\\BlazorFileUpload.png",
+      "Identity": "C:\\Projects\\GitHub\\BlazorFileUpload\\wwwroot\\BlazorFileUpload.png",
       "SourceId": "DataJuggler.Blazor.FileUpload",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Projects\\GitHub\\BlazorFileUpload\\BlazorFileUpload\\wwwroot\\",
+      "ContentRoot": "C:\\Projects\\GitHub\\BlazorFileUpload\\wwwroot\\",
       "BasePath": "_content/DataJuggler.Blazor.FileUpload",
       "RelativePath": "BlazorFileUpload.png",
       "AssetKind": "All",
@@ -51,10 +51,10 @@
       "OriginalItemSpec": "wwwroot\\BlazorFileUpload.png"
     },
     {
-      "Identity": "C:\\Projects\\GitHub\\BlazorFileUpload\\BlazorFileUpload\\wwwroot\\BlazorFileUploadIcon.ico",
+      "Identity": "C:\\Projects\\GitHub\\BlazorFileUpload\\wwwroot\\BlazorFileUploadIcon.ico",
       "SourceId": "DataJuggler.Blazor.FileUpload",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Projects\\GitHub\\BlazorFileUpload\\BlazorFileUpload\\wwwroot\\",
+      "ContentRoot": "C:\\Projects\\GitHub\\BlazorFileUpload\\wwwroot\\",
       "BasePath": "_content/DataJuggler.Blazor.FileUpload",
       "RelativePath": "BlazorFileUploadIcon.ico",
       "AssetKind": "All",
@@ -68,10 +68,10 @@
       "OriginalItemSpec": "wwwroot\\BlazorFileUploadIcon.ico"
     },
     {
-      "Identity": "C:\\Projects\\GitHub\\BlazorFileUpload\\BlazorFileUpload\\wwwroot\\exampleJsInterop.js",
+      "Identity": "C:\\Projects\\GitHub\\BlazorFileUpload\\wwwroot\\exampleJsInterop.js",
       "SourceId": "DataJuggler.Blazor.FileUpload",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Projects\\GitHub\\BlazorFileUpload\\BlazorFileUpload\\wwwroot\\",
+      "ContentRoot": "C:\\Projects\\GitHub\\BlazorFileUpload\\wwwroot\\",
       "BasePath": "_content/DataJuggler.Blazor.FileUpload",
       "RelativePath": "exampleJsInterop.js",
       "AssetKind": "All",
@@ -85,10 +85,10 @@
       "OriginalItemSpec": "wwwroot\\exampleJsInterop.js"
     },
     {
-      "Identity": "C:\\Projects\\GitHub\\BlazorFileUpload\\BlazorFileUpload\\wwwroot\\Images\\Buttons\\BlackButton.jpg",
+      "Identity": "C:\\Projects\\GitHub\\BlazorFileUpload\\wwwroot\\Images\\Buttons\\BlackButton.jpg",
       "SourceId": "DataJuggler.Blazor.FileUpload",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Projects\\GitHub\\BlazorFileUpload\\BlazorFileUpload\\wwwroot\\",
+      "ContentRoot": "C:\\Projects\\GitHub\\BlazorFileUpload\\wwwroot\\",
       "BasePath": "_content/DataJuggler.Blazor.FileUpload",
       "RelativePath": "Images/Buttons/BlackButton.jpg",
       "AssetKind": "All",
@@ -102,10 +102,10 @@
       "OriginalItemSpec": "wwwroot\\Images\\Buttons\\BlackButton.jpg"
     },
     {
-      "Identity": "C:\\Projects\\GitHub\\BlazorFileUpload\\BlazorFileUpload\\wwwroot\\Images\\Buttons\\BlackButtonWide.jpg",
+      "Identity": "C:\\Projects\\GitHub\\BlazorFileUpload\\wwwroot\\Images\\Buttons\\BlackButtonWide.jpg",
       "SourceId": "DataJuggler.Blazor.FileUpload",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Projects\\GitHub\\BlazorFileUpload\\BlazorFileUpload\\wwwroot\\",
+      "ContentRoot": "C:\\Projects\\GitHub\\BlazorFileUpload\\wwwroot\\",
       "BasePath": "_content/DataJuggler.Blazor.FileUpload",
       "RelativePath": "Images/Buttons/BlackButtonWide.jpg",
       "AssetKind": "All",
