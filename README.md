@@ -21,7 +21,7 @@ Blazor Gallery can also be installed a dotnet cli project:
     dotnet new install DataJuggler.BlazorGallery
     dotnet new DataJuggler.BlazorGallery
 
-# Blazor Excelerate - Complete working example, with source code please visit:
+To see a complete working example, with source code please visit:
 
 <img src=https://excelerate.datajuggler.com/Images/ExcelerateLogoSmallWhite.png height=128 width=128>
 <img src=https://excelerate.datajuggler.com/Images/logotextsparkled.png>
