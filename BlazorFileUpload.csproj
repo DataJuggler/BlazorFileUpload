@@ -98,7 +98,9 @@ version 7.1.0: BlazorFileUpload now supports multiple file uploads!</Description
   </ItemGroup>
 	
   <ItemGroup>		
-	<None Include="docs\README.md" Pack="true" PackagePath="\" />		
+	<None Include="docs\README.md" Pack="true" PackagePath="\">
+	  <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+	</None>		
   </ItemGroup>
 
 </Project>

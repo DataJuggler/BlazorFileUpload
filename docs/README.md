@@ -1,9 +1,27 @@
-﻿# BlazorFileUpload
-This is a wrapper of Steve Sanderson's BlazorFileInput
+# BlazorFileUpload
+This project was originally a wrapper of Steve Sanderson's BlazorFileInput, but now has been
+updated to the InputFile .NET component. This project has been updated to .NET 7.
 
-This project has been updated to .NET 7.
+# 6.21.2023: New Sample Project Blazor Gallery
+
+Blazor Gallery is a C#, Blazor, SQL Server image portfolio site, allowing anyone to create up to
+five folders with up to 20 images per file.
+
+Live Demo: https://blazorgallery.com
 
 To see a complete working example, with source code please visit:
+
+Blazor Gallery
+https://github.com/DataJuggler/BlazorGallery
+
+Blazor Gallery can also be installed as a dotnet cli project: 
+(You may change the top line to any directory you wish)
+
+    cd c:\Projects\BlazorGallery
+    dotnet new install DataJuggler.BlazorGallery
+    dotnet new DataJuggler.BlazorGallery
+
+Another complete working example, with source code please visit:
 
 <img src=https://excelerate.datajuggler.com/Images/ExcelerateLogoSmallWhite.png height=128 width=128>
 <img src=https://excelerate.datajuggler.com/Images/logotextsparkled.png>
@@ -33,7 +51,7 @@ Here is an example of creating a file upload component:
     
 
 To handle the File Upload event 'OnFileUploaded'. The code shown also starts a progress bar timer and reads the sheet names
-using Nuget package DataJuggler.Excelrate (the Nuget package that powers Blazor Excelerate). 
+using Nuget package DataJuggler.Excelerate (the Nuget package that powers Blazor Excelerate). 
 
     #region OnFileUploaded(UploadedFileInfo file)
     /// <summary>
@@ -78,6 +96,13 @@ using Nuget package DataJuggler.Excelrate (the Nuget package that powers Blazor 
     }
     #endregion
     
-It is on my to do list to handle multiple file uploads, I just haven't had a use case that I need this feature yet.
+Update
 
-Volunteers are welcome to add this and I will merge the pull request. 
+version 7.1.0
+7.2.2023: DataJuggler.BlazorFileUpload now supports multiple file uploads.
+
+
+
+
+
+
