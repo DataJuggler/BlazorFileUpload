@@ -20,38 +20,41 @@ version 7.1.0: BlazorFileUpload now supports multiple file uploads!</Description
     <RepositoryUrl>https://github.com/DataJuggler/BlazorFileUpload</RepositoryUrl>
     <RepositoryType>Git Git Hub</RepositoryType>
     <PackageTags>C#;Blazor;File Upload;</PackageTags>
-    <PackageReleaseNotes>6.21.2023: I updated 4 Nuget packages:
-Microsoft.AspCore.Components, Microsoft.AspCore.Components.Web, DataJuggler.Blazor.Components
-and DataJuggler.UltimateHelper.
+    <PackageReleaseNotes>
+		version 7.1.0
+		7.2.2023: DataJuggler.BlazorFileUpload now supports multiple file uploads.
 
-5.8.2023: Updated Microsoft.AspCore.Components and Microsoft.AspCore.Components.Web.
-Also made this project be able to implement IBlazorComponent, so now it can register
-with IBlazorComponentParents. This allos the parent to send a message 'OnReset", to force
-a reset.
+		6.21.2023: I updated 4 Nuget packages:
+		Microsoft.AspCore.Components, Microsoft.AspCore.Components.Web, DataJuggler.Blazor.Components
+		and DataJuggler.UltimateHelper.
+
+		5.8.2023: Updated Microsoft.AspCore.Components and Microsoft.AspCore.Components.Web.
+		Also made this project be able to implement IBlazorComponent, so now it can register
+		with IBlazorComponentParents. This allos the parent to send a message 'OnReset", to force
+		a reset.
+
+		4.5.2023: Upgraded Nuget package DataJuggler.UltimateHelper and
+		Microsoft.AspCore.Components and Microsoft.AspCore.Components.Web.
+
+		3.6.2023: Added a Read Me with links to Blazor Excelerate examples.
+		v7.0.2
 
 
-4.5.2023: Upgraded Nuget package DataJuggler.UltimateHelper and
-Microsoft.AspCore.Components and Microsoft.AspCore.Components.Web.
+		3.6.2023: Updated some Nuget packages
+		v7.0.1
 
-3.6.2023: Added a Read Me with links to Blazor Excelerate examples.
-v7.0.2
+		12.3.2022: Released 7.0.0 version.
 
+		10.20.2022:
+		v7.0.0.-rc1: This version is listed as pre-release until .NET7 is out of preview.
 
-3.6.2023: Updated some Nuget packages
-v7.0.1
+		This version has been upaded for .NET7.
 
-12.3.2022: Released 7.0.0 version.
-
-10.20.2022:
-v7.0.0.-rc1: This version is listed as pre-release until .NET7 is out of preview.
-
-This version has been upaded for .NET7.
-
-7.6.2022
-Version 6.0.3: I set the default MaxFileUpload to 40 meg by default.
-If you don't set any value, the file upload is aborted, and yesterday I had to 
-add the project reference to figure this out. I figure this will make it easier.
-I may add an Aborted Reason when I get some time.</PackageReleaseNotes>
+		7.6.2022
+		Version 6.0.3: I set the default MaxFileUpload to 40 meg by default.
+		If you don't set any value, the file upload is aborted, and yesterday I had to
+		add the project reference to figure this out. I figure this will make it easier.
+		I may add an Aborted Reason when I get some time.</PackageReleaseNotes>
     <PackageProjectUrl>https://github.com/DataJuggler/BlazorFileUpload</PackageProjectUrl>
     <ApplicationIcon>wwwroot\BlazorFileUploadIcon.ico</ApplicationIcon>
   </PropertyGroup>
@@ -77,10 +80,10 @@ I may add an Aborted Reason when I get some time.</PackageReleaseNotes>
   </ItemGroup>
 
   <ItemGroup>    
-    <PackageReference Include="DataJuggler.Blazor.Components" Version="7.7.9" />    
+    <PackageReference Include="DataJuggler.Blazor.Components" Version="7.8.0" />    
     <PackageReference Include="DataJuggler.UltimateHelper" Version="7.1.3" />    
-    <PackageReference Include="Microsoft.AspNetCore.Components" Version="7.0.8" />
-    <PackageReference Include="Microsoft.AspNetCore.Components.Web" Version="7.0.8" />
+    <PackageReference Include="Microsoft.AspNetCore.Components" Version="7.0.9" />
+    <PackageReference Include="Microsoft.AspNetCore.Components.Web" Version="7.0.9" />
     <PackageReference Include="System.Drawing.Common" Version="7.0.0" />
   </ItemGroup>
 

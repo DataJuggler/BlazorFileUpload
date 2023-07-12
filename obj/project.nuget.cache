@@ -1,13 +1,13 @@
 {
   "version": 2,
-  "dgSpecHash": "2sS7AXIUggaS2OYlyhIKHw5pdxHuY4q9H+5IMWrO/siN5sNBf9fvql+cE/VaTDoykgfBGumkiVhyE2kDGeICTw==",
+  "dgSpecHash": "OpSG10EZbmfx4xT2wwGkQQGSXNb2bhZ5/BOKVAxUk+iJ6AO5MSkHwokor81rN3BcJX8Ta/0Ra6I9z50zWC5L9Q==",
   "success": true,
   "projectFilePath": "C:\\Projects\\GitHub\\BlazorFileUpload\\BlazorFileUpload.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\Corby\\.nuget\\packages\\azure.core\\1.25.0\\azure.core.1.25.0.nupkg.sha512",
     "C:\\Users\\Corby\\.nuget\\packages\\azure.identity\\1.7.0\\azure.identity.1.7.0.nupkg.sha512",
     "C:\\Users\\Corby\\.nuget\\packages\\blazorstyled\\3.1.0\\blazorstyled.3.1.0.nupkg.sha512",
-    "C:\\Users\\Corby\\.nuget\\packages\\datajuggler.blazor.components\\7.7.9\\datajuggler.blazor.components.7.7.9.nupkg.sha512",
+    "C:\\Users\\Corby\\.nuget\\packages\\datajuggler.blazor.components\\7.9.3\\datajuggler.blazor.components.7.9.3.nupkg.sha512",
     "C:\\Users\\Corby\\.nuget\\packages\\datajuggler.cryptography\\7.0.0\\datajuggler.cryptography.7.0.0.nupkg.sha512",
     "C:\\Users\\Corby\\.nuget\\packages\\datajuggler.excelerate\\7.2.12\\datajuggler.excelerate.7.2.12.nupkg.sha512",
     "C:\\Users\\Corby\\.nuget\\packages\\datajuggler.net7\\7.0.10\\datajuggler.net7.7.0.10.nupkg.sha512",
@@ -15,12 +15,12 @@
     "C:\\Users\\Corby\\.nuget\\packages\\epplus\\4.5.3.3\\epplus.4.5.3.3.nupkg.sha512",
     "C:\\Users\\Corby\\.nuget\\packages\\konscious.security.cryptography.argon2\\1.3.0\\konscious.security.cryptography.argon2.1.3.0.nupkg.sha512",
     "C:\\Users\\Corby\\.nuget\\packages\\konscious.security.cryptography.blake2\\1.1.0\\konscious.security.cryptography.blake2.1.1.0.nupkg.sha512",
-    "C:\\Users\\Corby\\.nuget\\packages\\microsoft.aspnetcore.authorization\\7.0.8\\microsoft.aspnetcore.authorization.7.0.8.nupkg.sha512",
-    "C:\\Users\\Corby\\.nuget\\packages\\microsoft.aspnetcore.components\\7.0.8\\microsoft.aspnetcore.components.7.0.8.nupkg.sha512",
-    "C:\\Users\\Corby\\.nuget\\packages\\microsoft.aspnetcore.components.analyzers\\7.0.8\\microsoft.aspnetcore.components.analyzers.7.0.8.nupkg.sha512",
-    "C:\\Users\\Corby\\.nuget\\packages\\microsoft.aspnetcore.components.forms\\7.0.8\\microsoft.aspnetcore.components.forms.7.0.8.nupkg.sha512",
-    "C:\\Users\\Corby\\.nuget\\packages\\microsoft.aspnetcore.components.web\\7.0.8\\microsoft.aspnetcore.components.web.7.0.8.nupkg.sha512",
-    "C:\\Users\\Corby\\.nuget\\packages\\microsoft.aspnetcore.metadata\\7.0.8\\microsoft.aspnetcore.metadata.7.0.8.nupkg.sha512",
+    "C:\\Users\\Corby\\.nuget\\packages\\microsoft.aspnetcore.authorization\\7.0.9\\microsoft.aspnetcore.authorization.7.0.9.nupkg.sha512",
+    "C:\\Users\\Corby\\.nuget\\packages\\microsoft.aspnetcore.components\\7.0.9\\microsoft.aspnetcore.components.7.0.9.nupkg.sha512",
+    "C:\\Users\\Corby\\.nuget\\packages\\microsoft.aspnetcore.components.analyzers\\7.0.9\\microsoft.aspnetcore.components.analyzers.7.0.9.nupkg.sha512",
+    "C:\\Users\\Corby\\.nuget\\packages\\microsoft.aspnetcore.components.forms\\7.0.9\\microsoft.aspnetcore.components.forms.7.0.9.nupkg.sha512",
+    "C:\\Users\\Corby\\.nuget\\packages\\microsoft.aspnetcore.components.web\\7.0.9\\microsoft.aspnetcore.components.web.7.0.9.nupkg.sha512",
+    "C:\\Users\\Corby\\.nuget\\packages\\microsoft.aspnetcore.metadata\\7.0.9\\microsoft.aspnetcore.metadata.7.0.9.nupkg.sha512",
     "C:\\Users\\Corby\\.nuget\\packages\\microsoft.bcl.asyncinterfaces\\1.1.1\\microsoft.bcl.asyncinterfaces.1.1.1.nupkg.sha512",
     "C:\\Users\\Corby\\.nuget\\packages\\microsoft.csharp\\4.5.0\\microsoft.csharp.4.5.0.nupkg.sha512",
     "C:\\Users\\Corby\\.nuget\\packages\\microsoft.data.sqlclient\\5.1.1\\microsoft.data.sqlclient.5.1.1.nupkg.sha512",
@@ -45,7 +45,7 @@
     "C:\\Users\\Corby\\.nuget\\packages\\microsoft.identitymodel.protocols\\6.24.0\\microsoft.identitymodel.protocols.6.24.0.nupkg.sha512",
     "C:\\Users\\Corby\\.nuget\\packages\\microsoft.identitymodel.protocols.openidconnect\\6.24.0\\microsoft.identitymodel.protocols.openidconnect.6.24.0.nupkg.sha512",
     "C:\\Users\\Corby\\.nuget\\packages\\microsoft.identitymodel.tokens\\6.24.0\\microsoft.identitymodel.tokens.6.24.0.nupkg.sha512",
-    "C:\\Users\\Corby\\.nuget\\packages\\microsoft.jsinterop\\7.0.8\\microsoft.jsinterop.7.0.8.nupkg.sha512",
+    "C:\\Users\\Corby\\.nuget\\packages\\microsoft.jsinterop\\7.0.9\\microsoft.jsinterop.7.0.9.nupkg.sha512",
     "C:\\Users\\Corby\\.nuget\\packages\\microsoft.netcore.platforms\\1.1.0\\microsoft.netcore.platforms.1.1.0.nupkg.sha512",
     "C:\\Users\\Corby\\.nuget\\packages\\microsoft.netcore.targets\\1.1.0\\microsoft.netcore.targets.1.1.0.nupkg.sha512",
     "C:\\Users\\Corby\\.nuget\\packages\\microsoft.sqlserver.server\\1.0.0\\microsoft.sqlserver.server.1.0.0.nupkg.sha512",
@@ -132,5 +132,16 @@
     "C:\\Users\\Corby\\.nuget\\packages\\system.xml.xpath\\4.3.0\\system.xml.xpath.4.3.0.nupkg.sha512",
     "C:\\Users\\Corby\\.nuget\\packages\\system.xml.xpath.xmldocument\\4.3.0\\system.xml.xpath.xmldocument.4.3.0.nupkg.sha512"
   ],
-  "logs": []
+  "logs": [
+    {
+      "code": "NU1603",
+      "level": "Warning",
+      "warningLevel": 1,
+      "message": "DataJuggler.Blazor.FileUpload depends on DataJuggler.Blazor.Components (>= 7.8.0) but DataJuggler.Blazor.Components 7.8.0 was not found. An approximate best match of DataJuggler.Blazor.Components 7.9.3 was resolved.",
+      "libraryId": "DataJuggler.Blazor.Components",
+      "targetGraphs": [
+        "net7.0"
+      ]
+    }
+  ]
 }
