@@ -13,6 +13,6 @@
     <SourceRoot Include="C:\Users\Corby\.nuget\packages\" />
   </ItemGroup>
   <ImportGroup Condition=" '$(ExcludeRestorePackageImports)' != 'true' ">
-    <Import Project="$(NuGetPackageRoot)datajuggler.blazor.components\7.9.3\buildTransitive\DataJuggler.Blazor.Components.props" Condition="Exists('$(NuGetPackageRoot)datajuggler.blazor.components\7.9.3\buildTransitive\DataJuggler.Blazor.Components.props')" />
+    <Import Project="$(NuGetPackageRoot)datajuggler.blazor.components\7.9.21\buildTransitive\DataJuggler.Blazor.Components.props" Condition="Exists('$(NuGetPackageRoot)datajuggler.blazor.components\7.9.21\buildTransitive\DataJuggler.Blazor.Components.props')" />
   </ImportGroup>
 </Project>

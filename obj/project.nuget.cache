@@ -1,16 +1,16 @@
 {
   "version": 2,
-  "dgSpecHash": "OpSG10EZbmfx4xT2wwGkQQGSXNb2bhZ5/BOKVAxUk+iJ6AO5MSkHwokor81rN3BcJX8Ta/0Ra6I9z50zWC5L9Q==",
+  "dgSpecHash": "vNd+RLr/sRP7Q2HzAcSYcfpImWouqcOS856HNo8pIxiyopAlLm6SIsOeNJ7t//upWELi+5fwRMZb2J1/7IJsWQ==",
   "success": true,
   "projectFilePath": "C:\\Projects\\GitHub\\BlazorFileUpload\\BlazorFileUpload.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\Corby\\.nuget\\packages\\azure.core\\1.25.0\\azure.core.1.25.0.nupkg.sha512",
     "C:\\Users\\Corby\\.nuget\\packages\\azure.identity\\1.7.0\\azure.identity.1.7.0.nupkg.sha512",
     "C:\\Users\\Corby\\.nuget\\packages\\blazorstyled\\3.1.0\\blazorstyled.3.1.0.nupkg.sha512",
-    "C:\\Users\\Corby\\.nuget\\packages\\datajuggler.blazor.components\\7.9.3\\datajuggler.blazor.components.7.9.3.nupkg.sha512",
-    "C:\\Users\\Corby\\.nuget\\packages\\datajuggler.cryptography\\7.0.0\\datajuggler.cryptography.7.0.0.nupkg.sha512",
-    "C:\\Users\\Corby\\.nuget\\packages\\datajuggler.excelerate\\7.2.12\\datajuggler.excelerate.7.2.12.nupkg.sha512",
-    "C:\\Users\\Corby\\.nuget\\packages\\datajuggler.net7\\7.0.10\\datajuggler.net7.7.0.10.nupkg.sha512",
+    "C:\\Users\\Corby\\.nuget\\packages\\datajuggler.blazor.components\\7.9.21\\datajuggler.blazor.components.7.9.21.nupkg.sha512",
+    "C:\\Users\\Corby\\.nuget\\packages\\datajuggler.cryptography\\7.1.0\\datajuggler.cryptography.7.1.0.nupkg.sha512",
+    "C:\\Users\\Corby\\.nuget\\packages\\datajuggler.excelerate\\7.3.18\\datajuggler.excelerate.7.3.18.nupkg.sha512",
+    "C:\\Users\\Corby\\.nuget\\packages\\datajuggler.net7\\7.2.6\\datajuggler.net7.7.2.6.nupkg.sha512",
     "C:\\Users\\Corby\\.nuget\\packages\\datajuggler.ultimatehelper\\7.1.3\\datajuggler.ultimatehelper.7.1.3.nupkg.sha512",
     "C:\\Users\\Corby\\.nuget\\packages\\epplus\\4.5.3.3\\epplus.4.5.3.3.nupkg.sha512",
     "C:\\Users\\Corby\\.nuget\\packages\\konscious.security.cryptography.argon2\\1.3.0\\konscious.security.cryptography.argon2.1.3.0.nupkg.sha512",
@@ -132,16 +132,5 @@
     "C:\\Users\\Corby\\.nuget\\packages\\system.xml.xpath\\4.3.0\\system.xml.xpath.4.3.0.nupkg.sha512",
     "C:\\Users\\Corby\\.nuget\\packages\\system.xml.xpath.xmldocument\\4.3.0\\system.xml.xpath.xmldocument.4.3.0.nupkg.sha512"
   ],
-  "logs": [
-    {
-      "code": "NU1603",
-      "level": "Warning",
-      "warningLevel": 1,
-      "message": "DataJuggler.Blazor.FileUpload depends on DataJuggler.Blazor.Components (>= 7.8.0) but DataJuggler.Blazor.Components 7.8.0 was not found. An approximate best match of DataJuggler.Blazor.Components 7.9.3 was resolved.",
-      "libraryId": "DataJuggler.Blazor.Components",
-      "targetGraphs": [
-        "net7.0"
-      ]
-    }
-  ]
+  "logs": []
 }
