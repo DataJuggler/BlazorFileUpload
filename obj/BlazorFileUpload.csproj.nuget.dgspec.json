@@ -5,7 +5,7 @@
   },
   "projects": {
     "C:\\Projects\\GitHub\\BlazorFileUpload\\BlazorFileUpload.csproj": {
-      "version": "7.1.1",
+      "version": "7.1.2",
       "restore": {
         "projectUniqueName": "C:\\Projects\\GitHub\\BlazorFileUpload\\BlazorFileUpload.csproj",
         "projectName": "DataJuggler.Blazor.FileUpload",
@@ -43,7 +43,7 @@
           "dependencies": {
             "DataJuggler.Blazor.Components": {
               "target": "Package",
-              "version": "[7.9.21, )"
+              "version": "[7.9.22, )"
             },
             "DataJuggler.UltimateHelper": {
               "target": "Package",

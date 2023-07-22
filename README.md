@@ -98,9 +98,9 @@ using Nuget package DataJuggler.Excelerate (the Nuget package that powers Blazor
     }
     #endregion
     
-Update
+Updates
 
-7.1.1
+7.1.2
 7.22.2023: DataJuggler.Blazor.Components was updated.
 
 version 7.1.0
