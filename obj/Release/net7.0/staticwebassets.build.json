@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "K0OVwFRewqO7wkyxLuixOz8vZtO9u/d5+r1eAU7ui1M=",
+  "Hash": "IJbJdr77pieMJnVrRbhrLWRiwEJDaLN+jABwFASbpkc=",
   "Source": "DataJuggler.Blazor.FileUpload",
   "BasePath": "_content/DataJuggler.Blazor.FileUpload",
   "Mode": "Default",
@@ -119,10 +119,10 @@
       "OriginalItemSpec": "wwwroot\\Images\\Buttons\\BlackButtonWide.jpg"
     },
     {
-      "Identity": "C:\\Users\\Corby\\.nuget\\packages\\datajuggler.blazor.components\\7.9.22\\staticwebassets\\background.png",
+      "Identity": "C:\\Users\\Corby\\.nuget\\packages\\datajuggler.blazor.components\\7.10.0\\staticwebassets\\background.png",
       "SourceId": "DataJuggler.Blazor.Components",
       "SourceType": "Package",
-      "ContentRoot": "C:\\Users\\Corby\\.nuget\\packages\\datajuggler.blazor.components\\7.9.22\\staticwebassets\\",
+      "ContentRoot": "C:\\Users\\Corby\\.nuget\\packages\\datajuggler.blazor.components\\7.10.0\\staticwebassets\\",
       "BasePath": "_content/DataJuggler.Blazor.Components",
       "RelativePath": "background.png",
       "AssetKind": "All",
@@ -133,13 +133,13 @@
       "AssetTraitValue": "",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
-      "OriginalItemSpec": "C:\\Users\\Corby\\.nuget\\packages\\datajuggler.blazor.components\\7.9.22\\staticwebassets\\background.png"
+      "OriginalItemSpec": "C:\\Users\\Corby\\.nuget\\packages\\datajuggler.blazor.components\\7.10.0\\staticwebassets\\background.png"
     },
     {
-      "Identity": "C:\\Users\\Corby\\.nuget\\packages\\datajuggler.blazor.components\\7.9.22\\staticwebassets\\css\\circle.css",
+      "Identity": "C:\\Users\\Corby\\.nuget\\packages\\datajuggler.blazor.components\\7.10.0\\staticwebassets\\css\\circle.css",
       "SourceId": "DataJuggler.Blazor.Components",
       "SourceType": "Package",
-      "ContentRoot": "C:\\Users\\Corby\\.nuget\\packages\\datajuggler.blazor.components\\7.9.22\\staticwebassets\\",
+      "ContentRoot": "C:\\Users\\Corby\\.nuget\\packages\\datajuggler.blazor.components\\7.10.0\\staticwebassets\\",
       "BasePath": "_content/DataJuggler.Blazor.Components",
       "RelativePath": "css/circle.css",
       "AssetKind": "All",
@@ -150,13 +150,13 @@
       "AssetTraitValue": "",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
-      "OriginalItemSpec": "C:\\Users\\Corby\\.nuget\\packages\\datajuggler.blazor.components\\7.9.22\\staticwebassets\\css\\circle.css"
+      "OriginalItemSpec": "C:\\Users\\Corby\\.nuget\\packages\\datajuggler.blazor.components\\7.10.0\\staticwebassets\\css\\circle.css"
     },
     {
-      "Identity": "C:\\Users\\Corby\\.nuget\\packages\\datajuggler.blazor.components\\7.9.22\\staticwebassets\\css\\circle.scss",
+      "Identity": "C:\\Users\\Corby\\.nuget\\packages\\datajuggler.blazor.components\\7.10.0\\staticwebassets\\css\\circle.scss",
       "SourceId": "DataJuggler.Blazor.Components",
       "SourceType": "Package",
-      "ContentRoot": "C:\\Users\\Corby\\.nuget\\packages\\datajuggler.blazor.components\\7.9.22\\staticwebassets\\",
+      "ContentRoot": "C:\\Users\\Corby\\.nuget\\packages\\datajuggler.blazor.components\\7.10.0\\staticwebassets\\",
       "BasePath": "_content/DataJuggler.Blazor.Components",
       "RelativePath": "css/circle.scss",
       "AssetKind": "All",
@@ -167,13 +167,13 @@
       "AssetTraitValue": "",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
-      "OriginalItemSpec": "C:\\Users\\Corby\\.nuget\\packages\\datajuggler.blazor.components\\7.9.22\\staticwebassets\\css\\circle.scss"
+      "OriginalItemSpec": "C:\\Users\\Corby\\.nuget\\packages\\datajuggler.blazor.components\\7.10.0\\staticwebassets\\css\\circle.scss"
     },
     {
-      "Identity": "C:\\Users\\Corby\\.nuget\\packages\\datajuggler.blazor.components\\7.9.22\\staticwebassets\\css\\DataJuggler.Blazor.Components.css",
+      "Identity": "C:\\Users\\Corby\\.nuget\\packages\\datajuggler.blazor.components\\7.10.0\\staticwebassets\\css\\DataJuggler.Blazor.Components.css",
       "SourceId": "DataJuggler.Blazor.Components",
       "SourceType": "Package",
-      "ContentRoot": "C:\\Users\\Corby\\.nuget\\packages\\datajuggler.blazor.components\\7.9.22\\staticwebassets\\",
+      "ContentRoot": "C:\\Users\\Corby\\.nuget\\packages\\datajuggler.blazor.components\\7.10.0\\staticwebassets\\",
       "BasePath": "_content/DataJuggler.Blazor.Components",
       "RelativePath": "css/DataJuggler.Blazor.Components.css",
       "AssetKind": "All",
@@ -184,13 +184,13 @@
       "AssetTraitValue": "",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
-      "OriginalItemSpec": "C:\\Users\\Corby\\.nuget\\packages\\datajuggler.blazor.components\\7.9.22\\staticwebassets\\css\\DataJuggler.Blazor.Components.css"
+      "OriginalItemSpec": "C:\\Users\\Corby\\.nuget\\packages\\datajuggler.blazor.components\\7.10.0\\staticwebassets\\css\\DataJuggler.Blazor.Components.css"
     },
     {
-      "Identity": "C:\\Users\\Corby\\.nuget\\packages\\datajuggler.blazor.components\\7.9.22\\staticwebassets\\exampleJsInterop.js",
+      "Identity": "C:\\Users\\Corby\\.nuget\\packages\\datajuggler.blazor.components\\7.10.0\\staticwebassets\\exampleJsInterop.js",
       "SourceId": "DataJuggler.Blazor.Components",
       "SourceType": "Package",
-      "ContentRoot": "C:\\Users\\Corby\\.nuget\\packages\\datajuggler.blazor.components\\7.9.22\\staticwebassets\\",
+      "ContentRoot": "C:\\Users\\Corby\\.nuget\\packages\\datajuggler.blazor.components\\7.10.0\\staticwebassets\\",
       "BasePath": "_content/DataJuggler.Blazor.Components",
       "RelativePath": "exampleJsInterop.js",
       "AssetKind": "All",
@@ -201,13 +201,13 @@
       "AssetTraitValue": "",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
-      "OriginalItemSpec": "C:\\Users\\Corby\\.nuget\\packages\\datajuggler.blazor.components\\7.9.22\\staticwebassets\\exampleJsInterop.js"
+      "OriginalItemSpec": "C:\\Users\\Corby\\.nuget\\packages\\datajuggler.blazor.components\\7.10.0\\staticwebassets\\exampleJsInterop.js"
     },
     {
-      "Identity": "C:\\Users\\Corby\\.nuget\\packages\\datajuggler.blazor.components\\7.9.22\\staticwebassets\\favicon.ico",
+      "Identity": "C:\\Users\\Corby\\.nuget\\packages\\datajuggler.blazor.components\\7.10.0\\staticwebassets\\favicon.ico",
       "SourceId": "DataJuggler.Blazor.Components",
       "SourceType": "Package",
-      "ContentRoot": "C:\\Users\\Corby\\.nuget\\packages\\datajuggler.blazor.components\\7.9.22\\staticwebassets\\",
+      "ContentRoot": "C:\\Users\\Corby\\.nuget\\packages\\datajuggler.blazor.components\\7.10.0\\staticwebassets\\",
       "BasePath": "_content/DataJuggler.Blazor.Components",
       "RelativePath": "favicon.ico",
       "AssetKind": "All",
@@ -218,13 +218,13 @@
       "AssetTraitValue": "",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
-      "OriginalItemSpec": "C:\\Users\\Corby\\.nuget\\packages\\datajuggler.blazor.components\\7.9.22\\staticwebassets\\favicon.ico"
+      "OriginalItemSpec": "C:\\Users\\Corby\\.nuget\\packages\\datajuggler.blazor.components\\7.10.0\\staticwebassets\\favicon.ico"
     },
     {
-      "Identity": "C:\\Users\\Corby\\.nuget\\packages\\datajuggler.blazor.components\\7.9.22\\staticwebassets\\Images\\Buttons\\BlackButton.jpg",
+      "Identity": "C:\\Users\\Corby\\.nuget\\packages\\datajuggler.blazor.components\\7.10.0\\staticwebassets\\Images\\Buttons\\BlackButton.jpg",
       "SourceId": "DataJuggler.Blazor.Components",
       "SourceType": "Package",
-      "ContentRoot": "C:\\Users\\Corby\\.nuget\\packages\\datajuggler.blazor.components\\7.9.22\\staticwebassets\\",
+      "ContentRoot": "C:\\Users\\Corby\\.nuget\\packages\\datajuggler.blazor.components\\7.10.0\\staticwebassets\\",
       "BasePath": "_content/DataJuggler.Blazor.Components",
       "RelativePath": "Images/Buttons/BlackButton.jpg",
       "AssetKind": "All",
@@ -235,13 +235,13 @@
       "AssetTraitValue": "",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
-      "OriginalItemSpec": "C:\\Users\\Corby\\.nuget\\packages\\datajuggler.blazor.components\\7.9.22\\staticwebassets\\Images\\Buttons\\BlackButton.jpg"
+      "OriginalItemSpec": "C:\\Users\\Corby\\.nuget\\packages\\datajuggler.blazor.components\\7.10.0\\staticwebassets\\Images\\Buttons\\BlackButton.jpg"
     },
     {
-      "Identity": "C:\\Users\\Corby\\.nuget\\packages\\datajuggler.blazor.components\\7.9.22\\staticwebassets\\Images\\Buttons\\BlackButtonWide.jpg",
+      "Identity": "C:\\Users\\Corby\\.nuget\\packages\\datajuggler.blazor.components\\7.10.0\\staticwebassets\\Images\\Buttons\\BlackButtonWide.jpg",
       "SourceId": "DataJuggler.Blazor.Components",
       "SourceType": "Package",
-      "ContentRoot": "C:\\Users\\Corby\\.nuget\\packages\\datajuggler.blazor.components\\7.9.22\\staticwebassets\\",
+      "ContentRoot": "C:\\Users\\Corby\\.nuget\\packages\\datajuggler.blazor.components\\7.10.0\\staticwebassets\\",
       "BasePath": "_content/DataJuggler.Blazor.Components",
       "RelativePath": "Images/Buttons/BlackButtonWide.jpg",
       "AssetKind": "All",
@@ -252,13 +252,13 @@
       "AssetTraitValue": "",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
-      "OriginalItemSpec": "C:\\Users\\Corby\\.nuget\\packages\\datajuggler.blazor.components\\7.9.22\\staticwebassets\\Images\\Buttons\\BlackButtonWide.jpg"
+      "OriginalItemSpec": "C:\\Users\\Corby\\.nuget\\packages\\datajuggler.blazor.components\\7.10.0\\staticwebassets\\Images\\Buttons\\BlackButtonWide.jpg"
     },
     {
-      "Identity": "C:\\Users\\Corby\\.nuget\\packages\\datajuggler.blazor.components\\7.9.22\\staticwebassets\\Images\\Buttons\\ComboBox.png",
+      "Identity": "C:\\Users\\Corby\\.nuget\\packages\\datajuggler.blazor.components\\7.10.0\\staticwebassets\\Images\\Buttons\\ComboBox.png",
       "SourceId": "DataJuggler.Blazor.Components",
       "SourceType": "Package",
-      "ContentRoot": "C:\\Users\\Corby\\.nuget\\packages\\datajuggler.blazor.components\\7.9.22\\staticwebassets\\",
+      "ContentRoot": "C:\\Users\\Corby\\.nuget\\packages\\datajuggler.blazor.components\\7.10.0\\staticwebassets\\",
       "BasePath": "_content/DataJuggler.Blazor.Components",
       "RelativePath": "Images/Buttons/ComboBox.png",
       "AssetKind": "All",
@@ -269,13 +269,13 @@
       "AssetTraitValue": "",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
-      "OriginalItemSpec": "C:\\Users\\Corby\\.nuget\\packages\\datajuggler.blazor.components\\7.9.22\\staticwebassets\\Images\\Buttons\\ComboBox.png"
+      "OriginalItemSpec": "C:\\Users\\Corby\\.nuget\\packages\\datajuggler.blazor.components\\7.10.0\\staticwebassets\\Images\\Buttons\\ComboBox.png"
     },
     {
-      "Identity": "C:\\Users\\Corby\\.nuget\\packages\\datajuggler.blazor.components\\7.9.22\\staticwebassets\\Images\\Buttons\\ComboBoxBlack.png",
+      "Identity": "C:\\Users\\Corby\\.nuget\\packages\\datajuggler.blazor.components\\7.10.0\\staticwebassets\\Images\\Buttons\\ComboBoxBlack.png",
       "SourceId": "DataJuggler.Blazor.Components",
       "SourceType": "Package",
-      "ContentRoot": "C:\\Users\\Corby\\.nuget\\packages\\datajuggler.blazor.components\\7.9.22\\staticwebassets\\",
+      "ContentRoot": "C:\\Users\\Corby\\.nuget\\packages\\datajuggler.blazor.components\\7.10.0\\staticwebassets\\",
       "BasePath": "_content/DataJuggler.Blazor.Components",
       "RelativePath": "Images/Buttons/ComboBoxBlack.png",
       "AssetKind": "All",
@@ -286,13 +286,13 @@
       "AssetTraitValue": "",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
-      "OriginalItemSpec": "C:\\Users\\Corby\\.nuget\\packages\\datajuggler.blazor.components\\7.9.22\\staticwebassets\\Images\\Buttons\\ComboBoxBlack.png"
+      "OriginalItemSpec": "C:\\Users\\Corby\\.nuget\\packages\\datajuggler.blazor.components\\7.10.0\\staticwebassets\\Images\\Buttons\\ComboBoxBlack.png"
     },
     {
-      "Identity": "C:\\Users\\Corby\\.nuget\\packages\\datajuggler.blazor.components\\7.9.22\\staticwebassets\\Images\\Buttons\\ComboBoxBlackOpen.png",
+      "Identity": "C:\\Users\\Corby\\.nuget\\packages\\datajuggler.blazor.components\\7.10.0\\staticwebassets\\Images\\Buttons\\ComboBoxBlackOpen.png",
       "SourceId": "DataJuggler.Blazor.Components",
       "SourceType": "Package",
-      "ContentRoot": "C:\\Users\\Corby\\.nuget\\packages\\datajuggler.blazor.components\\7.9.22\\staticwebassets\\",
+      "ContentRoot": "C:\\Users\\Corby\\.nuget\\packages\\datajuggler.blazor.components\\7.10.0\\staticwebassets\\",
       "BasePath": "_content/DataJuggler.Blazor.Components",
       "RelativePath": "Images/Buttons/ComboBoxBlackOpen.png",
       "AssetKind": "All",
@@ -303,13 +303,13 @@
       "AssetTraitValue": "",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
-      "OriginalItemSpec": "C:\\Users\\Corby\\.nuget\\packages\\datajuggler.blazor.components\\7.9.22\\staticwebassets\\Images\\Buttons\\ComboBoxBlackOpen.png"
+      "OriginalItemSpec": "C:\\Users\\Corby\\.nuget\\packages\\datajuggler.blazor.components\\7.10.0\\staticwebassets\\Images\\Buttons\\ComboBoxBlackOpen.png"
     },
     {
-      "Identity": "C:\\Users\\Corby\\.nuget\\packages\\datajuggler.blazor.components\\7.9.22\\staticwebassets\\Images\\Buttons\\ComboBoxBrown.png",
+      "Identity": "C:\\Users\\Corby\\.nuget\\packages\\datajuggler.blazor.components\\7.10.0\\staticwebassets\\Images\\Buttons\\ComboBoxBrown.png",
       "SourceId": "DataJuggler.Blazor.Components",
       "SourceType": "Package",
-      "ContentRoot": "C:\\Users\\Corby\\.nuget\\packages\\datajuggler.blazor.components\\7.9.22\\staticwebassets\\",
+      "ContentRoot": "C:\\Users\\Corby\\.nuget\\packages\\datajuggler.blazor.components\\7.10.0\\staticwebassets\\",
       "BasePath": "_content/DataJuggler.Blazor.Components",
       "RelativePath": "Images/Buttons/ComboBoxBrown.png",
       "AssetKind": "All",
@@ -320,13 +320,13 @@
       "AssetTraitValue": "",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
-      "OriginalItemSpec": "C:\\Users\\Corby\\.nuget\\packages\\datajuggler.blazor.components\\7.9.22\\staticwebassets\\Images\\Buttons\\ComboBoxBrown.png"
+      "OriginalItemSpec": "C:\\Users\\Corby\\.nuget\\packages\\datajuggler.blazor.components\\7.10.0\\staticwebassets\\Images\\Buttons\\ComboBoxBrown.png"
     },
     {
-      "Identity": "C:\\Users\\Corby\\.nuget\\packages\\datajuggler.blazor.components\\7.9.22\\staticwebassets\\Images\\Buttons\\ComboBoxBrownOpen.png",
+      "Identity": "C:\\Users\\Corby\\.nuget\\packages\\datajuggler.blazor.components\\7.10.0\\staticwebassets\\Images\\Buttons\\ComboBoxBrownOpen.png",
       "SourceId": "DataJuggler.Blazor.Components",
       "SourceType": "Package",
-      "ContentRoot": "C:\\Users\\Corby\\.nuget\\packages\\datajuggler.blazor.components\\7.9.22\\staticwebassets\\",
+      "ContentRoot": "C:\\Users\\Corby\\.nuget\\packages\\datajuggler.blazor.components\\7.10.0\\staticwebassets\\",
       "BasePath": "_content/DataJuggler.Blazor.Components",
       "RelativePath": "Images/Buttons/ComboBoxBrownOpen.png",
       "AssetKind": "All",
@@ -337,13 +337,13 @@
       "AssetTraitValue": "",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
-      "OriginalItemSpec": "C:\\Users\\Corby\\.nuget\\packages\\datajuggler.blazor.components\\7.9.22\\staticwebassets\\Images\\Buttons\\ComboBoxBrownOpen.png"
+      "OriginalItemSpec": "C:\\Users\\Corby\\.nuget\\packages\\datajuggler.blazor.components\\7.10.0\\staticwebassets\\Images\\Buttons\\ComboBoxBrownOpen.png"
     },
     {
-      "Identity": "C:\\Users\\Corby\\.nuget\\packages\\datajuggler.blazor.components\\7.9.22\\staticwebassets\\Images\\Buttons\\ComboBoxDark.png",
+      "Identity": "C:\\Users\\Corby\\.nuget\\packages\\datajuggler.blazor.components\\7.10.0\\staticwebassets\\Images\\Buttons\\ComboBoxDark.png",
       "SourceId": "DataJuggler.Blazor.Components",
       "SourceType": "Package",
-      "ContentRoot": "C:\\Users\\Corby\\.nuget\\packages\\datajuggler.blazor.components\\7.9.22\\staticwebassets\\",
+      "ContentRoot": "C:\\Users\\Corby\\.nuget\\packages\\datajuggler.blazor.components\\7.10.0\\staticwebassets\\",
       "BasePath": "_content/DataJuggler.Blazor.Components",
       "RelativePath": "Images/Buttons/ComboBoxDark.png",
       "AssetKind": "All",
@@ -354,13 +354,13 @@
       "AssetTraitValue": "",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
-      "OriginalItemSpec": "C:\\Users\\Corby\\.nuget\\packages\\datajuggler.blazor.components\\7.9.22\\staticwebassets\\Images\\Buttons\\ComboBoxDark.png"
+      "OriginalItemSpec": "C:\\Users\\Corby\\.nuget\\packages\\datajuggler.blazor.components\\7.10.0\\staticwebassets\\Images\\Buttons\\ComboBoxDark.png"
     },
     {
-      "Identity": "C:\\Users\\Corby\\.nuget\\packages\\datajuggler.blazor.components\\7.9.22\\staticwebassets\\Images\\Buttons\\ComboBoxOpen.png",
+      "Identity": "C:\\Users\\Corby\\.nuget\\packages\\datajuggler.blazor.components\\7.10.0\\staticwebassets\\Images\\Buttons\\ComboBoxOpen.png",
       "SourceId": "DataJuggler.Blazor.Components",
       "SourceType": "Package",
-      "ContentRoot": "C:\\Users\\Corby\\.nuget\\packages\\datajuggler.blazor.components\\7.9.22\\staticwebassets\\",
+      "ContentRoot": "C:\\Users\\Corby\\.nuget\\packages\\datajuggler.blazor.components\\7.10.0\\staticwebassets\\",
       "BasePath": "_content/DataJuggler.Blazor.Components",
       "RelativePath": "Images/Buttons/ComboBoxOpen.png",
       "AssetKind": "All",
@@ -371,13 +371,13 @@
       "AssetTraitValue": "",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
-      "OriginalItemSpec": "C:\\Users\\Corby\\.nuget\\packages\\datajuggler.blazor.components\\7.9.22\\staticwebassets\\Images\\Buttons\\ComboBoxOpen.png"
+      "OriginalItemSpec": "C:\\Users\\Corby\\.nuget\\packages\\datajuggler.blazor.components\\7.10.0\\staticwebassets\\Images\\Buttons\\ComboBoxOpen.png"
     },
     {
-      "Identity": "C:\\Users\\Corby\\.nuget\\packages\\datajuggler.blazor.components\\7.9.22\\staticwebassets\\Images\\Buttons\\ComboBoxOpenDark.png",
+      "Identity": "C:\\Users\\Corby\\.nuget\\packages\\datajuggler.blazor.components\\7.10.0\\staticwebassets\\Images\\Buttons\\ComboBoxOpenDark.png",
       "SourceId": "DataJuggler.Blazor.Components",
       "SourceType": "Package",
-      "ContentRoot": "C:\\Users\\Corby\\.nuget\\packages\\datajuggler.blazor.components\\7.9.22\\staticwebassets\\",
+      "ContentRoot": "C:\\Users\\Corby\\.nuget\\packages\\datajuggler.blazor.components\\7.10.0\\staticwebassets\\",
       "BasePath": "_content/DataJuggler.Blazor.Components",
       "RelativePath": "Images/Buttons/ComboBoxOpenDark.png",
       "AssetKind": "All",
@@ -388,13 +388,13 @@
       "AssetTraitValue": "",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
-      "OriginalItemSpec": "C:\\Users\\Corby\\.nuget\\packages\\datajuggler.blazor.components\\7.9.22\\staticwebassets\\Images\\Buttons\\ComboBoxOpenDark.png"
+      "OriginalItemSpec": "C:\\Users\\Corby\\.nuget\\packages\\datajuggler.blazor.components\\7.10.0\\staticwebassets\\Images\\Buttons\\ComboBoxOpenDark.png"
     },
     {
-      "Identity": "C:\\Users\\Corby\\.nuget\\packages\\datajuggler.blazor.components\\7.9.22\\staticwebassets\\Images\\darkbackground.png",
+      "Identity": "C:\\Users\\Corby\\.nuget\\packages\\datajuggler.blazor.components\\7.10.0\\staticwebassets\\Images\\darkbackground.png",
       "SourceId": "DataJuggler.Blazor.Components",
       "SourceType": "Package",
-      "ContentRoot": "C:\\Users\\Corby\\.nuget\\packages\\datajuggler.blazor.components\\7.9.22\\staticwebassets\\",
+      "ContentRoot": "C:\\Users\\Corby\\.nuget\\packages\\datajuggler.blazor.components\\7.10.0\\staticwebassets\\",
       "BasePath": "_content/DataJuggler.Blazor.Components",
       "RelativePath": "Images/darkbackground.png",
       "AssetKind": "All",
@@ -405,13 +405,13 @@
       "AssetTraitValue": "",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
-      "OriginalItemSpec": "C:\\Users\\Corby\\.nuget\\packages\\datajuggler.blazor.components\\7.9.22\\staticwebassets\\Images\\darkbackground.png"
+      "OriginalItemSpec": "C:\\Users\\Corby\\.nuget\\packages\\datajuggler.blazor.components\\7.10.0\\staticwebassets\\Images\\darkbackground.png"
     },
     {
-      "Identity": "C:\\Users\\Corby\\.nuget\\packages\\datajuggler.blazor.components\\7.9.22\\staticwebassets\\Images\\Failure.png",
+      "Identity": "C:\\Users\\Corby\\.nuget\\packages\\datajuggler.blazor.components\\7.10.0\\staticwebassets\\Images\\Failure.png",
       "SourceId": "DataJuggler.Blazor.Components",
       "SourceType": "Package",
-      "ContentRoot": "C:\\Users\\Corby\\.nuget\\packages\\datajuggler.blazor.components\\7.9.22\\staticwebassets\\",
+      "ContentRoot": "C:\\Users\\Corby\\.nuget\\packages\\datajuggler.blazor.components\\7.10.0\\staticwebassets\\",
       "BasePath": "_content/DataJuggler.Blazor.Components",
       "RelativePath": "Images/Failure.png",
       "AssetKind": "All",
@@ -422,13 +422,13 @@
       "AssetTraitValue": "",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
-      "OriginalItemSpec": "C:\\Users\\Corby\\.nuget\\packages\\datajuggler.blazor.components\\7.9.22\\staticwebassets\\Images\\Failure.png"
+      "OriginalItemSpec": "C:\\Users\\Corby\\.nuget\\packages\\datajuggler.blazor.components\\7.10.0\\staticwebassets\\Images\\Failure.png"
     },
     {
-      "Identity": "C:\\Users\\Corby\\.nuget\\packages\\datajuggler.blazor.components\\7.9.22\\staticwebassets\\Images\\Logo Black Small.png",
+      "Identity": "C:\\Users\\Corby\\.nuget\\packages\\datajuggler.blazor.components\\7.10.0\\staticwebassets\\Images\\Logo Black Small.png",
       "SourceId": "DataJuggler.Blazor.Components",
       "SourceType": "Package",
-      "ContentRoot": "C:\\Users\\Corby\\.nuget\\packages\\datajuggler.blazor.components\\7.9.22\\staticwebassets\\",
+      "ContentRoot": "C:\\Users\\Corby\\.nuget\\packages\\datajuggler.blazor.components\\7.10.0\\staticwebassets\\",
       "BasePath": "_content/DataJuggler.Blazor.Components",
       "RelativePath": "Images/Logo Black Small.png",
       "AssetKind": "All",
@@ -439,13 +439,13 @@
       "AssetTraitValue": "",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
-      "OriginalItemSpec": "C:\\Users\\Corby\\.nuget\\packages\\datajuggler.blazor.components\\7.9.22\\staticwebassets\\Images\\Logo Black Small.png"
+      "OriginalItemSpec": "C:\\Users\\Corby\\.nuget\\packages\\datajuggler.blazor.components\\7.10.0\\staticwebassets\\Images\\Logo Black Small.png"
     },
     {
-      "Identity": "C:\\Users\\Corby\\.nuget\\packages\\datajuggler.blazor.components\\7.9.22\\staticwebassets\\Images\\Logo Black.png",
+      "Identity": "C:\\Users\\Corby\\.nuget\\packages\\datajuggler.blazor.components\\7.10.0\\staticwebassets\\Images\\Logo Black.png",
       "SourceId": "DataJuggler.Blazor.Components",
       "SourceType": "Package",
-      "ContentRoot": "C:\\Users\\Corby\\.nuget\\packages\\datajuggler.blazor.components\\7.9.22\\staticwebassets\\",
+      "ContentRoot": "C:\\Users\\Corby\\.nuget\\packages\\datajuggler.blazor.components\\7.10.0\\staticwebassets\\",
       "BasePath": "_content/DataJuggler.Blazor.Components",
       "RelativePath": "Images/Logo Black.png",
       "AssetKind": "All",
@@ -456,13 +456,13 @@
       "AssetTraitValue": "",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
-      "OriginalItemSpec": "C:\\Users\\Corby\\.nuget\\packages\\datajuggler.blazor.components\\7.9.22\\staticwebassets\\Images\\Logo Black.png"
+      "OriginalItemSpec": "C:\\Users\\Corby\\.nuget\\packages\\datajuggler.blazor.components\\7.10.0\\staticwebassets\\Images\\Logo Black.png"
     },
     {
-      "Identity": "C:\\Users\\Corby\\.nuget\\packages\\datajuggler.blazor.components\\7.9.22\\staticwebassets\\Images\\Success.png",
+      "Identity": "C:\\Users\\Corby\\.nuget\\packages\\datajuggler.blazor.components\\7.10.0\\staticwebassets\\Images\\Success.png",
       "SourceId": "DataJuggler.Blazor.Components",
       "SourceType": "Package",
-      "ContentRoot": "C:\\Users\\Corby\\.nuget\\packages\\datajuggler.blazor.components\\7.9.22\\staticwebassets\\",
+      "ContentRoot": "C:\\Users\\Corby\\.nuget\\packages\\datajuggler.blazor.components\\7.10.0\\staticwebassets\\",
       "BasePath": "_content/DataJuggler.Blazor.Components",
       "RelativePath": "Images/Success.png",
       "AssetKind": "All",
@@ -473,7 +473,7 @@
       "AssetTraitValue": "",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
-      "OriginalItemSpec": "C:\\Users\\Corby\\.nuget\\packages\\datajuggler.blazor.components\\7.9.22\\staticwebassets\\Images\\Success.png"
+      "OriginalItemSpec": "C:\\Users\\Corby\\.nuget\\packages\\datajuggler.blazor.components\\7.10.0\\staticwebassets\\Images\\Success.png"
     }
   ]
 }

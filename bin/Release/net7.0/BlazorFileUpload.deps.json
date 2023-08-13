@@ -6,12 +6,12 @@
   "compilationOptions": {},
   "targets": {
     ".NETCoreApp,Version=v7.0": {
-      "BlazorFileUpload/7.1.2": {
+      "BlazorFileUpload/7.2.0": {
         "dependencies": {
-          "DataJuggler.Blazor.Components": "7.9.22",
-          "DataJuggler.UltimateHelper": "7.1.3",
-          "Microsoft.AspNetCore.Components": "7.0.9",
-          "Microsoft.AspNetCore.Components.Web": "7.0.9",
+          "DataJuggler.Blazor.Components": "7.10.0",
+          "DataJuggler.UltimateHelper": "7.1.7",
+          "Microsoft.AspNetCore.Components": "7.0.10",
+          "Microsoft.AspNetCore.Components.Web": "7.0.10",
           "System.Drawing.Common": "7.0.0"
         },
         "runtime": {
@@ -54,7 +54,7 @@
       },
       "BlazorStyled/3.1.0": {
         "dependencies": {
-          "Microsoft.AspNetCore.Components.Web": "7.0.9"
+          "Microsoft.AspNetCore.Components.Web": "7.0.10"
         },
         "runtime": {
           "lib/net5.0/BlazorStyled.dll": {
@@ -63,22 +63,22 @@
           }
         }
       },
-      "DataJuggler.Blazor.Components/7.9.22": {
+      "DataJuggler.Blazor.Components/7.10.0": {
         "dependencies": {
           "BlazorStyled": "3.1.0",
           "DataJuggler.Excelerate": "7.3.21",
-          "DataJuggler.UltimateHelper": "7.1.3"
+          "DataJuggler.UltimateHelper": "7.1.7"
         },
         "runtime": {
           "lib/net7.0/DataJuggler.Blazor.Components.dll": {
-            "assemblyVersion": "7.5.5.0",
-            "fileVersion": "7.5.5.0"
+            "assemblyVersion": "7.9.2.0",
+            "fileVersion": "7.9.2.0"
           }
         }
       },
       "DataJuggler.Cryptography/7.1.0": {
         "dependencies": {
-          "DataJuggler.UltimateHelper": "7.1.3",
+          "DataJuggler.UltimateHelper": "7.1.7",
           "Konscious.Security.Cryptography.Argon2": "1.3.0"
         },
         "runtime": {
@@ -91,7 +91,7 @@
       "DataJuggler.Excelerate/7.3.21": {
         "dependencies": {
           "DataJuggler.Net7": "7.2.8",
-          "DataJuggler.UltimateHelper": "7.1.3",
+          "DataJuggler.UltimateHelper": "7.1.7",
           "EPPlus": "4.5.3.3"
         },
         "runtime": {
@@ -104,7 +104,7 @@
       "DataJuggler.Net7/7.2.8": {
         "dependencies": {
           "DataJuggler.Cryptography": "7.1.0",
-          "DataJuggler.UltimateHelper": "7.1.3",
+          "DataJuggler.UltimateHelper": "7.1.7",
           "Microsoft.Data.SqlClient": "5.1.1"
         },
         "runtime": {
@@ -114,7 +114,7 @@
           }
         }
       },
-      "DataJuggler.UltimateHelper/7.1.3": {
+      "DataJuggler.UltimateHelper/7.1.7": {
         "dependencies": {
           "System.Configuration.ConfigurationManager": "7.0.0"
         },
@@ -166,63 +166,63 @@
           }
         }
       },
-      "Microsoft.AspNetCore.Authorization/7.0.9": {
+      "Microsoft.AspNetCore.Authorization/7.0.10": {
         "dependencies": {
-          "Microsoft.AspNetCore.Metadata": "7.0.9",
+          "Microsoft.AspNetCore.Metadata": "7.0.10",
           "Microsoft.Extensions.Logging.Abstractions": "7.0.1",
           "Microsoft.Extensions.Options": "7.0.1"
         },
         "runtime": {
           "lib/net7.0/Microsoft.AspNetCore.Authorization.dll": {
             "assemblyVersion": "7.0.0.0",
-            "fileVersion": "7.0.923.32110"
+            "fileVersion": "7.0.1023.36439"
           }
         }
       },
-      "Microsoft.AspNetCore.Components/7.0.9": {
+      "Microsoft.AspNetCore.Components/7.0.10": {
         "dependencies": {
-          "Microsoft.AspNetCore.Authorization": "7.0.9",
-          "Microsoft.AspNetCore.Components.Analyzers": "7.0.9"
+          "Microsoft.AspNetCore.Authorization": "7.0.10",
+          "Microsoft.AspNetCore.Components.Analyzers": "7.0.10"
         },
         "runtime": {
           "lib/net7.0/Microsoft.AspNetCore.Components.dll": {
             "assemblyVersion": "7.0.0.0",
-            "fileVersion": "7.0.923.32110"
+            "fileVersion": "7.0.1023.36439"
           }
         }
       },
-      "Microsoft.AspNetCore.Components.Analyzers/7.0.9": {},
-      "Microsoft.AspNetCore.Components.Forms/7.0.9": {
+      "Microsoft.AspNetCore.Components.Analyzers/7.0.10": {},
+      "Microsoft.AspNetCore.Components.Forms/7.0.10": {
         "dependencies": {
-          "Microsoft.AspNetCore.Components": "7.0.9"
+          "Microsoft.AspNetCore.Components": "7.0.10"
         },
         "runtime": {
           "lib/net7.0/Microsoft.AspNetCore.Components.Forms.dll": {
             "assemblyVersion": "7.0.0.0",
-            "fileVersion": "7.0.923.32110"
+            "fileVersion": "7.0.1023.36439"
           }
         }
       },
-      "Microsoft.AspNetCore.Components.Web/7.0.9": {
+      "Microsoft.AspNetCore.Components.Web/7.0.10": {
         "dependencies": {
-          "Microsoft.AspNetCore.Components": "7.0.9",
-          "Microsoft.AspNetCore.Components.Forms": "7.0.9",
+          "Microsoft.AspNetCore.Components": "7.0.10",
+          "Microsoft.AspNetCore.Components.Forms": "7.0.10",
           "Microsoft.Extensions.DependencyInjection": "7.0.0",
-          "Microsoft.JSInterop": "7.0.9",
+          "Microsoft.JSInterop": "7.0.10",
           "System.IO.Pipelines": "7.0.0"
         },
         "runtime": {
           "lib/net7.0/Microsoft.AspNetCore.Components.Web.dll": {
             "assemblyVersion": "7.0.0.0",
-            "fileVersion": "7.0.923.32110"
+            "fileVersion": "7.0.1023.36439"
           }
         }
       },
-      "Microsoft.AspNetCore.Metadata/7.0.9": {
+      "Microsoft.AspNetCore.Metadata/7.0.10": {
         "runtime": {
           "lib/net7.0/Microsoft.AspNetCore.Metadata.dll": {
             "assemblyVersion": "7.0.0.0",
-            "fileVersion": "7.0.923.32110"
+            "fileVersion": "7.0.1023.36439"
           }
         }
       },
@@ -512,11 +512,11 @@
           }
         }
       },
-      "Microsoft.JSInterop/7.0.9": {
+      "Microsoft.JSInterop/7.0.10": {
         "runtime": {
           "lib/net7.0/Microsoft.JSInterop.dll": {
             "assemblyVersion": "7.0.0.0",
-            "fileVersion": "7.0.923.32110"
+            "fileVersion": "7.0.1023.36439"
           }
         }
       },
@@ -1247,7 +1247,7 @@
     }
   },
   "libraries": {
-    "BlazorFileUpload/7.1.2": {
+    "BlazorFileUpload/7.2.0": {
       "type": "project",
       "serviceable": false,
       "sha512": ""
@@ -1273,12 +1273,12 @@
       "path": "blazorstyled/3.1.0",
       "hashPath": "blazorstyled.3.1.0.nupkg.sha512"
     },
-    "DataJuggler.Blazor.Components/7.9.22": {
+    "DataJuggler.Blazor.Components/7.10.0": {
       "type": "package",
       "serviceable": true,
-      "sha512": "sha512-Q43hpTFCiEzUdYt+lPkDYcOxkgZ60GFRvhX4SlLgnJBVI5Rpn2sUYOEjvKnR1+0gdSfAm4qE6Q+DEVv2S8xvjA==",
-      "path": "datajuggler.blazor.components/7.9.22",
-      "hashPath": "datajuggler.blazor.components.7.9.22.nupkg.sha512"
+      "sha512": "sha512-evRoC4g5JZ/6So+Celw7PYH5jaeRgGIzYu2OI8CPwglQnLi8jIYG6IUVr2QLhEtejOVV5z/rkDxwe8wZzoVaCA==",
+      "path": "datajuggler.blazor.components/7.10.0",
+      "hashPath": "datajuggler.blazor.components.7.10.0.nupkg.sha512"
     },
     "DataJuggler.Cryptography/7.1.0": {
       "type": "package",
@@ -1301,12 +1301,12 @@
       "path": "datajuggler.net7/7.2.8",
       "hashPath": "datajuggler.net7.7.2.8.nupkg.sha512"
     },
-    "DataJuggler.UltimateHelper/7.1.3": {
+    "DataJuggler.UltimateHelper/7.1.7": {
       "type": "package",
       "serviceable": true,
-      "sha512": "sha512-ytOrnb1RusT9iDRb8jj986sSIZldtZ4qtSAordktXkfsdwQq2H60DSw+0D3f1M09UwTnBQl0xtZO4jeRT1gDcg==",
-      "path": "datajuggler.ultimatehelper/7.1.3",
-      "hashPath": "datajuggler.ultimatehelper.7.1.3.nupkg.sha512"
+      "sha512": "sha512-Nvd2Zj63NNNc47EYMmJka5dMjzS68QAU8Qlpne7Iy2fEs9d0iasifJFvfFupij+pUiTcExJfwHEV5PXC17oGzg==",
+      "path": "datajuggler.ultimatehelper/7.1.7",
+      "hashPath": "datajuggler.ultimatehelper.7.1.7.nupkg.sha512"
     },
     "EPPlus/4.5.3.3": {
       "type": "package",
@@ -1329,47 +1329,47 @@
       "path": "konscious.security.cryptography.blake2/1.1.0",
       "hashPath": "konscious.security.cryptography.blake2.1.1.0.nupkg.sha512"
     },
-    "Microsoft.AspNetCore.Authorization/7.0.9": {
+    "Microsoft.AspNetCore.Authorization/7.0.10": {
       "type": "package",
       "serviceable": true,
-      "sha512": "sha512-fP5h07iQILCMA1kl7Y3KgzM9YWNgcmJKdzBEE59i9LhcTUsvMdvY2LhfmmJ7ZftS0mhkPRiXF/LdsKb06ClwYg==",
-      "path": "microsoft.aspnetcore.authorization/7.0.9",
-      "hashPath": "microsoft.aspnetcore.authorization.7.0.9.nupkg.sha512"
+      "sha512": "sha512-ZAAQZfho51GaJ+Pr2e6TVSDQu8lQ09xHJW67OZwuKtcWbgE4LaKmz6U5z7TYTctWxPQD5uZC1+U1hZUcn0g5Zw==",
+      "path": "microsoft.aspnetcore.authorization/7.0.10",
+      "hashPath": "microsoft.aspnetcore.authorization.7.0.10.nupkg.sha512"
     },
-    "Microsoft.AspNetCore.Components/7.0.9": {
+    "Microsoft.AspNetCore.Components/7.0.10": {
       "type": "package",
       "serviceable": true,
-      "sha512": "sha512-pxaPhkp7dRZxuobkAdJkxwI+xZaI1FVIo8t9lsikv1oG3aeYbwPdfzaSFV5TbKsGxQnRnUUfpGb4NebDd4/G8w==",
-      "path": "microsoft.aspnetcore.components/7.0.9",
-      "hashPath": "microsoft.aspnetcore.components.7.0.9.nupkg.sha512"
+      "sha512": "sha512-BX8U5jpbMG8jBecMGrjl1ZjxxFUpJCcGiIaunP4EFSQKxomM7mjjfskkbQhruOy8c60aeiacRx86gXGQ0uK6TA==",
+      "path": "microsoft.aspnetcore.components/7.0.10",
+      "hashPath": "microsoft.aspnetcore.components.7.0.10.nupkg.sha512"
     },
-    "Microsoft.AspNetCore.Components.Analyzers/7.0.9": {
+    "Microsoft.AspNetCore.Components.Analyzers/7.0.10": {
       "type": "package",
       "serviceable": true,
-      "sha512": "sha512-Bk5COjKt1fMkOXjv82VCM83pGj47YkyHv3PZXDEMym0WVKhvNyiqAUd4nPdvqyxfldIhC0H6zyCPLAC0oLsZkA==",
-      "path": "microsoft.aspnetcore.components.analyzers/7.0.9",
-      "hashPath": "microsoft.aspnetcore.components.analyzers.7.0.9.nupkg.sha512"
+      "sha512": "sha512-F1BPBk1koIKmUDGEoH/4qZaGI2+9T9HbGWtvaoWRyyOIsa2/AIJ1aWk08TGkFQuVExSHqJgi3Wb82ApnXDFJZA==",
+      "path": "microsoft.aspnetcore.components.analyzers/7.0.10",
+      "hashPath": "microsoft.aspnetcore.components.analyzers.7.0.10.nupkg.sha512"
     },
-    "Microsoft.AspNetCore.Components.Forms/7.0.9": {
+    "Microsoft.AspNetCore.Components.Forms/7.0.10": {
       "type": "package",
       "serviceable": true,
-      "sha512": "sha512-woBR7tiXLAZ/PJjSXYuQoZt+OSDuZ9d8IBMsSwx/OFIDdvY+w+FVbFuxuHHvk4ZrHFM4S0KG6jKWllfSHqJs3g==",
-      "path": "microsoft.aspnetcore.components.forms/7.0.9",
-      "hashPath": "microsoft.aspnetcore.components.forms.7.0.9.nupkg.sha512"
+      "sha512": "sha512-J1kLcXnO0gtGZjluTHfnZDVpp/EJtXLKULVyqD/qGpCujguRcyRS42PeaoZrI8ALnWNmCvIrOYLVkTiG1/6fJw==",
+      "path": "microsoft.aspnetcore.components.forms/7.0.10",
+      "hashPath": "microsoft.aspnetcore.components.forms.7.0.10.nupkg.sha512"
     },
-    "Microsoft.AspNetCore.Components.Web/7.0.9": {
+    "Microsoft.AspNetCore.Components.Web/7.0.10": {
       "type": "package",
       "serviceable": true,
-      "sha512": "sha512-46nrUg3/Tl/D1FT08nQqtsxs0VstOBwJpE8YS8nv0Mhm1cBeWg2Z0c9U22l/MIGiH12PcrAaHnBFy02EWrH9uA==",
-      "path": "microsoft.aspnetcore.components.web/7.0.9",
-      "hashPath": "microsoft.aspnetcore.components.web.7.0.9.nupkg.sha512"
+      "sha512": "sha512-voBVhtYNZ9fGtGZ2fa172y9HSe/3Ee3BavFxRQCLJCvg+ynDuQTjsB6f76xLx+ySXKHZCyAyJmN+HTBo7duW0Q==",
+      "path": "microsoft.aspnetcore.components.web/7.0.10",
+      "hashPath": "microsoft.aspnetcore.components.web.7.0.10.nupkg.sha512"
     },
-    "Microsoft.AspNetCore.Metadata/7.0.9": {
+    "Microsoft.AspNetCore.Metadata/7.0.10": {
       "type": "package",
       "serviceable": true,
-      "sha512": "sha512-ni8k/TCKMFmBdW+FOEmPNad4pA697tt59iEcpUG+HhagyXYnipfkbW9bu4/EOyyvSAOz4YMSA6in7gL/KZZlAA==",
-      "path": "microsoft.aspnetcore.metadata/7.0.9",
-      "hashPath": "microsoft.aspnetcore.metadata.7.0.9.nupkg.sha512"
+      "sha512": "sha512-czsM8xLZdCyATOWwaSUf8k9/D0Il6RTmUh7QQpQDD/J1KeVMd0C4L6tDpb1U+OMmECDG1xjrKnXBJP0SoeCjhg==",
+      "path": "microsoft.aspnetcore.metadata/7.0.10",
+      "hashPath": "microsoft.aspnetcore.metadata.7.0.10.nupkg.sha512"
     },
     "Microsoft.Bcl.AsyncInterfaces/1.1.1": {
       "type": "package",
@@ -1539,12 +1539,12 @@
       "path": "microsoft.identitymodel.tokens/6.24.0",
       "hashPath": "microsoft.identitymodel.tokens.6.24.0.nupkg.sha512"
     },
-    "Microsoft.JSInterop/7.0.9": {
+    "Microsoft.JSInterop/7.0.10": {
       "type": "package",
       "serviceable": true,
-      "sha512": "sha512-GNIQDHu7A7paONe/IOm3cUnRfUTxfWNlsvhKmEfUKFWdEsuBMd70aIl1YPtwasg9dkjW535pRudaExBm8IrvbA==",
-      "path": "microsoft.jsinterop/7.0.9",
-      "hashPath": "microsoft.jsinterop.7.0.9.nupkg.sha512"
+      "sha512": "sha512-MH5KValnvohy+bXUz7Bf72avLqi+95uLARJCQ14s+rjW0km5qJOY6WmuWQHF3eLBTjq4T0iRoGD7/MfKrLztzA==",
+      "path": "microsoft.jsinterop/7.0.10",
+      "hashPath": "microsoft.jsinterop.7.0.10.nupkg.sha512"
     },
     "Microsoft.NETCore.Platforms/1.1.0": {
       "type": "package",
