@@ -1,8 +1,11 @@
 # BlazorFileUpload
+
 This project was originally a wrapper of Steve Sanderson's BlazorFileInput, but now has been
 updated to the InputFile .NET component. This project has been updated to .NET 7.
 
-#7.13.2023: DataJuggler.Blazor.FileUpload now supports Multille Files.
+# 8.13.2023: DataJuggler.Blazor.Components was updated because DataJuggler.UltimateHelper was updated.
+
+# 7.13.2023: DataJuggler.Blazor.FileUpload now supports Multille Files.
 
 # 6.21.2023: New Sample Project Blazor Gallery
 

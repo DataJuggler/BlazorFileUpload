@@ -6,10 +6,10 @@
   "compilationOptions": {},
   "targets": {
     ".NETCoreApp,Version=v7.0": {
-      "BlazorFileUpload/7.2.0": {
+      "BlazorFileUpload/7.2.1": {
         "dependencies": {
-          "DataJuggler.Blazor.Components": "7.10.0",
-          "DataJuggler.UltimateHelper": "7.1.7",
+          "DataJuggler.Blazor.Components": "7.10.1",
+          "DataJuggler.UltimateHelper": "7.2.1",
           "Microsoft.AspNetCore.Components": "7.0.10",
           "Microsoft.AspNetCore.Components.Web": "7.0.10",
           "System.Drawing.Common": "7.0.0"
@@ -63,11 +63,11 @@
           }
         }
       },
-      "DataJuggler.Blazor.Components/7.10.0": {
+      "DataJuggler.Blazor.Components/7.10.1": {
         "dependencies": {
           "BlazorStyled": "3.1.0",
           "DataJuggler.Excelerate": "7.3.21",
-          "DataJuggler.UltimateHelper": "7.1.7"
+          "DataJuggler.UltimateHelper": "7.2.1"
         },
         "runtime": {
           "lib/net7.0/DataJuggler.Blazor.Components.dll": {
@@ -78,7 +78,7 @@
       },
       "DataJuggler.Cryptography/7.1.0": {
         "dependencies": {
-          "DataJuggler.UltimateHelper": "7.1.7",
+          "DataJuggler.UltimateHelper": "7.2.1",
           "Konscious.Security.Cryptography.Argon2": "1.3.0"
         },
         "runtime": {
@@ -91,7 +91,7 @@
       "DataJuggler.Excelerate/7.3.21": {
         "dependencies": {
           "DataJuggler.Net7": "7.2.8",
-          "DataJuggler.UltimateHelper": "7.1.7",
+          "DataJuggler.UltimateHelper": "7.2.1",
           "EPPlus": "4.5.3.3"
         },
         "runtime": {
@@ -104,7 +104,7 @@
       "DataJuggler.Net7/7.2.8": {
         "dependencies": {
           "DataJuggler.Cryptography": "7.1.0",
-          "DataJuggler.UltimateHelper": "7.1.7",
+          "DataJuggler.UltimateHelper": "7.2.1",
           "Microsoft.Data.SqlClient": "5.1.1"
         },
         "runtime": {
@@ -114,14 +114,14 @@
           }
         }
       },
-      "DataJuggler.UltimateHelper/7.1.7": {
+      "DataJuggler.UltimateHelper/7.2.1": {
         "dependencies": {
           "System.Configuration.ConfigurationManager": "7.0.0"
         },
         "runtime": {
           "lib/net7.0/DataJuggler.UltimateHelper.dll": {
-            "assemblyVersion": "1.6.8.0",
-            "fileVersion": "1.6.8.0"
+            "assemblyVersion": "7.2.1.0",
+            "fileVersion": "7.2.1.0"
           }
         }
       },
@@ -1247,7 +1247,7 @@
     }
   },
   "libraries": {
-    "BlazorFileUpload/7.2.0": {
+    "BlazorFileUpload/7.2.1": {
       "type": "project",
       "serviceable": false,
       "sha512": ""
@@ -1273,12 +1273,12 @@
       "path": "blazorstyled/3.1.0",
       "hashPath": "blazorstyled.3.1.0.nupkg.sha512"
     },
-    "DataJuggler.Blazor.Components/7.10.0": {
+    "DataJuggler.Blazor.Components/7.10.1": {
       "type": "package",
       "serviceable": true,
-      "sha512": "sha512-evRoC4g5JZ/6So+Celw7PYH5jaeRgGIzYu2OI8CPwglQnLi8jIYG6IUVr2QLhEtejOVV5z/rkDxwe8wZzoVaCA==",
-      "path": "datajuggler.blazor.components/7.10.0",
-      "hashPath": "datajuggler.blazor.components.7.10.0.nupkg.sha512"
+      "sha512": "sha512-f48VpR31eC7AMww+c9B44RxvmRK3HE21aMDQwI/2Odx0pIRycZpPpEd8FzCWGD4OTS4RZYwf0zogBoCxV99Tvw==",
+      "path": "datajuggler.blazor.components/7.10.1",
+      "hashPath": "datajuggler.blazor.components.7.10.1.nupkg.sha512"
     },
     "DataJuggler.Cryptography/7.1.0": {
       "type": "package",
@@ -1301,12 +1301,12 @@
       "path": "datajuggler.net7/7.2.8",
       "hashPath": "datajuggler.net7.7.2.8.nupkg.sha512"
     },
-    "DataJuggler.UltimateHelper/7.1.7": {
+    "DataJuggler.UltimateHelper/7.2.1": {
       "type": "package",
       "serviceable": true,
-      "sha512": "sha512-Nvd2Zj63NNNc47EYMmJka5dMjzS68QAU8Qlpne7Iy2fEs9d0iasifJFvfFupij+pUiTcExJfwHEV5PXC17oGzg==",
-      "path": "datajuggler.ultimatehelper/7.1.7",
-      "hashPath": "datajuggler.ultimatehelper.7.1.7.nupkg.sha512"
+      "sha512": "sha512-DoC5R/oTw7kiLn/pc740KUXO4EUsT1eO//4h0qVHprBJ9Uc4VBjfw0PBl3Wpc2Rt6dxZXwMi5H1U+aEI9rSG6w==",
+      "path": "datajuggler.ultimatehelper/7.2.1",
+      "hashPath": "datajuggler.ultimatehelper.7.2.1.nupkg.sha512"
     },
     "EPPlus/4.5.3.3": {
       "type": "package",

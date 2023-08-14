@@ -58,7 +58,7 @@
           "lib/net5.0/BlazorStyled.dll": {}
         }
       },
-      "DataJuggler.Blazor.Components/7.10.0": {
+      "DataJuggler.Blazor.Components/7.10.1": {
         "type": "package",
         "dependencies": {
           "BlazorStyled": "3.1.0",
@@ -119,7 +119,7 @@
           "lib/net7.0/DataJuggler.Net7.dll": {}
         }
       },
-      "DataJuggler.UltimateHelper/7.1.7": {
+      "DataJuggler.UltimateHelper/7.2.1": {
         "type": "package",
         "dependencies": {
           "System.Configuration.ConfigurationManager": "7.0.0"
@@ -2205,10 +2205,10 @@
         "lib/net5.0/BlazorStyled.dll"
       ]
     },
-    "DataJuggler.Blazor.Components/7.10.0": {
-      "sha512": "evRoC4g5JZ/6So+Celw7PYH5jaeRgGIzYu2OI8CPwglQnLi8jIYG6IUVr2QLhEtejOVV5z/rkDxwe8wZzoVaCA==",
+    "DataJuggler.Blazor.Components/7.10.1": {
+      "sha512": "f48VpR31eC7AMww+c9B44RxvmRK3HE21aMDQwI/2Odx0pIRycZpPpEd8FzCWGD4OTS4RZYwf0zogBoCxV99Tvw==",
       "type": "package",
-      "path": "datajuggler.blazor.components/7.10.0",
+      "path": "datajuggler.blazor.components/7.10.1",
       "files": [
         ".nupkg.metadata",
         "License.txt",
@@ -2218,7 +2218,7 @@
         "build/Microsoft.AspNetCore.StaticWebAssets.props",
         "buildMultiTargeting/DataJuggler.Blazor.Components.props",
         "buildTransitive/DataJuggler.Blazor.Components.props",
-        "datajuggler.blazor.components.7.10.0.nupkg.sha512",
+        "datajuggler.blazor.components.7.10.1.nupkg.sha512",
         "datajuggler.blazor.components.nuspec",
         "lib/net7.0/DataJuggler.Blazor.Components.dll",
         "staticwebassets/Images/Buttons/BlackButton.jpg",
@@ -2289,16 +2289,17 @@
         "lib/net7.0/DataJuggler.Net7.dll"
       ]
     },
-    "DataJuggler.UltimateHelper/7.1.7": {
-      "sha512": "Nvd2Zj63NNNc47EYMmJka5dMjzS68QAU8Qlpne7Iy2fEs9d0iasifJFvfFupij+pUiTcExJfwHEV5PXC17oGzg==",
+    "DataJuggler.UltimateHelper/7.2.1": {
+      "sha512": "DoC5R/oTw7kiLn/pc740KUXO4EUsT1eO//4h0qVHprBJ9Uc4VBjfw0PBl3Wpc2Rt6dxZXwMi5H1U+aEI9rSG6w==",
       "type": "package",
-      "path": "datajuggler.ultimatehelper/7.1.7",
+      "path": "datajuggler.ultimatehelper/7.2.1",
       "files": [
         ".nupkg.metadata",
         ".signature.p7s",
+        "DataJuggler128.png",
         "LICENSE",
         "README.md",
-        "datajuggler.ultimatehelper.7.1.7.nupkg.sha512",
+        "datajuggler.ultimatehelper.7.2.1.nupkg.sha512",
         "datajuggler.ultimatehelper.nuspec",
         "lib/net7.0/DataJuggler.UltimateHelper.dll"
       ]
@@ -6602,8 +6603,8 @@
   },
   "projectFileDependencyGroups": {
     "net7.0": [
-      "DataJuggler.Blazor.Components >= 7.10.0",
-      "DataJuggler.UltimateHelper >= 7.1.7",
+      "DataJuggler.Blazor.Components >= 7.10.1",
+      "DataJuggler.UltimateHelper >= 7.2.1",
       "Microsoft.AspNetCore.Components >= 7.0.10",
       "Microsoft.AspNetCore.Components.Web >= 7.0.10",
       "System.Drawing.Common >= 7.0.0"
@@ -6614,7 +6615,7 @@
     "C:\\Program Files (x86)\\DevExpress 21.2\\Components\\Offline Packages": {}
   },
   "project": {
-    "version": "7.2.0",
+    "version": "7.2.1",
     "restore": {
       "projectUniqueName": "C:\\Projects\\GitHub\\BlazorFileUpload\\BlazorFileUpload.csproj",
       "projectName": "DataJuggler.Blazor.FileUpload",
@@ -6657,11 +6658,11 @@
         "dependencies": {
           "DataJuggler.Blazor.Components": {
             "target": "Package",
-            "version": "[7.10.0, )"
+            "version": "[7.10.1, )"
           },
           "DataJuggler.UltimateHelper": {
             "target": "Package",
-            "version": "[7.1.7, )"
+            "version": "[7.2.1, )"
           },
           "Microsoft.AspNetCore.Components": {
             "target": "Package",
