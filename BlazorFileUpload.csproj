@@ -5,7 +5,7 @@
     <TargetFramework>net7.0</TargetFramework>
     <Nullable>disable</Nullable>    
     <PackageId>DataJuggler.Blazor.FileUpload</PackageId>
-    <Version>7.2.1</Version>
+    <Version>7.2.2</Version>
     <PackageLicenseExpression>MIT</PackageLicenseExpression>
     <GeneratePackageOnBuild>True</GeneratePackageOnBuild>
     <Authors>DataJuggler</Authors>
@@ -84,8 +84,8 @@ version 7.1.0: BlazorFileUpload now supports multiple file uploads!</Description
   </ItemGroup>
 
   <ItemGroup>    
-    <PackageReference Include="DataJuggler.Blazor.Components" Version="7.10.1" />    
-    <PackageReference Include="DataJuggler.UltimateHelper" Version="7.2.1" />    
+    <PackageReference Include="DataJuggler.Blazor.Components" Version="7.12.2" />    
+    <PackageReference Include="DataJuggler.UltimateHelper" Version="7.2.2" />    
     <PackageReference Include="Microsoft.AspNetCore.Components" Version="7.0.10" />
     <PackageReference Include="Microsoft.AspNetCore.Components.Web" Version="7.0.10" />
     <PackageReference Include="System.Drawing.Common" Version="7.0.0" />

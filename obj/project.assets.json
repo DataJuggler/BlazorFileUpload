@@ -58,12 +58,12 @@
           "lib/net5.0/BlazorStyled.dll": {}
         }
       },
-      "DataJuggler.Blazor.Components/7.10.1": {
+      "DataJuggler.Blazor.Components/7.12.2": {
         "type": "package",
         "dependencies": {
           "BlazorStyled": "3.1.0",
-          "DataJuggler.Excelerate": "7.3.21",
-          "DataJuggler.UltimateHelper": "7.1.3"
+          "DataJuggler.Excelerate": "7.4.5",
+          "DataJuggler.UltimateHelper": "7.2.2"
         },
         "compile": {
           "lib/net7.0/DataJuggler.Blazor.Components.dll": {}
@@ -78,10 +78,10 @@
           "buildMultiTargeting/DataJuggler.Blazor.Components.props": {}
         }
       },
-      "DataJuggler.Cryptography/7.1.0": {
+      "DataJuggler.Cryptography/7.1.1": {
         "type": "package",
         "dependencies": {
-          "DataJuggler.UltimateHelper": "7.1.3",
+          "DataJuggler.UltimateHelper": "7.2.1",
           "Konscious.Security.Cryptography.Argon2": "1.3.0"
         },
         "compile": {
@@ -91,11 +91,11 @@
           "lib/net7.0/DataJuggler.Cryptography.dll": {}
         }
       },
-      "DataJuggler.Excelerate/7.3.21": {
+      "DataJuggler.Excelerate/7.4.5": {
         "type": "package",
         "dependencies": {
-          "DataJuggler.Net7": "7.2.8",
-          "DataJuggler.UltimateHelper": "7.1.3",
+          "DataJuggler.Net7": "7.3.1",
+          "DataJuggler.UltimateHelper": "7.2.2",
           "EPPlus": "4.5.3.3"
         },
         "compile": {
@@ -105,11 +105,11 @@
           "lib/net7.0/DataJuggler.Excelerate.dll": {}
         }
       },
-      "DataJuggler.Net7/7.2.8": {
+      "DataJuggler.Net7/7.3.1": {
         "type": "package",
         "dependencies": {
-          "DataJuggler.Cryptography": "7.1.0",
-          "DataJuggler.UltimateHelper": "7.1.3",
+          "DataJuggler.Cryptography": "7.1.1",
+          "DataJuggler.UltimateHelper": "7.2.2",
           "Microsoft.Data.SqlClient": "5.1.1"
         },
         "compile": {
@@ -119,7 +119,7 @@
           "lib/net7.0/DataJuggler.Net7.dll": {}
         }
       },
-      "DataJuggler.UltimateHelper/7.2.1": {
+      "DataJuggler.UltimateHelper/7.2.2": {
         "type": "package",
         "dependencies": {
           "System.Configuration.ConfigurationManager": "7.0.0"
@@ -2205,12 +2205,13 @@
         "lib/net5.0/BlazorStyled.dll"
       ]
     },
-    "DataJuggler.Blazor.Components/7.10.1": {
-      "sha512": "f48VpR31eC7AMww+c9B44RxvmRK3HE21aMDQwI/2Odx0pIRycZpPpEd8FzCWGD4OTS4RZYwf0zogBoCxV99Tvw==",
+    "DataJuggler.Blazor.Components/7.12.2": {
+      "sha512": "bXId+9ljX4LevqKWFVT0k+vi2IfcGEo9R7t4iJVu8Hl7LZuW1e3lFdNmCBCzwjgugSOTIAb3wFGd6rlQlACu4A==",
       "type": "package",
-      "path": "datajuggler.blazor.components/7.10.1",
+      "path": "datajuggler.blazor.components/7.12.2",
       "files": [
         ".nupkg.metadata",
+        ".signature.p7s",
         "License.txt",
         "Merge Boxes Small.png",
         "README.md",
@@ -2218,7 +2219,7 @@
         "build/Microsoft.AspNetCore.StaticWebAssets.props",
         "buildMultiTargeting/DataJuggler.Blazor.Components.props",
         "buildTransitive/DataJuggler.Blazor.Components.props",
-        "datajuggler.blazor.components.7.10.1.nupkg.sha512",
+        "datajuggler.blazor.components.7.12.2.nupkg.sha512",
         "datajuggler.blazor.components.nuspec",
         "lib/net7.0/DataJuggler.Blazor.Components.dll",
         "staticwebassets/Images/Buttons/BlackButton.jpg",
@@ -2244,62 +2245,62 @@
         "staticwebassets/favicon.ico"
       ]
     },
-    "DataJuggler.Cryptography/7.1.0": {
-      "sha512": "E7ErxGZhZShcN0JrPXqbYfr0TXWkwQxyOtdV79Gol+bmA3MzbU8ydATG+oijEZQkFwAd2f3cQILJ34/H7JXWHw==",
+    "DataJuggler.Cryptography/7.1.1": {
+      "sha512": "ZKFPbsnS3+KZBfTmilyPd5a/SPtSOAcwSLkGA7J9MR1vFbg3Yd9+WpeFn46AvEy/60IzAIsjnS8Clpa6afqXcw==",
       "type": "package",
-      "path": "datajuggler.cryptography/7.1.0",
+      "path": "datajuggler.cryptography/7.1.1",
       "files": [
         ".nupkg.metadata",
         ".signature.p7s",
         "License.txt",
         "Lock32.png",
         "README.md",
-        "datajuggler.cryptography.7.1.0.nupkg.sha512",
+        "datajuggler.cryptography.7.1.1.nupkg.sha512",
         "datajuggler.cryptography.nuspec",
         "lib/net7.0/DataJuggler.Cryptography.dll"
       ]
     },
-    "DataJuggler.Excelerate/7.3.21": {
-      "sha512": "lzRzqVATkp3bBLHH9FX2u/bmbIwQXdMOkk3E1Wg3Yf+6XMvWjfE2VSF7+YGUGhx9ru5srKFSf2My5LwWd9nTew==",
+    "DataJuggler.Excelerate/7.4.5": {
+      "sha512": "xM86exVS9vqFySjwDKqXKbnb5NMnFhvPtk2KKakiE11WszlWD3Bodg1BelYIjRD67Wed9atztIhmwcG1Tf5iCA==",
       "type": "package",
-      "path": "datajuggler.excelerate/7.3.21",
+      "path": "datajuggler.excelerate/7.4.5",
       "files": [
         ".nupkg.metadata",
         ".signature.p7s",
         "ExcelerateLogoSmallWhite.png",
         "LICENSE",
         "README.md",
-        "datajuggler.excelerate.7.3.21.nupkg.sha512",
+        "datajuggler.excelerate.7.4.5.nupkg.sha512",
         "datajuggler.excelerate.nuspec",
         "lib/net7.0/DataJuggler.Excelerate.dll"
       ]
     },
-    "DataJuggler.Net7/7.2.8": {
-      "sha512": "v2nqdTjpUimV+2FPPcCgG41PBwxXn4YGoQTsfRZhQT7d+nteY5YcHJmhoXiEG+tnzbeasz6EfI8OWkovAOUiqA==",
+    "DataJuggler.Net7/7.3.1": {
+      "sha512": "tKOsk9sWtPZSKVBPB6WoyzM+mRiDjZsLx8qfh54NFHR7YSq7ORxkxacuMVf53XsD/8IH8tkw/TJhX9Ks60fZFg==",
       "type": "package",
-      "path": "datajuggler.net7/7.2.8",
+      "path": "datajuggler.net7/7.3.1",
       "files": [
         ".nupkg.metadata",
         ".signature.p7s",
         "LICENSE.txt",
         "README.md",
-        "datajuggler.net7.7.2.8.nupkg.sha512",
+        "datajuggler.net7.7.3.1.nupkg.sha512",
         "datajuggler.net7.nuspec",
         "lib/ReadMe.md",
         "lib/net7.0/DataJuggler.Net7.dll"
       ]
     },
-    "DataJuggler.UltimateHelper/7.2.1": {
-      "sha512": "DoC5R/oTw7kiLn/pc740KUXO4EUsT1eO//4h0qVHprBJ9Uc4VBjfw0PBl3Wpc2Rt6dxZXwMi5H1U+aEI9rSG6w==",
+    "DataJuggler.UltimateHelper/7.2.2": {
+      "sha512": "YaKTi27rEE8u0RjOvazJfhXDsHaj5tYrsQ1tKZMHO8bnCAsZK0GepVA7k7q5yNYESpN5kwNEpP8So9rrkFfCbQ==",
       "type": "package",
-      "path": "datajuggler.ultimatehelper/7.2.1",
+      "path": "datajuggler.ultimatehelper/7.2.2",
       "files": [
         ".nupkg.metadata",
         ".signature.p7s",
         "DataJuggler128.png",
         "LICENSE",
         "README.md",
-        "datajuggler.ultimatehelper.7.2.1.nupkg.sha512",
+        "datajuggler.ultimatehelper.7.2.2.nupkg.sha512",
         "datajuggler.ultimatehelper.nuspec",
         "lib/net7.0/DataJuggler.UltimateHelper.dll"
       ]
@@ -6603,8 +6604,8 @@
   },
   "projectFileDependencyGroups": {
     "net7.0": [
-      "DataJuggler.Blazor.Components >= 7.10.1",
-      "DataJuggler.UltimateHelper >= 7.2.1",
+      "DataJuggler.Blazor.Components >= 7.12.2",
+      "DataJuggler.UltimateHelper >= 7.2.2",
       "Microsoft.AspNetCore.Components >= 7.0.10",
       "Microsoft.AspNetCore.Components.Web >= 7.0.10",
       "System.Drawing.Common >= 7.0.0"
@@ -6615,7 +6616,7 @@
     "C:\\Program Files (x86)\\DevExpress 21.2\\Components\\Offline Packages": {}
   },
   "project": {
-    "version": "7.2.1",
+    "version": "7.2.2",
     "restore": {
       "projectUniqueName": "C:\\Projects\\GitHub\\BlazorFileUpload\\BlazorFileUpload.csproj",
       "projectName": "DataJuggler.Blazor.FileUpload",
@@ -6658,11 +6659,11 @@
         "dependencies": {
           "DataJuggler.Blazor.Components": {
             "target": "Package",
-            "version": "[7.10.1, )"
+            "version": "[7.12.2, )"
           },
           "DataJuggler.UltimateHelper": {
             "target": "Package",
-            "version": "[7.2.1, )"
+            "version": "[7.2.2, )"
           },
           "Microsoft.AspNetCore.Components": {
             "target": "Package",
