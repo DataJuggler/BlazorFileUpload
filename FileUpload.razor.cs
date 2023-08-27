@@ -385,8 +385,7 @@ namespace DataJuggler.Blazor.FileUpload
                 InputFileClassName = "inputfile";
                 CustomButtonClassName = "buttonwide";
                 ResetButtonClassName = "button";
-                ButtonText = "Choose File";
-                CustomButtonTextClassName = "custombuttontextstyle";
+                ButtonText = "Choose File";                
                 SaveToDisk = true;
                 Visible = true;
                 ProgressVisible = true;

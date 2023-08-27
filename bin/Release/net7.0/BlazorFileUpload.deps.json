@@ -6,9 +6,9 @@
   "compilationOptions": {},
   "targets": {
     ".NETCoreApp,Version=v7.0": {
-      "BlazorFileUpload/7.2.2": {
+      "BlazorFileUpload/7.2.3": {
         "dependencies": {
-          "DataJuggler.Blazor.Components": "7.12.2",
+          "DataJuggler.Blazor.Components": "7.12.5",
           "DataJuggler.UltimateHelper": "7.2.2",
           "Microsoft.AspNetCore.Components": "7.0.10",
           "Microsoft.AspNetCore.Components.Web": "7.0.10",
@@ -63,7 +63,7 @@
           }
         }
       },
-      "DataJuggler.Blazor.Components/7.12.2": {
+      "DataJuggler.Blazor.Components/7.12.5": {
         "dependencies": {
           "BlazorStyled": "3.1.0",
           "DataJuggler.Excelerate": "7.4.5",
@@ -1247,7 +1247,7 @@
     }
   },
   "libraries": {
-    "BlazorFileUpload/7.2.2": {
+    "BlazorFileUpload/7.2.3": {
       "type": "project",
       "serviceable": false,
       "sha512": ""
@@ -1273,12 +1273,12 @@
       "path": "blazorstyled/3.1.0",
       "hashPath": "blazorstyled.3.1.0.nupkg.sha512"
     },
-    "DataJuggler.Blazor.Components/7.12.2": {
+    "DataJuggler.Blazor.Components/7.12.5": {
       "type": "package",
       "serviceable": true,
-      "sha512": "sha512-bXId+9ljX4LevqKWFVT0k+vi2IfcGEo9R7t4iJVu8Hl7LZuW1e3lFdNmCBCzwjgugSOTIAb3wFGd6rlQlACu4A==",
-      "path": "datajuggler.blazor.components/7.12.2",
-      "hashPath": "datajuggler.blazor.components.7.12.2.nupkg.sha512"
+      "sha512": "sha512-KTM0fVsNAesWH0XxVV4+kyzYYN5tMgykqnHZ5phl2iCx4ITf1wVETIB8yTq6ynSXR6O6LRnUmr+4HwHZnhUwjQ==",
+      "path": "datajuggler.blazor.components/7.12.5",
+      "hashPath": "datajuggler.blazor.components.7.12.5.nupkg.sha512"
     },
     "DataJuggler.Cryptography/7.1.1": {
       "type": "package",

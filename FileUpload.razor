@@ -22,13 +22,13 @@
         <label>
             @if (MultipleFiles)
             {
-                <InputFile InputFileClassName="@InputFileClassName" OnChange="OnFileChange" Visible="@Visible" accept="@AllowedExtensions" multiple />
+                <InputFile class="@InputFileClassName" OnChange="OnFileChange" Visible="@Visible" accept="@AllowedExtensions" multiple />
             }
             else
             {
-                <InputFile InputFileClassName="@InputFileClassName" OnChange="OnFileChange" Visible="@Visible" accept="@AllowedExtensions" />
+                <InputFile class="@InputFileClassName" OnChange="OnFileChange" Visible="@Visible" accept="@AllowedExtensions" />                
             }
-            <span class="verticalcenter @CustomButtonClassName">@ButtonText</span>
+            <span class="verticalcenter @CustomButtonClassName"><span class="@CustomButtonTextClassName"></span>@ButtonText</span>
         </label>
     }
     else

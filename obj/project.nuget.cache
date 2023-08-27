@@ -1,13 +1,13 @@
 {
   "version": 2,
-  "dgSpecHash": "LWtvZEIpAoVZZ0SWEhmEgs5GYBolghQ6bBbV3nvo76OwzsEU7Yb8FaanocOg7qHFaCW5DLpbyKIjhmec4kJy9Q==",
+  "dgSpecHash": "YrgIy1BWyrsDVLLRVCVnAEzHRFESl5ODGkHZXTk1cHVKUHzybMHBFcz/l0UUAg1TKgWx84DfhXI4RfkD/BTFow==",
   "success": true,
   "projectFilePath": "C:\\Projects\\GitHub\\BlazorFileUpload\\BlazorFileUpload.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\Corby\\.nuget\\packages\\azure.core\\1.25.0\\azure.core.1.25.0.nupkg.sha512",
     "C:\\Users\\Corby\\.nuget\\packages\\azure.identity\\1.7.0\\azure.identity.1.7.0.nupkg.sha512",
     "C:\\Users\\Corby\\.nuget\\packages\\blazorstyled\\3.1.0\\blazorstyled.3.1.0.nupkg.sha512",
-    "C:\\Users\\Corby\\.nuget\\packages\\datajuggler.blazor.components\\7.12.2\\datajuggler.blazor.components.7.12.2.nupkg.sha512",
+    "C:\\Users\\Corby\\.nuget\\packages\\datajuggler.blazor.components\\7.12.5\\datajuggler.blazor.components.7.12.5.nupkg.sha512",
     "C:\\Users\\Corby\\.nuget\\packages\\datajuggler.cryptography\\7.1.1\\datajuggler.cryptography.7.1.1.nupkg.sha512",
     "C:\\Users\\Corby\\.nuget\\packages\\datajuggler.excelerate\\7.4.5\\datajuggler.excelerate.7.4.5.nupkg.sha512",
     "C:\\Users\\Corby\\.nuget\\packages\\datajuggler.net7\\7.3.1\\datajuggler.net7.7.3.1.nupkg.sha512",

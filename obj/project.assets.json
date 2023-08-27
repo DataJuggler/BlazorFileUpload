@@ -58,7 +58,7 @@
           "lib/net5.0/BlazorStyled.dll": {}
         }
       },
-      "DataJuggler.Blazor.Components/7.12.2": {
+      "DataJuggler.Blazor.Components/7.12.5": {
         "type": "package",
         "dependencies": {
           "BlazorStyled": "3.1.0",
@@ -2205,10 +2205,10 @@
         "lib/net5.0/BlazorStyled.dll"
       ]
     },
-    "DataJuggler.Blazor.Components/7.12.2": {
-      "sha512": "bXId+9ljX4LevqKWFVT0k+vi2IfcGEo9R7t4iJVu8Hl7LZuW1e3lFdNmCBCzwjgugSOTIAb3wFGd6rlQlACu4A==",
+    "DataJuggler.Blazor.Components/7.12.5": {
+      "sha512": "KTM0fVsNAesWH0XxVV4+kyzYYN5tMgykqnHZ5phl2iCx4ITf1wVETIB8yTq6ynSXR6O6LRnUmr+4HwHZnhUwjQ==",
       "type": "package",
-      "path": "datajuggler.blazor.components/7.12.2",
+      "path": "datajuggler.blazor.components/7.12.5",
       "files": [
         ".nupkg.metadata",
         ".signature.p7s",
@@ -2219,7 +2219,7 @@
         "build/Microsoft.AspNetCore.StaticWebAssets.props",
         "buildMultiTargeting/DataJuggler.Blazor.Components.props",
         "buildTransitive/DataJuggler.Blazor.Components.props",
-        "datajuggler.blazor.components.7.12.2.nupkg.sha512",
+        "datajuggler.blazor.components.7.12.5.nupkg.sha512",
         "datajuggler.blazor.components.nuspec",
         "lib/net7.0/DataJuggler.Blazor.Components.dll",
         "staticwebassets/Images/Buttons/BlackButton.jpg",
@@ -6604,7 +6604,7 @@
   },
   "projectFileDependencyGroups": {
     "net7.0": [
-      "DataJuggler.Blazor.Components >= 7.12.2",
+      "DataJuggler.Blazor.Components >= 7.12.5",
       "DataJuggler.UltimateHelper >= 7.2.2",
       "Microsoft.AspNetCore.Components >= 7.0.10",
       "Microsoft.AspNetCore.Components.Web >= 7.0.10",
@@ -6616,7 +6616,7 @@
     "C:\\Program Files (x86)\\DevExpress 21.2\\Components\\Offline Packages": {}
   },
   "project": {
-    "version": "7.2.2",
+    "version": "7.2.3",
     "restore": {
       "projectUniqueName": "C:\\Projects\\GitHub\\BlazorFileUpload\\BlazorFileUpload.csproj",
       "projectName": "DataJuggler.Blazor.FileUpload",
@@ -6659,7 +6659,7 @@
         "dependencies": {
           "DataJuggler.Blazor.Components": {
             "target": "Package",
-            "version": "[7.12.2, )"
+            "version": "[7.12.5, )"
           },
           "DataJuggler.UltimateHelper": {
             "target": "Package",
