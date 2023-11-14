@@ -1,4 +1,4 @@
-﻿<Project Sdk="Microsoft.NET.Sdk.Razor">
+<Project Sdk="Microsoft.NET.Sdk.Razor">
 
   <PropertyGroup>
 	<PackageReadmeFile>README.md</PackageReadmeFile>
@@ -86,7 +86,7 @@ version 7.1.0: BlazorFileUpload now supports multiple file uploads!</Description
   <ItemGroup>    
     <PackageReference Include="DataJuggler.Blazor.Components" Version="7.12.5" />    
     <PackageReference Include="DataJuggler.UltimateHelper" Version="7.2.2" />    
-    <PackageReference Include="Microsoft.AspNetCore.Components" Version="7.0.10" />
+    <PackageReference Include="Microsoft.AspNetCore.Components" Version="7.0.14" />
     <PackageReference Include="Microsoft.AspNetCore.Components.Web" Version="7.0.10" />
     <PackageReference Include="System.Drawing.Common" Version="7.0.0" />
   </ItemGroup>
