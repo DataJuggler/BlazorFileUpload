@@ -1,7 +1,9 @@
 # BlazorFileUpload
 
 This project was originally a wrapper of Steve Sanderson's BlazorFileInput, but now has been
-updated to the InputFile .NET component. This project has been updated to .NET 7.
+updated to the InputFile .NET component. This project has been updated to .NET 8.
+
+# 11.17.2023: This project has been updated to .NET8.
 
 # 8.13.2023: DataJuggler.Blazor.Components was updated because DataJuggler.UltimateHelper was updated.
 

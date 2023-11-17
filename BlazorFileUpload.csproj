@@ -2,23 +2,26 @@
 
   <PropertyGroup>
 	<PackageReadmeFile>README.md</PackageReadmeFile>
-    <TargetFramework>net7.0</TargetFramework>
+    <TargetFramework>net8.0</TargetFramework>
     <Nullable>disable</Nullable>    
     <PackageId>DataJuggler.Blazor.FileUpload</PackageId>
-    <Version>7.2.3</Version>
+    <Version>8.0.0</Version>
     <PackageLicenseExpression>MIT</PackageLicenseExpression>
     <GeneratePackageOnBuild>True</GeneratePackageOnBuild>
     <Authors>DataJuggler</Authors>
     <Company>DataJuggler</Company>	
     <Product>DataJuggler.Blazor.FileUpload</Product>
-    <Description>BlazorFileUpload makes it easy to upload files in Blazor projects. The 7.0 version is only for .NET7.
-Use 6.x version for .NET6, 5.x for .NET5. All new features / bug fixes are for .NET 7 version onward.
-version 7.1.0: BlazorFileUpload now supports multiple file uploads!</Description>
+    <Description>BlazorFileUpload makes it easy to upload files in Blazor projects. The 8.0 version is only for .NET8.
+Use 7.x version for .NET7, 6.x for .NET6. All new features / bug fixes are for .NET8 version onward.
+BlazorFileUpload now supports multiple file uploads!</Description>
     <PackageIcon>BlazorFileUploadIcon.png</PackageIcon>
     <RepositoryUrl>https://github.com/DataJuggler/BlazorFileUpload</RepositoryUrl>
     <RepositoryType>Git Git Hub</RepositoryType>
     <PackageTags>C#;Blazor;File Upload;</PackageTags>
     <PackageReleaseNotes>
+		8.0.0
+		11.17.2023: This project was updated to .NET8.
+		
 		7.2.0
 		8.13.2023: DataJuggler.Blazor.Components and DataJuggler.UltimateHelper were updated.
 
@@ -84,11 +87,11 @@ version 7.1.0: BlazorFileUpload now supports multiple file uploads!</Description
   </ItemGroup>
 
   <ItemGroup>    
-    <PackageReference Include="DataJuggler.Blazor.Components" Version="7.12.5" />    
-    <PackageReference Include="DataJuggler.UltimateHelper" Version="7.2.2" />    
-    <PackageReference Include="Microsoft.AspNetCore.Components" Version="7.0.10" />
-    <PackageReference Include="Microsoft.AspNetCore.Components.Web" Version="7.0.10" />
-    <PackageReference Include="System.Drawing.Common" Version="7.0.0" />
+    <PackageReference Include="DataJuggler.Blazor.Components" Version="8.0.0" />    
+    <PackageReference Include="DataJuggler.UltimateHelper" Version="8.0.0" />    
+    <PackageReference Include="Microsoft.AspNetCore.Components" Version="8.0.0" />
+    <PackageReference Include="Microsoft.AspNetCore.Components.Web" Version="8.0.0" />
+    <PackageReference Include="System.Drawing.Common" Version="8.0.0" />
   </ItemGroup>
 
   <ItemGroup>
