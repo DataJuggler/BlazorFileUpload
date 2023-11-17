@@ -3,14 +3,6 @@
 This project was originally a wrapper of Steve Sanderson's BlazorFileInput, but now has been
 updated to the InputFile .NET component. This project has been updated to .NET 8.
 
-# 11.17.2023: This project has been updated to .NET8.
-
-# 8.13.2023: DataJuggler.Blazor.Components was updated because DataJuggler.UltimateHelper was updated.
-
-# 7.13.2023: DataJuggler.Blazor.FileUpload now supports Multille Files.
-
-# 6.21.2023: New Sample Project Blazor Gallery
-
 Blazor Gallery is a C#, Blazor, SQL Server image portfolio site, allowing anyone to create up to
 five folders with up to 20 images per file.
 
@@ -105,8 +97,12 @@ using Nuget package DataJuggler.Excelerate (the Nuget package that powers Blazor
     
 Updates
 
-7.1.2
-7.22.2023: DataJuggler.Blazor.Components was updated.
+11.17.2023: This project has been updated to .NET8.
+
+8.13.2023: DataJuggler.Blazor.Components was updated because DataJuggler.UltimateHelper was updated.
 
 version 7.1.0
 7.2.2023: DataJuggler.BlazorFileUpload now supports multiple file uploads.
+
+7.1.2
+7.22.2023: DataJuggler.Blazor.Components was updated.
