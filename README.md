@@ -3,6 +3,18 @@
 This project was originally a wrapper of Steve Sanderson's BlazorFileInput, but now has been
 updated to the InputFile .NET component. This project has been updated to .NET 8.
 
+# Update 8.19.2024 - New sample Project and Video
+
+First Ever Opensource Saturday - Sunday Edition
+https://youtu.be/uxa1xR6xpzk
+
+# New Sample Project
+
+NTouch - A Simple Contact Management Demo
+https://github.com/DataJuggler/NTouch/
+
+# Blazor Gallery
+
 Blazor Gallery is a C#, Blazor, SQL Server image portfolio site, allowing anyone to create up to
 five folders with up to 20 images per file.
 
