@@ -7,7 +7,7 @@
     <NuGetPackageRoot Condition=" '$(NuGetPackageRoot)' == '' ">$(UserProfile)\.nuget\packages\</NuGetPackageRoot>
     <NuGetPackageFolders Condition=" '$(NuGetPackageFolders)' == '' ">C:\Users\Corby\.nuget\packages\;C:\Program Files\DevExpress 23.1\Components\Offline Packages;C:\Program Files (x86)\Microsoft Visual Studio\Shared\NuGetPackages</NuGetPackageFolders>
     <NuGetProjectStyle Condition=" '$(NuGetProjectStyle)' == '' ">PackageReference</NuGetProjectStyle>
-    <NuGetToolVersion Condition=" '$(NuGetToolVersion)' == '' ">6.9.2</NuGetToolVersion>
+    <NuGetToolVersion Condition=" '$(NuGetToolVersion)' == '' ">6.11.0</NuGetToolVersion>
   </PropertyGroup>
   <ItemGroup Condition=" '$(ExcludeRestorePackageImports)' != 'true' ">
     <SourceRoot Include="C:\Users\Corby\.nuget\packages\" />
@@ -15,6 +15,6 @@
     <SourceRoot Include="C:\Program Files (x86)\Microsoft Visual Studio\Shared\NuGetPackages\" />
   </ItemGroup>
   <ImportGroup Condition=" '$(ExcludeRestorePackageImports)' != 'true' ">
-    <Import Project="$(NuGetPackageRoot)datajuggler.blazor.components\8.8.7\buildTransitive\DataJuggler.Blazor.Components.props" Condition="Exists('$(NuGetPackageRoot)datajuggler.blazor.components\8.8.7\buildTransitive\DataJuggler.Blazor.Components.props')" />
+    <Import Project="$(NuGetPackageRoot)datajuggler.blazor.components\8.10.3\buildTransitive\DataJuggler.Blazor.Components.props" Condition="Exists('$(NuGetPackageRoot)datajuggler.blazor.components\8.10.3\buildTransitive\DataJuggler.Blazor.Components.props')" />
   </ImportGroup>
 </Project>

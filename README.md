@@ -109,6 +109,8 @@ using Nuget package DataJuggler.Excelerate (the Nuget package that powers Blazor
     
 Updates
 
+9.13.2023: I updated 5 NuGet packages.
+
 11.17.2023: This project has been updated to .NET8.
 
 8.13.2023: DataJuggler.Blazor.Components was updated because DataJuggler.UltimateHelper was updated.
