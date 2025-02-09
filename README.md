@@ -1,7 +1,11 @@
 # BlazorFileUpload
 
 This project was originally a wrapper of Steve Sanderson's BlazorFileInput, but now has been
-updated to the InputFile .NET component. This project has been updated to .NET 8.
+updated to the InputFile .NET component. This project has been updated to .NET 9.
+
+# Update 2.9.2025 - .NET 9
+
+This project has been updated to .NET 9.
 
 # Update 8.19.2024 - New sample Project and Video
 
