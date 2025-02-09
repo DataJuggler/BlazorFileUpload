@@ -5,7 +5,7 @@
     <TargetFramework>net9.0</TargetFramework>
     <Nullable>disable</Nullable>    
     <PackageId>DataJuggler.Blazor.FileUpload</PackageId>
-    <Version>9.0.0</Version>
+    <Version>9.0.1</Version>
     <PackageLicenseExpression>MIT</PackageLicenseExpression>
     <GeneratePackageOnBuild>True</GeneratePackageOnBuild>
     <Authors>DataJuggler</Authors>
@@ -14,7 +14,7 @@
     <Description>BlazorFileUpload makes it easy to upload files in Blazor projects. The 9.0 version is only for .NET9.
 Use 8.x version for .NET8, 7.x for .NET7. All new features / bug fixes are for .NET9 version onward.
 BlazorFileUpload now supports multiple file uploads!</Description>
-    <PackageIcon>BlazorFileUploadIcon.png</PackageIcon>
+    <PackageIcon>BlazorFileUpload.png</PackageIcon>
     <RepositoryUrl>https://github.com/DataJuggler/BlazorFileUpload</RepositoryUrl>
     <RepositoryType>Git Git Hub</RepositoryType>
     <PackageTags>C#;Blazor;File Upload;</PackageTags>
@@ -66,7 +66,7 @@ BlazorFileUpload now supports multiple file uploads!</Description>
 		add the project reference to figure this out. I figure this will make it easier.
 		I may add an Aborted Reason when I get some time.</PackageReleaseNotes>
     <PackageProjectUrl>https://github.com/DataJuggler/BlazorFileUpload</PackageProjectUrl>
-    <ApplicationIcon>wwwroot\BlazorFileUploadIcon.ico</ApplicationIcon>
+    <ApplicationIcon>BlazorFileUpload.ico</ApplicationIcon>
   </PropertyGroup>
 
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|AnyCPU'">
@@ -84,6 +84,11 @@ BlazorFileUpload now supports multiple file uploads!</Description>
     <None Remove="Sample\**" />
   </ItemGroup>
 
+  <ItemGroup>
+    <Content Include="BlazorFileUpload.ico" />
+    <Content Include="BlazorFileUpload.png" />
+  </ItemGroup>
+
 
   <ItemGroup>
     <SupportedPlatform Include="browser" />
@@ -98,7 +103,7 @@ BlazorFileUpload now supports multiple file uploads!</Description>
   </ItemGroup>
 
   <ItemGroup>
-    <None Update="BlazorFileUploadIcon.png">
+    <None Update="BlazorFileUpload.png">
       <Pack>True</Pack>
       <PackagePath>\</PackagePath>
     </None>
@@ -111,6 +116,10 @@ BlazorFileUpload now supports multiple file uploads!</Description>
 	<None Include="docs\README.md" Pack="true" PackagePath="\">
 	  <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
 	</None>		
+  </ItemGroup>
+	
+  <ItemGroup>
+    <Folder Include="Images\" />
   </ItemGroup>
 
 </Project>
