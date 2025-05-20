@@ -60,14 +60,14 @@
           }
         }
       },
-      "DataJuggler.Blazor.Components/9.8.16": {
+      "DataJuggler.Blazor.Components/9.14.0": {
         "type": "package",
         "dependencies": {
           "DataJuggler.BlazorStyled": "9.0.0",
-          "DataJuggler.Excelerate": "9.0.1",
-          "DataJuggler.UltimateHelper": "9.0.16",
-          "Microsoft.AspNetCore.Components": "9.0.1",
-          "Microsoft.AspNetCore.Components.Web": "9.0.1"
+          "DataJuggler.Excelerate": "9.0.4",
+          "DataJuggler.UltimateHelper": "9.1.0",
+          "Microsoft.AspNetCore.Components": "9.0.4",
+          "Microsoft.AspNetCore.Components.Web": "9.0.4"
         },
         "compile": {
           "lib/net9.0/DataJuggler.Blazor.Components.dll": {}
@@ -107,12 +107,12 @@
           "lib/net9.0/DataJuggler.Cryptography.dll": {}
         }
       },
-      "DataJuggler.Excelerate/9.0.1": {
+      "DataJuggler.Excelerate/9.0.4": {
         "type": "package",
         "dependencies": {
           "DataJuggler.Net9": "9.0.3",
-          "DataJuggler.UltimateHelper": "9.0.2",
-          "NPOI": "2.7.2"
+          "DataJuggler.UltimateHelper": "9.1.0",
+          "NPOI": "2.7.3"
         },
         "compile": {
           "lib/net9.0/DataJuggler.Excelerate.dll": {}
@@ -135,7 +135,7 @@
           "lib/net9.0/DataJuggler.Net9.dll": {}
         }
       },
-      "DataJuggler.UltimateHelper/9.0.16": {
+      "DataJuggler.UltimateHelper/9.1.0": {
         "type": "package",
         "dependencies": {
           "System.Configuration.ConfigurationManager": "9.0.1"
@@ -216,12 +216,12 @@
           }
         }
       },
-      "Microsoft.AspNetCore.Authorization/9.0.1": {
+      "Microsoft.AspNetCore.Authorization/9.0.5": {
         "type": "package",
         "dependencies": {
-          "Microsoft.AspNetCore.Metadata": "9.0.1",
-          "Microsoft.Extensions.Logging.Abstractions": "9.0.1",
-          "Microsoft.Extensions.Options": "9.0.1"
+          "Microsoft.AspNetCore.Metadata": "9.0.5",
+          "Microsoft.Extensions.Logging.Abstractions": "9.0.5",
+          "Microsoft.Extensions.Options": "9.0.5"
         },
         "compile": {
           "lib/net9.0/Microsoft.AspNetCore.Authorization.dll": {
@@ -234,11 +234,11 @@
           }
         }
       },
-      "Microsoft.AspNetCore.Components/9.0.1": {
+      "Microsoft.AspNetCore.Components/9.0.5": {
         "type": "package",
         "dependencies": {
-          "Microsoft.AspNetCore.Authorization": "9.0.1",
-          "Microsoft.AspNetCore.Components.Analyzers": "9.0.1"
+          "Microsoft.AspNetCore.Authorization": "9.0.5",
+          "Microsoft.AspNetCore.Components.Analyzers": "9.0.5"
         },
         "compile": {
           "lib/net9.0/Microsoft.AspNetCore.Components.dll": {
@@ -251,16 +251,16 @@
           }
         }
       },
-      "Microsoft.AspNetCore.Components.Analyzers/9.0.1": {
+      "Microsoft.AspNetCore.Components.Analyzers/9.0.5": {
         "type": "package",
         "build": {
           "buildTransitive/netstandard2.0/Microsoft.AspNetCore.Components.Analyzers.targets": {}
         }
       },
-      "Microsoft.AspNetCore.Components.Forms/9.0.1": {
+      "Microsoft.AspNetCore.Components.Forms/9.0.5": {
         "type": "package",
         "dependencies": {
-          "Microsoft.AspNetCore.Components": "9.0.1"
+          "Microsoft.AspNetCore.Components": "9.0.5"
         },
         "compile": {
           "lib/net9.0/Microsoft.AspNetCore.Components.Forms.dll": {
@@ -273,14 +273,14 @@
           }
         }
       },
-      "Microsoft.AspNetCore.Components.Web/9.0.1": {
+      "Microsoft.AspNetCore.Components.Web/9.0.5": {
         "type": "package",
         "dependencies": {
-          "Microsoft.AspNetCore.Components": "9.0.1",
-          "Microsoft.AspNetCore.Components.Forms": "9.0.1",
-          "Microsoft.Extensions.DependencyInjection": "9.0.1",
-          "Microsoft.Extensions.Primitives": "9.0.1",
-          "Microsoft.JSInterop": "9.0.1"
+          "Microsoft.AspNetCore.Components": "9.0.5",
+          "Microsoft.AspNetCore.Components.Forms": "9.0.5",
+          "Microsoft.Extensions.DependencyInjection": "9.0.5",
+          "Microsoft.Extensions.Primitives": "9.0.5",
+          "Microsoft.JSInterop": "9.0.5"
         },
         "compile": {
           "lib/net9.0/Microsoft.AspNetCore.Components.Web.dll": {
@@ -293,7 +293,7 @@
           }
         }
       },
-      "Microsoft.AspNetCore.Metadata/9.0.1": {
+      "Microsoft.AspNetCore.Metadata/9.0.5": {
         "type": "package",
         "compile": {
           "lib/net9.0/Microsoft.AspNetCore.Metadata.dll": {
@@ -412,10 +412,10 @@
           }
         }
       },
-      "Microsoft.Extensions.DependencyInjection/9.0.1": {
+      "Microsoft.Extensions.DependencyInjection/9.0.5": {
         "type": "package",
         "dependencies": {
-          "Microsoft.Extensions.DependencyInjection.Abstractions": "9.0.1"
+          "Microsoft.Extensions.DependencyInjection.Abstractions": "9.0.5"
         },
         "compile": {
           "lib/net9.0/Microsoft.Extensions.DependencyInjection.dll": {
@@ -431,7 +431,7 @@
           "buildTransitive/net8.0/_._": {}
         }
       },
-      "Microsoft.Extensions.DependencyInjection.Abstractions/9.0.1": {
+      "Microsoft.Extensions.DependencyInjection.Abstractions/9.0.5": {
         "type": "package",
         "compile": {
           "lib/net9.0/Microsoft.Extensions.DependencyInjection.Abstractions.dll": {
@@ -447,10 +447,10 @@
           "buildTransitive/net8.0/_._": {}
         }
       },
-      "Microsoft.Extensions.Logging.Abstractions/9.0.1": {
+      "Microsoft.Extensions.Logging.Abstractions/9.0.5": {
         "type": "package",
         "dependencies": {
-          "Microsoft.Extensions.DependencyInjection.Abstractions": "9.0.1"
+          "Microsoft.Extensions.DependencyInjection.Abstractions": "9.0.5"
         },
         "compile": {
           "lib/net9.0/Microsoft.Extensions.Logging.Abstractions.dll": {
@@ -466,11 +466,11 @@
           "buildTransitive/net8.0/Microsoft.Extensions.Logging.Abstractions.targets": {}
         }
       },
-      "Microsoft.Extensions.Options/9.0.1": {
+      "Microsoft.Extensions.Options/9.0.5": {
         "type": "package",
         "dependencies": {
-          "Microsoft.Extensions.DependencyInjection.Abstractions": "9.0.1",
-          "Microsoft.Extensions.Primitives": "9.0.1"
+          "Microsoft.Extensions.DependencyInjection.Abstractions": "9.0.5",
+          "Microsoft.Extensions.Primitives": "9.0.5"
         },
         "compile": {
           "lib/net9.0/Microsoft.Extensions.Options.dll": {
@@ -486,7 +486,7 @@
           "buildTransitive/net8.0/Microsoft.Extensions.Options.targets": {}
         }
       },
-      "Microsoft.Extensions.Primitives/9.0.1": {
+      "Microsoft.Extensions.Primitives/9.0.5": {
         "type": "package",
         "compile": {
           "lib/net9.0/Microsoft.Extensions.Primitives.dll": {
@@ -649,7 +649,7 @@
           }
         }
       },
-      "Microsoft.JSInterop/9.0.1": {
+      "Microsoft.JSInterop/9.0.5": {
         "type": "package",
         "compile": {
           "lib/net9.0/Microsoft.JSInterop.dll": {
@@ -693,7 +693,7 @@
           }
         }
       },
-      "Microsoft.Win32.SystemEvents/9.0.1": {
+      "Microsoft.Win32.SystemEvents/9.0.5": {
         "type": "package",
         "compile": {
           "lib/net9.0/Microsoft.Win32.SystemEvents.dll": {
@@ -715,7 +715,7 @@
           }
         }
       },
-      "NPOI/2.7.2": {
+      "NPOI/2.7.3": {
         "type": "package",
         "dependencies": {
           "BouncyCastle.Cryptography": "2.3.1",
@@ -725,35 +725,35 @@
           "Microsoft.IO.RecyclableMemoryStream": "3.0.0",
           "SharpZipLib": "1.4.2",
           "SixLabors.Fonts": "1.0.1",
-          "SixLabors.ImageSharp": "2.1.9",
+          "SixLabors.ImageSharp": "2.1.10",
           "System.Security.Cryptography.Pkcs": "8.0.1",
           "System.Security.Cryptography.Xml": "8.0.2"
         },
         "compile": {
-          "lib/net6.0/NPOI.Core.dll": {
+          "lib/net8.0/NPOI.Core.dll": {
             "related": ".pdb;.xml"
           },
-          "lib/net6.0/NPOI.OOXML.dll": {
+          "lib/net8.0/NPOI.OOXML.dll": {
             "related": ".pdb;.xml"
           },
-          "lib/net6.0/NPOI.OpenXml4Net.dll": {
+          "lib/net8.0/NPOI.OpenXml4Net.dll": {
             "related": ".pdb;.xml"
           },
-          "lib/net6.0/NPOI.OpenXmlFormats.dll": {
+          "lib/net8.0/NPOI.OpenXmlFormats.dll": {
             "related": ".pdb;.xml"
           }
         },
         "runtime": {
-          "lib/net6.0/NPOI.Core.dll": {
+          "lib/net8.0/NPOI.Core.dll": {
             "related": ".pdb;.xml"
           },
-          "lib/net6.0/NPOI.OOXML.dll": {
+          "lib/net8.0/NPOI.OOXML.dll": {
             "related": ".pdb;.xml"
           },
-          "lib/net6.0/NPOI.OpenXml4Net.dll": {
+          "lib/net8.0/NPOI.OpenXml4Net.dll": {
             "related": ".pdb;.xml"
           },
-          "lib/net6.0/NPOI.OpenXmlFormats.dll": {
+          "lib/net8.0/NPOI.OpenXmlFormats.dll": {
             "related": ".pdb;.xml"
           }
         }
@@ -784,7 +784,7 @@
           }
         }
       },
-      "SixLabors.ImageSharp/2.1.9": {
+      "SixLabors.ImageSharp/2.1.10": {
         "type": "package",
         "dependencies": {
           "System.Runtime.CompilerServices.Unsafe": "5.0.0",
@@ -883,10 +883,10 @@
           }
         }
       },
-      "System.Drawing.Common/9.0.1": {
+      "System.Drawing.Common/9.0.5": {
         "type": "package",
         "dependencies": {
-          "Microsoft.Win32.SystemEvents": "9.0.1"
+          "Microsoft.Win32.SystemEvents": "9.0.5"
         },
         "compile": {
           "lib/net9.0/System.Drawing.Common.dll": {
@@ -1218,10 +1218,10 @@
         "packageIcon.png"
       ]
     },
-    "DataJuggler.Blazor.Components/9.8.16": {
-      "sha512": "zJqRLv+lCuwS2xevTyCnwsrN6hgRbYJ31pjbDu7QdwMQKntdG3BgSgjQcO7OFicX4q7nJt9/dxeWmzznP4N/aw==",
+    "DataJuggler.Blazor.Components/9.14.0": {
+      "sha512": "nyDWUXIQkqFDAyleVP/Mk2vzfjQEMgGRHVlbdB5YKLmNtxq2z6/NWiaphXpvYWljsSJcW1y0ASEJvr3rCjbYUw==",
       "type": "package",
-      "path": "datajuggler.blazor.components/9.8.16",
+      "path": "datajuggler.blazor.components/9.14.0",
       "files": [
         ".nupkg.metadata",
         ".signature.p7s",
@@ -1233,7 +1233,7 @@
         "build/Microsoft.AspNetCore.StaticWebAssets.props",
         "buildMultiTargeting/DataJuggler.Blazor.Components.props",
         "buildTransitive/DataJuggler.Blazor.Components.props",
-        "datajuggler.blazor.components.9.8.16.nupkg.sha512",
+        "datajuggler.blazor.components.9.14.0.nupkg.sha512",
         "datajuggler.blazor.components.nuspec",
         "lib/net9.0/DataJuggler.Blazor.Components.dll",
         "staticwebassets/Images/Buttons/BlackButton.jpg",
@@ -1299,17 +1299,17 @@
         "lib/net9.0/DataJuggler.Cryptography.dll"
       ]
     },
-    "DataJuggler.Excelerate/9.0.1": {
-      "sha512": "ye0f5I+LrPuxYo9XD4u6mmZCY/bo+cGsWDd/KLAhA9tP4OS2jwbr/F6Klyrk4Tw+yJ1HWt9arEuuxkC4A3G6hA==",
+    "DataJuggler.Excelerate/9.0.4": {
+      "sha512": "LMUPWdLtky8IzoZOZto2XfwWFQgJVnliCE2hDypcfIHLJ5A6Amw96C7iZROxT9K1f+XdVtfYPZHhht6fkvG34A==",
       "type": "package",
-      "path": "datajuggler.excelerate/9.0.1",
+      "path": "datajuggler.excelerate/9.0.4",
       "files": [
         ".nupkg.metadata",
         ".signature.p7s",
         "ExcelerateLogoSmallWhite.png",
         "LICENSE",
         "README.md",
-        "datajuggler.excelerate.9.0.1.nupkg.sha512",
+        "datajuggler.excelerate.9.0.4.nupkg.sha512",
         "datajuggler.excelerate.nuspec",
         "lib/net9.0/DataJuggler.Excelerate.dll"
       ]
@@ -1329,17 +1329,17 @@
         "lib/net9.0/DataJuggler.Net9.dll"
       ]
     },
-    "DataJuggler.UltimateHelper/9.0.16": {
-      "sha512": "hsqpoBrng1zJlb6s7nRJNDHGGWSV56Zn/4FkFfmW0Cc2jf87f+aK5+xXTCh8WD9uW0X1iKTpnn0UQXBoavpOTQ==",
+    "DataJuggler.UltimateHelper/9.1.0": {
+      "sha512": "W7PwW3cIVoYAi6EGM4OiwSoagiVgCtTwCpclCq990RomXDt0KRZjT5Tk/doMd+gtmDVdKoAueTLgLD3Y74rPyA==",
       "type": "package",
-      "path": "datajuggler.ultimatehelper/9.0.16",
+      "path": "datajuggler.ultimatehelper/9.1.0",
       "files": [
         ".nupkg.metadata",
         ".signature.p7s",
         "DataJuggler128.png",
         "LICENSE",
         "README.md",
-        "datajuggler.ultimatehelper.9.0.16.nupkg.sha512",
+        "datajuggler.ultimatehelper.9.1.0.nupkg.sha512",
         "datajuggler.ultimatehelper.nuspec",
         "lib/net9.0/DataJuggler.UltimateHelper.dll"
       ]
@@ -1470,10 +1470,10 @@
         "mathnet.numerics.signed.nuspec"
       ]
     },
-    "Microsoft.AspNetCore.Authorization/9.0.1": {
-      "sha512": "WgLlLBlMczb2+QLNG6sM95OUZ0EBztz60k/N75tjIgpyu0SdpIfYytAmX/7JJAjRTZF0c/CrWaQV+SH9FuGsrA==",
+    "Microsoft.AspNetCore.Authorization/9.0.5": {
+      "sha512": "HPd+7PG+nMZSP13bTJuM5+q0vdzoBtjoBUMP9iuUGwG/kFHkeBOZ9QrZuSHHGmz/IgYdLbqbdJGEykSI5biIPw==",
       "type": "package",
-      "path": "microsoft.aspnetcore.authorization/9.0.1",
+      "path": "microsoft.aspnetcore.authorization/9.0.5",
       "files": [
         ".nupkg.metadata",
         ".signature.p7s",
@@ -1485,14 +1485,14 @@
         "lib/net9.0/Microsoft.AspNetCore.Authorization.xml",
         "lib/netstandard2.0/Microsoft.AspNetCore.Authorization.dll",
         "lib/netstandard2.0/Microsoft.AspNetCore.Authorization.xml",
-        "microsoft.aspnetcore.authorization.9.0.1.nupkg.sha512",
+        "microsoft.aspnetcore.authorization.9.0.5.nupkg.sha512",
         "microsoft.aspnetcore.authorization.nuspec"
       ]
     },
-    "Microsoft.AspNetCore.Components/9.0.1": {
-      "sha512": "6pwfbQKNtvPkbF4tCGiAKGyt6BVpu58xAXz7u2YXcUKTNmNxrymbG1mEyMc0EPzVdnquDDqTyfXM3mC1EJycxQ==",
+    "Microsoft.AspNetCore.Components/9.0.5": {
+      "sha512": "qwA9bx7nWayh1ogWe1H13vyGL64pNjHrukHmnZ9WZbQPtHeY9QTuXkvF/Uue0tzGbxChBf9v2LH5+KeVaRJIqw==",
       "type": "package",
-      "path": "microsoft.aspnetcore.components/9.0.1",
+      "path": "microsoft.aspnetcore.components/9.0.5",
       "files": [
         ".nupkg.metadata",
         ".signature.p7s",
@@ -1500,14 +1500,14 @@
         "THIRD-PARTY-NOTICES.txt",
         "lib/net9.0/Microsoft.AspNetCore.Components.dll",
         "lib/net9.0/Microsoft.AspNetCore.Components.xml",
-        "microsoft.aspnetcore.components.9.0.1.nupkg.sha512",
+        "microsoft.aspnetcore.components.9.0.5.nupkg.sha512",
         "microsoft.aspnetcore.components.nuspec"
       ]
     },
-    "Microsoft.AspNetCore.Components.Analyzers/9.0.1": {
-      "sha512": "I8Rs4LXT5UQxM5Nin2+Oj8aSY2heszSZ3EyTLgt3mxmfiRPrVO7D8NNSsf1voI2Gb0qFJceof/J5c9E+nfNuHw==",
+    "Microsoft.AspNetCore.Components.Analyzers/9.0.5": {
+      "sha512": "u9dQP0/bjkTVHFHVBV+8TYpBVerjbFfvD3nwwOfaoJ8VmyCHoBFbD8m4nxV+rfu+jVLe2FQF4skjHZLIjjFbyQ==",
       "type": "package",
-      "path": "microsoft.aspnetcore.components.analyzers/9.0.1",
+      "path": "microsoft.aspnetcore.components.analyzers/9.0.5",
       "files": [
         ".nupkg.metadata",
         ".signature.p7s",
@@ -1516,14 +1516,14 @@
         "analyzers/dotnet/cs/Microsoft.AspNetCore.Components.Analyzers.dll",
         "build/netstandard2.0/Microsoft.AspNetCore.Components.Analyzers.targets",
         "buildTransitive/netstandard2.0/Microsoft.AspNetCore.Components.Analyzers.targets",
-        "microsoft.aspnetcore.components.analyzers.9.0.1.nupkg.sha512",
+        "microsoft.aspnetcore.components.analyzers.9.0.5.nupkg.sha512",
         "microsoft.aspnetcore.components.analyzers.nuspec"
       ]
     },
-    "Microsoft.AspNetCore.Components.Forms/9.0.1": {
-      "sha512": "KyULVU32bLz74LWDwPEwNUEllTehzWJuM7YAsz80rMKEzvR0K8cRjRzO0fnN/nfydMeLRRlbI0xj8wnEAymLVw==",
+    "Microsoft.AspNetCore.Components.Forms/9.0.5": {
+      "sha512": "KsAPGDQIa3SpP9yaIDrlETHpqprtmbbotdbGfGJ9aVvn/vi72cCTUVzpWOXIXgstVCb0ZQ940o/wfHKxBZEQMg==",
       "type": "package",
-      "path": "microsoft.aspnetcore.components.forms/9.0.1",
+      "path": "microsoft.aspnetcore.components.forms/9.0.5",
       "files": [
         ".nupkg.metadata",
         ".signature.p7s",
@@ -1531,14 +1531,14 @@
         "THIRD-PARTY-NOTICES.txt",
         "lib/net9.0/Microsoft.AspNetCore.Components.Forms.dll",
         "lib/net9.0/Microsoft.AspNetCore.Components.Forms.xml",
-        "microsoft.aspnetcore.components.forms.9.0.1.nupkg.sha512",
+        "microsoft.aspnetcore.components.forms.9.0.5.nupkg.sha512",
         "microsoft.aspnetcore.components.forms.nuspec"
       ]
     },
-    "Microsoft.AspNetCore.Components.Web/9.0.1": {
-      "sha512": "LI0vjYEd9MaDZPDQxPCn4gGYDkEC5U9rp1nWZo7rPozJxgTG2zU3WERujxTi2LeAC2ZzdXlOVCrUyPQ55LZV2A==",
+    "Microsoft.AspNetCore.Components.Web/9.0.5": {
+      "sha512": "llh2dh9rR9JcnAMqvbijc9BzEnVhloQwKF8Kvfw73N2tJMnUJoxF3C9Ln1sao+nkZo3IpUuUu3k2czLOpS3NRQ==",
       "type": "package",
-      "path": "microsoft.aspnetcore.components.web/9.0.1",
+      "path": "microsoft.aspnetcore.components.web/9.0.5",
       "files": [
         ".nupkg.metadata",
         ".signature.p7s",
@@ -1546,14 +1546,14 @@
         "THIRD-PARTY-NOTICES.txt",
         "lib/net9.0/Microsoft.AspNetCore.Components.Web.dll",
         "lib/net9.0/Microsoft.AspNetCore.Components.Web.xml",
-        "microsoft.aspnetcore.components.web.9.0.1.nupkg.sha512",
+        "microsoft.aspnetcore.components.web.9.0.5.nupkg.sha512",
         "microsoft.aspnetcore.components.web.nuspec"
       ]
     },
-    "Microsoft.AspNetCore.Metadata/9.0.1": {
-      "sha512": "EZnHifamF7IFEIyjAKMtJM3I/94OIe72i3P09v5oL0twmsmfQwal6Ni3m8lbB5mge3jWFhMozeW+rUdRSqnXRQ==",
+    "Microsoft.AspNetCore.Metadata/9.0.5": {
+      "sha512": "E4lbYlraZfZLvWgliUEtrqKt42++Yh9mpGKLyGHPGo1FpbZrXF/x+fOg5dbe22bnuosgWn3cj30566XKdwiodw==",
       "type": "package",
-      "path": "microsoft.aspnetcore.metadata/9.0.1",
+      "path": "microsoft.aspnetcore.metadata/9.0.5",
       "files": [
         ".nupkg.metadata",
         ".signature.p7s",
@@ -1565,7 +1565,7 @@
         "lib/net9.0/Microsoft.AspNetCore.Metadata.xml",
         "lib/netstandard2.0/Microsoft.AspNetCore.Metadata.dll",
         "lib/netstandard2.0/Microsoft.AspNetCore.Metadata.xml",
-        "microsoft.aspnetcore.metadata.9.0.1.nupkg.sha512",
+        "microsoft.aspnetcore.metadata.9.0.5.nupkg.sha512",
         "microsoft.aspnetcore.metadata.nuspec"
       ]
     },
@@ -1770,10 +1770,10 @@
         "runtimes/win-x86/native/Microsoft.Data.SqlClient.SNI.dll"
       ]
     },
-    "Microsoft.Extensions.DependencyInjection/9.0.1": {
-      "sha512": "qZI42ASAe3hr2zMSA6UjM92pO1LeDq5DcwkgSowXXPY8I56M76pEKrnmsKKbxagAf39AJxkH2DY4sb72ixyOrg==",
+    "Microsoft.Extensions.DependencyInjection/9.0.5": {
+      "sha512": "N1Mn0T/tUBPoLL+Fzsp+VCEtneUhhxc1//Dx3BeuQ8AX+XrMlYCfnp2zgpEXnTCB7053CLdiqVWPZ7mEX6MPjg==",
       "type": "package",
-      "path": "microsoft.extensions.dependencyinjection/9.0.1",
+      "path": "microsoft.extensions.dependencyinjection/9.0.5",
       "files": [
         ".nupkg.metadata",
         ".signature.p7s",
@@ -1795,15 +1795,15 @@
         "lib/netstandard2.0/Microsoft.Extensions.DependencyInjection.xml",
         "lib/netstandard2.1/Microsoft.Extensions.DependencyInjection.dll",
         "lib/netstandard2.1/Microsoft.Extensions.DependencyInjection.xml",
-        "microsoft.extensions.dependencyinjection.9.0.1.nupkg.sha512",
+        "microsoft.extensions.dependencyinjection.9.0.5.nupkg.sha512",
         "microsoft.extensions.dependencyinjection.nuspec",
         "useSharedDesignerContext.txt"
       ]
     },
-    "Microsoft.Extensions.DependencyInjection.Abstractions/9.0.1": {
-      "sha512": "Tr74eP0oQ3AyC24ch17N8PuEkrPbD0JqIfENCYqmgKYNOmL8wQKzLJu3ObxTUDrjnn4rHoR1qKa37/eQyHmCDA==",
+    "Microsoft.Extensions.DependencyInjection.Abstractions/9.0.5": {
+      "sha512": "cjnRtsEAzU73aN6W7vkWy8Phj5t3Xm78HSqgrbh/O4Q9SK/yN73wZVa21QQY6amSLQRQ/M8N+koGnY6PuvKQsw==",
       "type": "package",
-      "path": "microsoft.extensions.dependencyinjection.abstractions/9.0.1",
+      "path": "microsoft.extensions.dependencyinjection.abstractions/9.0.5",
       "files": [
         ".nupkg.metadata",
         ".signature.p7s",
@@ -1825,15 +1825,15 @@
         "lib/netstandard2.0/Microsoft.Extensions.DependencyInjection.Abstractions.xml",
         "lib/netstandard2.1/Microsoft.Extensions.DependencyInjection.Abstractions.dll",
         "lib/netstandard2.1/Microsoft.Extensions.DependencyInjection.Abstractions.xml",
-        "microsoft.extensions.dependencyinjection.abstractions.9.0.1.nupkg.sha512",
+        "microsoft.extensions.dependencyinjection.abstractions.9.0.5.nupkg.sha512",
         "microsoft.extensions.dependencyinjection.abstractions.nuspec",
         "useSharedDesignerContext.txt"
       ]
     },
-    "Microsoft.Extensions.Logging.Abstractions/9.0.1": {
-      "sha512": "w2gUqXN/jNIuvqYwX3lbXagsizVNXYyt6LlF57+tMve4JYCEgCMMAjRce6uKcDASJgpMbErRT1PfHy2OhbkqEA==",
+    "Microsoft.Extensions.Logging.Abstractions/9.0.5": {
+      "sha512": "pP1PADCrIxMYJXxFmTVbAgEU7GVpjK5i0/tyfU9DiE0oXQy3JWQaOVgCkrCiePLgS8b5sghM3Fau3EeHiVWbCg==",
       "type": "package",
-      "path": "microsoft.extensions.logging.abstractions/9.0.1",
+      "path": "microsoft.extensions.logging.abstractions/9.0.5",
       "files": [
         ".nupkg.metadata",
         ".signature.p7s",
@@ -1896,15 +1896,15 @@
         "lib/net9.0/Microsoft.Extensions.Logging.Abstractions.xml",
         "lib/netstandard2.0/Microsoft.Extensions.Logging.Abstractions.dll",
         "lib/netstandard2.0/Microsoft.Extensions.Logging.Abstractions.xml",
-        "microsoft.extensions.logging.abstractions.9.0.1.nupkg.sha512",
+        "microsoft.extensions.logging.abstractions.9.0.5.nupkg.sha512",
         "microsoft.extensions.logging.abstractions.nuspec",
         "useSharedDesignerContext.txt"
       ]
     },
-    "Microsoft.Extensions.Options/9.0.1": {
-      "sha512": "nggoNKnWcsBIAaOWHA+53XZWrslC7aGeok+aR+epDPRy7HI7GwMnGZE8yEsL2Onw7kMOHVHwKcsDls1INkNUJQ==",
+    "Microsoft.Extensions.Options/9.0.5": {
+      "sha512": "vPdJQU8YLOUSSK8NL0RmwcXJr2E0w8xH559PGQl4JYsglgilZr9LZnqV2zdgk+XR05+kuvhBEZKoDVd46o7NqA==",
       "type": "package",
-      "path": "microsoft.extensions.options/9.0.1",
+      "path": "microsoft.extensions.options/9.0.5",
       "files": [
         ".nupkg.metadata",
         ".signature.p7s",
@@ -1941,15 +1941,15 @@
         "lib/netstandard2.0/Microsoft.Extensions.Options.xml",
         "lib/netstandard2.1/Microsoft.Extensions.Options.dll",
         "lib/netstandard2.1/Microsoft.Extensions.Options.xml",
-        "microsoft.extensions.options.9.0.1.nupkg.sha512",
+        "microsoft.extensions.options.9.0.5.nupkg.sha512",
         "microsoft.extensions.options.nuspec",
         "useSharedDesignerContext.txt"
       ]
     },
-    "Microsoft.Extensions.Primitives/9.0.1": {
-      "sha512": "bHtTesA4lrSGD1ZUaMIx6frU3wyy0vYtTa/hM6gGQu5QNrydObv8T5COiGUWsisflAfmsaFOe9Xvw5NSO99z0g==",
+    "Microsoft.Extensions.Primitives/9.0.5": {
+      "sha512": "b4OAv1qE1C9aM+ShWJu3rlo/WjDwa/I30aIPXqDWSKXTtKl1Wwh6BZn+glH5HndGVVn3C6ZAPQj5nv7/7HJNBQ==",
       "type": "package",
-      "path": "microsoft.extensions.primitives/9.0.1",
+      "path": "microsoft.extensions.primitives/9.0.5",
       "files": [
         ".nupkg.metadata",
         ".signature.p7s",
@@ -1969,7 +1969,7 @@
         "lib/net9.0/Microsoft.Extensions.Primitives.xml",
         "lib/netstandard2.0/Microsoft.Extensions.Primitives.dll",
         "lib/netstandard2.0/Microsoft.Extensions.Primitives.xml",
-        "microsoft.extensions.primitives.9.0.1.nupkg.sha512",
+        "microsoft.extensions.primitives.9.0.5.nupkg.sha512",
         "microsoft.extensions.primitives.nuspec",
         "useSharedDesignerContext.txt"
       ]
@@ -2167,10 +2167,10 @@
         "microsoft.io.recyclablememorystream.nuspec"
       ]
     },
-    "Microsoft.JSInterop/9.0.1": {
-      "sha512": "/xBwIfb0YoC2Muv6EsHjxpqZw2aKv94+i0g0FWZvqvGv3DeAy+8wipAuECVvKYEs2EIclRD41bjajHLoD6mTtw==",
+    "Microsoft.JSInterop/9.0.5": {
+      "sha512": "ji4fQKbUUZiq3lmzVBMvp15VgBtEyfR51NrmEjo6qnD97Jf1R6C6QkSMjwUO8bw5NZIDRtmPCYurypB3W5AMEg==",
       "type": "package",
-      "path": "microsoft.jsinterop/9.0.1",
+      "path": "microsoft.jsinterop/9.0.5",
       "files": [
         ".nupkg.metadata",
         ".signature.p7s",
@@ -2178,7 +2178,7 @@
         "THIRD-PARTY-NOTICES.TXT",
         "lib/net9.0/Microsoft.JSInterop.dll",
         "lib/net9.0/Microsoft.JSInterop.xml",
-        "microsoft.jsinterop.9.0.1.nupkg.sha512",
+        "microsoft.jsinterop.9.0.5.nupkg.sha512",
         "microsoft.jsinterop.nuspec"
       ]
     },
@@ -2233,10 +2233,10 @@
         "microsoft.sqlserver.server.nuspec"
       ]
     },
-    "Microsoft.Win32.SystemEvents/9.0.1": {
-      "sha512": "OxjcwJqBW/5A1111+vL9d+5KYTvOzeCTJY9zHZ0kpQI4wX075p6L7inHPSYuf0MGakVjUvaShvw9e9pfbInU2Q==",
+    "Microsoft.Win32.SystemEvents/9.0.5": {
+      "sha512": "D4OYNpmvAsF9MkaY2W8Jue2XuNHDhygvwzo019hs+lP85KaVnOlXmqsjDKr1dHb1DPxDnOKpe6mAgJN7S6ttwg==",
       "type": "package",
-      "path": "microsoft.win32.systemevents/9.0.1",
+      "path": "microsoft.win32.systemevents/9.0.5",
       "files": [
         ".nupkg.metadata",
         ".signature.p7s",
@@ -2256,7 +2256,7 @@
         "lib/net9.0/Microsoft.Win32.SystemEvents.xml",
         "lib/netstandard2.0/Microsoft.Win32.SystemEvents.dll",
         "lib/netstandard2.0/Microsoft.Win32.SystemEvents.xml",
-        "microsoft.win32.systemevents.9.0.1.nupkg.sha512",
+        "microsoft.win32.systemevents.9.0.5.nupkg.sha512",
         "microsoft.win32.systemevents.nuspec",
         "runtimes/win/lib/net8.0/Microsoft.Win32.SystemEvents.dll",
         "runtimes/win/lib/net8.0/Microsoft.Win32.SystemEvents.xml",
@@ -2265,15 +2265,15 @@
         "useSharedDesignerContext.txt"
       ]
     },
-    "NPOI/2.7.2": {
-      "sha512": "hKJeAQOuVl8b2qiQQg0ph8uhqm5ihq94SDSnmPu5ytCLIRTVcg2rFA274ow+IacrORImdvo0Q3K51L1t3vLqpw==",
+    "NPOI/2.7.3": {
+      "sha512": "iCZx3DSwUSwaV61E8tXgPlPuxYmcYV/Zi405nGlxQvWaGTAbuc0KvSBjsLucQUJ92iMeetT8iK9makLfF4uZ3g==",
       "type": "package",
-      "path": "npoi/2.7.2",
+      "path": "npoi/2.7.3",
       "files": [
         ".nupkg.metadata",
         ".signature.p7s",
         "LICENSE",
-        "Read Me.txt",
+        "README.md",
         "lib/net472/NPOI.Core.dll",
         "lib/net472/NPOI.Core.pdb",
         "lib/net472/NPOI.Core.xml",
@@ -2286,18 +2286,18 @@
         "lib/net472/NPOI.OpenXmlFormats.dll",
         "lib/net472/NPOI.OpenXmlFormats.pdb",
         "lib/net472/NPOI.OpenXmlFormats.xml",
-        "lib/net6.0/NPOI.Core.dll",
-        "lib/net6.0/NPOI.Core.pdb",
-        "lib/net6.0/NPOI.Core.xml",
-        "lib/net6.0/NPOI.OOXML.dll",
-        "lib/net6.0/NPOI.OOXML.pdb",
-        "lib/net6.0/NPOI.OOXML.xml",
-        "lib/net6.0/NPOI.OpenXml4Net.dll",
-        "lib/net6.0/NPOI.OpenXml4Net.pdb",
-        "lib/net6.0/NPOI.OpenXml4Net.xml",
-        "lib/net6.0/NPOI.OpenXmlFormats.dll",
-        "lib/net6.0/NPOI.OpenXmlFormats.pdb",
-        "lib/net6.0/NPOI.OpenXmlFormats.xml",
+        "lib/net8.0/NPOI.Core.dll",
+        "lib/net8.0/NPOI.Core.pdb",
+        "lib/net8.0/NPOI.Core.xml",
+        "lib/net8.0/NPOI.OOXML.dll",
+        "lib/net8.0/NPOI.OOXML.pdb",
+        "lib/net8.0/NPOI.OOXML.xml",
+        "lib/net8.0/NPOI.OpenXml4Net.dll",
+        "lib/net8.0/NPOI.OpenXml4Net.pdb",
+        "lib/net8.0/NPOI.OpenXml4Net.xml",
+        "lib/net8.0/NPOI.OpenXmlFormats.dll",
+        "lib/net8.0/NPOI.OpenXmlFormats.pdb",
+        "lib/net8.0/NPOI.OpenXmlFormats.xml",
         "lib/netstandard2.0/NPOI.Core.dll",
         "lib/netstandard2.0/NPOI.Core.pdb",
         "lib/netstandard2.0/NPOI.Core.xml",
@@ -2326,7 +2326,7 @@
         "logo/240_240.png",
         "logo/32_32.jpg",
         "logo/60_60.jpg",
-        "npoi.2.7.2.nupkg.sha512",
+        "npoi.2.7.3.nupkg.sha512",
         "npoi.nuspec"
       ]
     },
@@ -2369,10 +2369,10 @@
         "sixlabors.fonts.nuspec"
       ]
     },
-    "SixLabors.ImageSharp/2.1.9": {
-      "sha512": "VcjfKbOExie3RgZGrQL1jJMI4iZ3J9B6ifDo2QpDVJUYhTZKVcKnBhpNOHqbvNjHgadAks1jzhRjB7OZet1PJA==",
+    "SixLabors.ImageSharp/2.1.10": {
+      "sha512": "hk1E7U3RSlxrBVo6Gb6OjeM52fChpFYH+SZvyT/M2vzSGlzAaKE33hc3V/Pvnjcnn1opT8/Z+0QfqdM5HsIaeA==",
       "type": "package",
-      "path": "sixlabors.imagesharp/2.1.9",
+      "path": "sixlabors.imagesharp/2.1.10",
       "files": [
         ".nupkg.metadata",
         ".signature.p7s",
@@ -2387,7 +2387,7 @@
         "lib/netstandard2.1/SixLabors.ImageSharp.dll",
         "lib/netstandard2.1/SixLabors.ImageSharp.xml",
         "sixlabors.imagesharp.128.png",
-        "sixlabors.imagesharp.2.1.9.nupkg.sha512",
+        "sixlabors.imagesharp.2.1.10.nupkg.sha512",
         "sixlabors.imagesharp.nuspec"
       ]
     },
@@ -2496,10 +2496,10 @@
         "useSharedDesignerContext.txt"
       ]
     },
-    "System.Drawing.Common/9.0.1": {
-      "sha512": "TTPkCqSMyMaG8BXlBKYTTJFtLV0SvjjsvgUN598hYgHaX/5B7tdUc2JhQF9vwrYmlzxId+gwFnKYuxQ2XsSz2g==",
+    "System.Drawing.Common/9.0.5": {
+      "sha512": "T/6nqx0B7/uTe5JjBwrKZilLuwfhHLOVmNKlT/wr4A9Dna94mgTdz3lTfrdJ72QRx7IHCv/LzoJPmFSfK/N6WA==",
       "type": "package",
-      "path": "system.drawing.common/9.0.1",
+      "path": "system.drawing.common/9.0.5",
       "files": [
         ".nupkg.metadata",
         ".signature.p7s",
@@ -2533,7 +2533,7 @@
         "lib/xamarinmac20/_._",
         "lib/xamarintvos10/_._",
         "lib/xamarinwatchos10/_._",
-        "system.drawing.common.9.0.1.nupkg.sha512",
+        "system.drawing.common.9.0.5.nupkg.sha512",
         "system.drawing.common.nuspec",
         "useSharedDesignerContext.txt"
       ]
@@ -3163,20 +3163,20 @@
   },
   "projectFileDependencyGroups": {
     "net9.0": [
-      "DataJuggler.Blazor.Components >= 9.8.16",
-      "DataJuggler.UltimateHelper >= 9.0.16",
-      "Microsoft.AspNetCore.Components >= 9.0.1",
-      "Microsoft.AspNetCore.Components.Web >= 9.0.1",
-      "System.Drawing.Common >= 9.0.1"
+      "DataJuggler.Blazor.Components >= 9.14.0",
+      "DataJuggler.UltimateHelper >= 9.1.0",
+      "Microsoft.AspNetCore.Components >= 9.0.5",
+      "Microsoft.AspNetCore.Components.Web >= 9.0.5",
+      "System.Drawing.Common >= 9.0.5"
     ]
   },
   "packageFolders": {
     "C:\\Users\\Corby\\.nuget\\packages\\": {},
-    "C:\\Program Files\\DevExpress 24.2\\Components\\Offline Packages": {},
+    "C:\\Program Files\\DevExpress 23.1\\Components\\Offline Packages": {},
     "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages": {}
   },
   "project": {
-    "version": "9.0.2",
+    "version": "9.0.3",
     "restore": {
       "projectUniqueName": "C:\\Projects\\GitHub\\BlazorFileUpload\\BlazorFileUpload.csproj",
       "projectName": "DataJuggler.Blazor.FileUpload",
@@ -3185,12 +3185,12 @@
       "outputPath": "C:\\Projects\\GitHub\\BlazorFileUpload\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
-        "C:\\Program Files\\DevExpress 24.2\\Components\\Offline Packages",
+        "C:\\Program Files\\DevExpress 23.1\\Components\\Offline Packages",
         "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
       ],
       "configFilePaths": [
         "C:\\Users\\Corby\\AppData\\Roaming\\NuGet\\NuGet.Config",
-        "C:\\Program Files (x86)\\NuGet\\Config\\DevExpress 24.2.config",
+        "C:\\Program Files (x86)\\NuGet\\Config\\DevExpress 23.1.config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
@@ -3200,8 +3200,7 @@
       "sources": {
         "C:\\LocalNuGet": {},
         "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
-        "C:\\Program Files\\DevExpress 24.2\\Components\\System\\Components\\Packages": {},
-        "C:\\Program Files\\dotnet\\library-packs": {},
+        "C:\\Program Files\\DevExpress 23.1\\Components\\System\\Components\\Packages": {},
         "https://api.nuget.org/v3/index.json": {}
       },
       "frameworks": {
@@ -3220,7 +3219,7 @@
         "auditLevel": "low",
         "auditMode": "direct"
       },
-      "SdkAnalysisLevel": "9.0.100"
+      "SdkAnalysisLevel": "9.0.300"
     },
     "frameworks": {
       "net9.0": {
@@ -3228,23 +3227,23 @@
         "dependencies": {
           "DataJuggler.Blazor.Components": {
             "target": "Package",
-            "version": "[9.8.16, )"
+            "version": "[9.14.0, )"
           },
           "DataJuggler.UltimateHelper": {
             "target": "Package",
-            "version": "[9.0.16, )"
+            "version": "[9.1.0, )"
           },
           "Microsoft.AspNetCore.Components": {
             "target": "Package",
-            "version": "[9.0.1, )"
+            "version": "[9.0.5, )"
           },
           "Microsoft.AspNetCore.Components.Web": {
             "target": "Package",
-            "version": "[9.0.1, )"
+            "version": "[9.0.5, )"
           },
           "System.Drawing.Common": {
             "target": "Package",
-            "version": "[9.0.1, )"
+            "version": "[9.0.5, )"
           }
         },
         "imports": [
@@ -3263,7 +3262,7 @@
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\9.0.102/PortableRuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\9.0.300/PortableRuntimeIdentifierGraph.json"
       }
     }
   }
